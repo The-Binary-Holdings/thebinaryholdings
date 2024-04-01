@@ -15,10 +15,11 @@ const config: Config = {
         "about": "linear-gradient(180deg, #000000 0%, #03102A 29.91%, #4327B5 59.71%, #8E70DC 75.73%, #9E7DF5 84.47%, #A385F5 89.91%, #C0ABF8 100%);",
         "heros-bg": "url('/heros-bg.png')",
         "heros-gate": "url('/gate.svg')",
+        "partners": "url('/partners-bg.png')",
       },
       colors: {
         'highlight': '#EBEABA',
-      }
+      },
     },
   },
   darkMode: "class",

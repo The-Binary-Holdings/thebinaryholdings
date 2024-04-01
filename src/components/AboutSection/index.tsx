@@ -7,15 +7,15 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="w-full bg-about rounded-[4rem] flex justify-center pt-32 flex-col items-center overflow-hidden"
+      className="w-full flex justify-center pt-64 flex-col items-center overflow-hidden"
     >
-      <div className="inline-table w-0 flex-col items-center text-center space-y-20">
+      <div className="inline-table w-0 flex-col items-center text-center space-y-20 z-10 translate-y-10">
         <VariantsComponent startDistance={-100}>
-          <h1 className="text-highlight inline-table text-6xl w-fit whitespace-nowrap">
+          <h1 className="text-highlight flex md:inline-table text-6xl w-fit md:whitespace-nowrap font-medium">
             Where innovation meets Opportunity
           </h1>
         </VariantsComponent>
-        <div className="flex text-white w-auto text-start justify-between">
+        <div className="flex text-white flex-col md:flex-row w-auto text-start justify-between">
           <VariantsComponent startDistance={100} className="w-2/5">
             <p className="">
               Highlight the focus on human connection, ensuring technology
@@ -32,10 +32,10 @@ const AboutSection = () => {
       </div>
       <Image
         alt="about-image"
-        src={"/about-transcube.png"}
+        src={"/about-img.jpg"}
         width={100000}
         height={100}
-        className="w-full"
+        className="w-full z-0"
       />
     </section>
   );

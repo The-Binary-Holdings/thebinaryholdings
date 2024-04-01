@@ -26,9 +26,9 @@ const HeroSection = () => {
       {/* <Image src="/gate.svg" alt='image' width={100} height={100} className='fixed w-full bg-cover'/> */}
       <WrapperContent className="flex flex-col justify-evenly overflow-hidden h-full z-20 md:z-0 bg-black/50 md:bg-transparent relative md:static">
         <div
-          className={`hidden sm:flex flex-col text-[5rem] font-normal leading-none w-full text-highlight ${monumentExtended.className} translate-y-[400px]`}
+          className={`hidden sm:flex flex-col text-[5rem] font-normal leading-none w-full text-highlight ${monumentExtended.className} translate-y-[1000px]`}
         >
-          <ParallaxText distance={400}>
+          <ParallaxText distance={1000}>
             <h1>SEAMLESSLY</h1>
             <h1>CONNECT</h1>
           </ParallaxText>
@@ -45,9 +45,9 @@ const HeroSection = () => {
             <Button className="px-12 py-6 w-fit">CLICK TO EXPLORE</Button>
           </div>
           <div
-            className={`hidden sm:flex text-[5rem] font-normal order-2 leading-none text-highlight flex-col items-end -translate-y-[400px] ${monumentExtended.className}`}
+            className={`hidden sm:flex text-[5rem] font-normal order-2 leading-none text-highlight flex-col items-end -translate-y-[1000px] ${monumentExtended.className}`}
           >
-            <ParallaxText distance={-400}>
+            <ParallaxText distance={-1000}>
               <h1>SECURELY</h1>
               <h1>TRANSFORM</h1>
             </ParallaxText>

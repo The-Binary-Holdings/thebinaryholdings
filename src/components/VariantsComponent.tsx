@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, TargetAndTransition, Variants } from "framer-motion";
 
-function createVariants(direction: string, startDistance: number, endDistance: number) {
+function createVariants(direction: string, startDistance: number, endDistance: number, duration: number, delay: number) {
   const componentsVariants: Variants = {
     offscreen: {
       y: direction === "y" ? startDistance : 0,
@@ -16,9 +16,11 @@ function createVariants(direction: string, startDistance: number, endDistance: n
       transition: {
         type: "spring",
         bounce: 0.4,
-        duration: 2,
+        duration: duration,
+        delay: delay,
       },
     },
+    
   };
   return componentsVariants;
 }
@@ -28,21 +30,30 @@ const VariantsComponent = ({
   direction = "y",
   startDistance = 100,
   endDistance = 0,
-  className
+  className,
+  duration = 2,
+  delay = 0,
+  whileHoverObject = undefined,
+  isOnce = true,
 }: {
   children: React.ReactNode;
   direction?: "x" | "y";
   startDistance?: number;
   endDistance?: number;
   className?: string;
+  duration?: number;
+  delay?: number;
+  whileHoverObject?: TargetAndTransition;
+  isOnce?: boolean;
 }) => {
   return (
     <motion.div
-      variants={createVariants(direction, startDistance, endDistance)}
+      variants={createVariants(direction, startDistance, endDistance, duration, delay)}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.8 }}
+      viewport={{ once: isOnce, amount: 0.5 }}
       className={className}
+      whileHover={whileHoverObject}
     >
       {children}
     </motion.div>
