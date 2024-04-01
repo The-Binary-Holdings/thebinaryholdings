@@ -3,37 +3,27 @@ import {
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
   NavbarMenuToggle,
   NavbarMenu,
-  NavbarMenuItem,
   Link,
   Button,
 } from "@nextui-org/react";
 import Image from "next/image";
+import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
+import clsx from "clsx";
+import NavbarMenuContent from "./NavbarMenuContent";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const { scrollPosition } = useDetectScroll();
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className="px-8 py-4 bg-transparent fixed"
+      isBlurred={scrollPosition.top !== 0}
+      className={clsx("px-8 py-4 fixed", isMenuOpen ? "bg-black" : "bg-transparent transition-colors delay-[220ms]")}
       maxWidth="full"
-      isBlurred={false}
+      shouldHideOnScroll
     >
       <NavbarContent>
         <NavbarBrand>
@@ -57,25 +47,8 @@ export default function Header() {
         </div>
       </NavbarContent>
 
-      <NavbarMenu className="bg-transparent">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} className="">
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+      <NavbarMenu className="bg-black px-0">
+        <NavbarMenuContent/>
       </NavbarMenu>
     </Navbar>
   );

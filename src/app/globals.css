@@ -18,11 +18,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  /* background-color: #060011; */
   background-color: black;
+  font-size: 18px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.transition-border{
+  -webkit-transition-property: border-color;
 }
