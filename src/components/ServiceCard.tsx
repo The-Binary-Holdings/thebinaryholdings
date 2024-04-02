@@ -12,7 +12,7 @@ const ServiceCard = ({
   return (
     <Card className={`${className}`}>
       <CardBody className="z-10 flex-col !items-start justify-end select-none bg-black/40 space-y-5 py-10">
-        <h4 className="text-white font-normal text-5xl">
+        <h4 className="text-white md:font-normal text-4xl md:text-5xl font-medium">
           {data.name}
         </h4>
         <p className="">

@@ -70,36 +70,28 @@ export interface IBusiness {
 
 export const BUSINESSES: IBusiness[] = [
   {
-    name: "BNRY Lab",
+    name: "BNRY Token",
     description:
-      "Web3: Decentralized Finance, NFTs, Blockchain, and Governance — A Case Study in Future of the Internet",
+      "Discover the BNRY Token: The First Telco Token Revolutionizing the Journey from Web2 to Web3!",
     link: "#",
     image_url: "/BNRYLab-img.png",
-    logo: "/BNRYLab-logo.png",
+    logo: "/logos/BNRY-blacklogo.png",
   },
   {
     name: "Fando",
     description:
-      "Web3: Decentralized Finance, NFTs, Blockchain, and Governance — A Case Study in Future of the Internet",
+      "The Ultimate Web3 Loyalty and Entertainment App, Crafted for Effortless Web3 Rewards!",
     link: "#",
     image_url: "/Fando-img.png",
-    logo: "/Fando-logo.png",
+    logo: "/logos/fando-blacklogo.png",
   },
   {
-    name: "Toy",
+    name: "The lost club toys",
     description:
-      "Web3: Decentralized Finance, NFTs, Blockchain, and Governance — A Case Study in Future of the Internet",
+      "Discover the Teddy Sticker, Your Key to Move2Earn - A Sticker That Transforms into an Investment!",
     link: "#",
-    image_url: "/BNRYLab-img.png",
-    logo: "/BNRYLab-logo.png",
-  },
-  {
-    name: "Toy",
-    description:
-      "Web3: Decentralized Finance, NFTs, Blockchain, and Governance — A Case Study in Future of the Internet",
-    link: "#",
-    image_url: "/BNRYLab-img.png",
-    logo: "/BNRYLab-logo.png",
+    image_url: "/toyClub-img.png",
+    logo: "/logos/lostClubToy-blacklogo.png",
   },
 ];
 

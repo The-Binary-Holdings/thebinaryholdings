@@ -44,10 +44,10 @@ const Carousel = ({
   }, [itemWidth]);
 
   return (
-    <div className="relative wrapper transition-[height] ease-in-out px-4 md:px-0 w-full">
+    <div className={clsx("relative wrapper transition-[height] ease-in-out md:px-0 w-full", className)}>
       <div
         className={clsx(
-          "grid grid-flow-col overflow-x-auto scroll-smooth gap-x-10 py-20 px-2 w-full cursor-grab overflow-y-hidden",
+          "grid grid-flow-col overflow-x-auto scroll-smooth no-scrollbar gap-x-4 md:gap-x-10 py-14 md:py-20 px-4 md:px-16 w-full cursor-grab overflow-y-hidden",
           isDragging && "cursor-grabbing"
         )}
         ref={carousel}
