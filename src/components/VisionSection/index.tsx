@@ -5,31 +5,36 @@ import VariantsComponent from "../VariantsComponent";
 
 const VisionSection = () => {
   return (
-    <section className="w-full text-white mt-32 py-32">
+    <section className="w-full text-white md:mt-32 py-16 md:py-32">
       <WrapperContent>
-        <div className="w-full grid grid-cols-2 gap-x-44">
-          <div className="flex flex-col space-y-20 p-20 justify-center">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-44 gap-y-20">
+          <div className="flex flex-col space-y-10 md:p-10 justify-center">
             <VariantsComponent direction="x" startDistance={-100}>
               <p className="text-sm text-[#AD00FF]">VISION</p>
-              <h1 className="text-highlight text-6xl font-medium">
-                Bridging Worlds with Ease and Security
+              <h1 className="text-highlight mt-10 md:mt-0 text-5xl md:text-6xl font-medium">
+                Bridging Worlds: Seamless Web3 Integration
               </h1>
             </VariantsComponent>
             <VariantsComponent direction="x" startDistance={-100}>
-              <p className="text-lg">
-                Highlight the focus on human connection, ensuring technology
-                enhances, not replaces, meaningful interactions.
+              <p className="">
+                At The Binary Holdings, we enhance human connections with Web3,
+                offering secure digital wallets and innovative Learn2Earn and
+                Play2Earn models. Our approach empowers users to join and
+                benefit from the digital economy seamlessly, making the Web3
+                transition intuitive and rewarding. We&apos;re simplifying the
+                complex, ensuring technology enriches, not replaces, real
+                interactions.
               </p>
             </VariantsComponent>
             <VariantsComponent direction="x" startDistance={-100}>
-              <Button className="w-fit px-16 py-8 bg-white font-semibold ">
+              <Button className="w-full md:w-fit px-16 py-8 bg-white font-semibold ">
                 CLICK TO EXPLORE
               </Button>
             </VariantsComponent>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VariantsComponent
-              className="row-span-4"
+              className="row-span-4 hidden md:block"
               startDistance={-100}
               delay={0.5}
             >
@@ -41,9 +46,8 @@ const VisionSection = () => {
               />
             </VariantsComponent>
             <VariantsComponent className="row-span-1" startDistance={-100}>
-              <div className="bg-[#00FB8A] p-6 rounded-3xl text-black rounded-ee-none font-medium">
-                SHOWCASE TBH&apos;S EXPERTISE IN FACILITATING SECURE AND
-                USER-FRIENDLY MIGRATION FROM WEB2 TO WEB3.
+              <div className="bg-[#00FB8A] p-6 rounded-3xl text-black rounded-ee-none font-medium text-base leading-none uppercase">
+                We&apos;re creating a Web3 infrastructure for everyday use.
               </div>
             </VariantsComponent>
             <VariantsComponent className="row-span-4" startDistance={-100}>
@@ -55,7 +59,7 @@ const VisionSection = () => {
               />
             </VariantsComponent>
             <VariantsComponent
-              className="row-span-2"
+              className="row-span-2 hidden md:block"
               startDistance={-100}
               delay={0.5}
             >
@@ -67,9 +71,8 @@ const VisionSection = () => {
               />
             </VariantsComponent>
             <VariantsComponent className="row-span-1" startDistance={-100}>
-              <div className="bg-[#402D98] p-6 rounded-3xl text-white rounded-se-none font-medium">
-                EMPHASIZE THE COMMITMENT TO PROVIDING CONTINUOUS SUPPORT
-                THROUGHOUT THE JOURNEY.
+              <div className="bg-[#402D98] p-6 rounded-3xl text-white rounded-se-none font-medium text-base leading-none uppercase">
+                Making earning as simple and natural as sending a text.
               </div>
             </VariantsComponent>
           </div>
