@@ -76,7 +76,7 @@ export const PARTNERS: IPartner[] = [
   },
   {
     name: "fando",
-    image: "/logos/fando-logo.png",
+    image: "/logos/fando-01.svg",
   }
 ]
 
