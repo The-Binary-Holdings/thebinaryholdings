@@ -20,13 +20,13 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 }) => {
   return (
     <div className="rounded-lg">
-      <div className="relative w-full h-80 mx-auto overflow-hidden rounded-lg">
+      <div className="relative w-full h-96 mx-auto overflow-hidden rounded-lg">
         <Image
           src={imageUrl}
           alt={name}
           layout="fill"
           objectFit="cover"
-          className="h-screen rounded-lg"
+          className="rounded-lg"
         />
         <div className="absolute bottom-0 right-0 p-4 space-x-2">
           {linkedinUrl && (

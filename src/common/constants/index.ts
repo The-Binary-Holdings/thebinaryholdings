@@ -1,35 +1,55 @@
 export interface IProduct{
   name: string;
   description: string;
-  logo: string;
-  link: string;
+  // logo: string;
+  // link: string;
 }
 
 export const PRODUCTS: IProduct[] = [
   {
-    name: "BNRY",
-    description: "Integral blockchain features and infrastructure",
-    logo: "/logos/BNRY-logo.png",
-    link: "#",
+    name : "Digital Social",
+    description : "Elevating online interactions with cutting-edge social platforms."
   },
   {
-    name: "Fando",
-    description: "Integral blockchain features and infrastructure",
-    logo: "/logos/fando-logo.png",
-    link: "https://fando.ai",
+    name : "Digital Finance",
+    description : "Streamlining finance with secure, digital-first solutions."
   },
   {
-    name: "Lost club toys",
-    description: "Integral blockchain features and infrastructure",
-    logo: "/logos/lostClubToy-logo.png",
-    link: "https://lostclubtoys.com/",
+    name : "Digital Enterprise",
+    description : "Driving business growth through digital innovation."
   },
   {
-    name: "Twin Matrix",
-    description: "Integral blockchain features and infrastructure",
-    logo: "/logos/twinMatrix-logo.png",
-    link: "https://www.twinmatrix.net/",
-  }
+    name : "Incubator and Accelerator",
+    description : " Accelerating startups with resources and mentorship."
+  },
+  {
+    name : "The Binary Network",
+    description : "Building a blockchain ecosystem for seamless collaboration and innovation."
+  },
+  // {
+  //   name: "BNRY",
+  //   description: "Integral blockchain features and infrastructure",
+  //   logo: "/logos/BNRY-logo.png",
+  //   link: "#",
+  // },
+  // {
+  //   name: "Fando",
+  //   description: "Integral blockchain features and infrastructure",
+  //   logo: "/logos/fando-logo.png",
+  //   link: "https://fando.ai",
+  // },
+  // {
+  //   name: "Lost club toys",
+  //   description: "Integral blockchain features and infrastructure",
+  //   logo: "/logos/lostClubToy-logo.png",
+  //   link: "https://lostclubtoys.com/",
+  // },
+  // {
+  //   name: "Twin Matrix",
+  //   description: "Integral blockchain features and infrastructure",
+  //   logo: "/logos/twinMatrix-logo.png",
+  //   link: "https://www.twinmatrix.net/",
+  // }
 ]
 
 export interface IPartner{
@@ -63,36 +83,72 @@ export const PARTNERS: IPartner[] = [
 export interface IBusiness {
   name: string;
   description: string;
-  link: string;
+  // link: string;
   image_url: string;
   logo: string;
+  text: string
 }
 
 export const BUSINESSES: IBusiness[] = [
   {
-    name: "BNRY Token",
-    description:
-      "Discover the BNRY Token: The First Telco Token Revolutionizing the Journey from Web2 to Web3!",
-    link: "https://bnrytoken.com",
-    image_url: "/BNRYLab-img.png",
-    logo: "/logos/BNRY-blacklogo.png",
-  },
-  {
-    name: "Fando",
-    description:
-      "The Ultimate Web3 Loyalty and Entertainment App, Crafted for Effortless Web3 Rewards!",
-    link: "https://fando.ai",
+    name : "Digital Social",
+    description : "Elevating online interactions with cutting-edge social platforms.",
     image_url: "/Fando-img.png",
     logo: "/logos/fando-blacklogo.png",
+    text: "Explore More"
   },
   {
-    name: "The lost club toys",
-    description:
-      "Discover the Teddy Sticker, Your Key to Move2Earn - A Sticker That Transforms into an Investment!",
-    link: "https://lostclubtoys.com/",
-    image_url: "/toyClub-img.png",
-    logo: "/logos/lostClubToy-blacklogo.png",
+    name : "The Binary Network",
+    description : "Building a blockchain ecosystem for seamless collaboration and innovation.",
+    image_url: "/BNRYLab-img.png",
+    logo: "/logos/BNRY-blacklogo.png",
+    text: "Coming Soon"
   },
+  {
+    name : "Digital Finance",
+    description : "Streamlining finance with secure, digital-first solutions.",
+    image_url: "/digital_finance.png",
+    logo: "/digital_finance.png",
+    text: "Coming Soon"
+  },
+  {
+    name : "Digital Enterprise",
+    description : "Driving business growth through digital innovation.",
+    image_url: "/digital_enterprise.png",
+    logo: "/digital_enterprise.png",
+    text: "Coming Soon"
+  },
+  {
+    name : "Incubator and Accelerator",
+    description : "Accelerating startups with resources and mentorship.",
+    image_url: "/incubator_and_accelerator.png",
+    logo: "/incubator_and_accelerator.png",
+    text: "Coming Soon"
+  },
+
+  // {
+  //   name: "BNRY Token",
+  //   description:
+  //     "Discover the BNRY Token: The First Telco Token Revolutionizing the Journey from Web2 to Web3!",
+  //   link: "https://bnrytoken.com",
+//
+  // },
+  // {
+  //   name: "Fando",
+  //   description:
+  //     "The Ultimate Web3 Loyalty and Entertainment App, Crafted for Effortless Web3 Rewards!",
+  //   link: "https://fando.ai",
+    // image_url: "/Fando-img.png",
+    // logo: "/logos/fando-blacklogo.png",
+  // },
+  // {
+  //   name: "The lost club toys",
+  //   description:
+  //     "Discover the Teddy Sticker, Your Key to Move2Earn - A Sticker That Transforms into an Investment!",
+  //   link: "https://lostclubtoys.com/",
+  //   image_url: "/toyClub-img.png",
+  //   logo: "/logos/lostClubToy-blacklogo.png",
+  // },
 ];
 
 export interface IService {
@@ -209,19 +265,29 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     ],
   },
   {
-    title: "Apps",
+    title: "Business",
     subItems: [
       {
-        name: "BNRY",
-        href: "https://bnrytoken.com",
+        name: "Digital Social",
+        href: "#",
       },
       {
-        name: "Fando",
-        href: "https://fando.ai",
+        name: "Digital Finance",
+        href: "#",
       },
       {
-        name: "Lost Club Toys",
-        href: "https://lostclubtoys.com/",
+        name: "Digital Enterprise",
+        href: "#",
+      },
+
+      {
+        name: "Incubator and Accelerator",
+        href: "#",
+      },
+
+      {
+        name: "The Binary Network",
+        href: "#",
       },
     ],
   },

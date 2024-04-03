@@ -28,8 +28,8 @@ let tabs = [
     tab: <ItemTab items={LAYOUT_ITEMS[0]} />,
   },
   {
-    id: "PRODUCT",
-    label: "PRODUCT",
+    id: "BUSINESS",
+    label: "BUSINESS",
     tab: <ProductTab />,
   },
   {

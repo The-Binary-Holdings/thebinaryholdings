@@ -48,17 +48,33 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/sidsahi/",
     },
     {
-      name: "Lavine Hemiani",
-      role: "MD - Learn to Earn",
-      imageUrl: "/team/lavine_hemlani.jpeg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/lavine-hemlani-17932826/",
-    },
-    {
       name: "Manish Jha ",
       role: "MD - Digital Social",
       imageUrl: "/team/manish_jha.jpeg", 
       linkedinUrl: "https://www.linkedin.com/in/mjha86/",
     },
+ 
+    {
+      name: "Sarah Intarapromma",
+      role: "Chief Of Staff",
+      imageUrl: "/team/sarah.jpeg", 
+      linkedinUrl: "https://www.linkedin.com/in/sarah-intarapromma-544b3ba/",
+    },
+     
+    {
+      name: "Man Pham",
+      role: "CEO - Move To Earn",
+      imageUrl: "/team/man_pham.jpeg", 
+      linkedinUrl: "https://www.linkedin.com/in/Business Development Director - SEA",
+    },
+
+    {
+      name: "Daniel Grove",
+      role: "CEO - Move To Earn",
+      imageUrl: "/team/daniel_grove.jpeg", 
+      linkedinUrl: "https://www.linkedin.com/in/daniel-grove-81b3501a3/",
+    },
+
   ];
 
   return (

@@ -29,7 +29,7 @@ const BusinessCard = ({
           <p className="text-white/80">{data.description}</p>
         </div>
         <Button className="bg-transparent border-2 border-[#1E1E1E] text-white py-6">
-          LEARN MORE
+          {data.text}
         </Button>
       </div>
       <div className={`col-span-1 md:col-span-3 bg-black rounded-2xl rounded-ss-none rounded-se-none md:rounded-se-2xl md:rounded-es-none relative block overflow-hidden`}> 
