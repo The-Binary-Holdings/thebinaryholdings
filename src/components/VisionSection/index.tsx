@@ -17,13 +17,10 @@ const VisionSection = () => {
             </VariantsComponent>
             <VariantsComponent direction="x" startDistance={-100}>
               <p className="">
-                At The Binary Holdings, we enhance human connections with Web3,
-                offering secure digital wallets and innovative Learn2Earn and
-                Play2Earn models. Our approach empowers users to join and
-                benefit from the digital economy seamlessly, making the Web3
-                transition intuitive and rewarding. We&apos;re simplifying the
-                complex, ensuring technology enriches, not replaces, real
-                interactions.
+                The Binary Holdings is focused on assisting our
+                telecommunication partners to to solve challenges across user
+                activation, user engagement and retention, and sustainable
+                incremental revenue per user.
               </p>
             </VariantsComponent>
             <VariantsComponent direction="x" startDistance={-100}>
