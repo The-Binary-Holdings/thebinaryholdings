@@ -13,14 +13,14 @@ const ProductTab = () => {
             className='w-full'
             delay={index * 0.1}
           >
-            {/* <Link className='flex flex-col items-start text-white w-full space-y-3' href={product.link}>
-              <Image src={product.logo} alt="logo" className='border w-2/3 aspect-square object-contain p-5' removeWrapper radius='lg'/> */}
+         <Link className='flex flex-col items-start text-white w-full space-y-3' href={product.link}> 
+              {/* <Image src={product.logo} alt="logo" className='border w-2/3 aspect-square object-contain p-5' removeWrapper radius='lg'/> */}
               <div className='space-y-3'>
 
               <h1 className='font-medium text-3xl'>{product.name}</h1>
               <p>{product.description}</p>
               </div>
-            {/* </Link> */}
+            </Link>
           </VariantsComponent>
         )
       })}

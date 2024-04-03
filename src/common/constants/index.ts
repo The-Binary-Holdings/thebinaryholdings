@@ -1,30 +1,37 @@
-export interface IProduct{
+export interface IProduct {
   name: string;
   description: string;
   // logo: string;
-  // link: string;
+  link: string;
 }
 
 export const PRODUCTS: IProduct[] = [
   {
-    name : "Digital Social",
-    description : "Elevating online interactions with cutting-edge social platforms."
+    name: "Digital Social",
+    description:
+      "Elevating online interactions with cutting-edge social platforms.",
+    link: "/digital-social",
   },
   {
-    name : "Digital Finance",
-    description : "Streamlining finance with secure, digital-first solutions."
+    name: "Digital Finance",
+    description: "Streamlining finance with secure, digital-first solutions.",
+    link: "#",
   },
   {
-    name : "Digital Enterprise",
-    description : "Driving business growth through digital innovation."
+    name: "Digital Enterprise",
+    description: "Driving business growth through digital innovation.",
+    link: "#",
   },
   {
-    name : "Incubator and Accelerator",
-    description : " Accelerating startups with resources and mentorship."
+    name: "Incubator and Accelerator",
+    description: " Accelerating startups with resources and mentorship.",
+    link: "#",
   },
   {
-    name : "The Binary Network",
-    description : "Building a blockchain ecosystem for seamless collaboration and innovation."
+    name: "The Binary Network",
+    description:
+      "Building a blockchain ecosystem for seamless collaboration and innovation.",
+    link: "#",
   },
   // {
   //   name: "BNRY",
@@ -50,9 +57,9 @@ export const PRODUCTS: IProduct[] = [
   //   logo: "/logos/twinMatrix-logo.png",
   //   link: "https://www.twinmatrix.net/",
   // }
-]
+];
 
-export interface IPartner{
+export interface IPartner {
   name: string;
   image: string;
 }
@@ -77,8 +84,8 @@ export const PARTNERS: IPartner[] = [
   {
     name: "fando",
     image: "/fando-01.svg",
-  }
-]
+  },
+];
 
 export interface IBusiness {
   name: string;
@@ -86,44 +93,46 @@ export interface IBusiness {
   // link: string;
   image_url: string;
   logo: string;
-  text: string
+  text: string;
 }
 
 export const BUSINESSES: IBusiness[] = [
   {
-    name : "Digital Social",
-    description : "Elevating online interactions with cutting-edge social platforms.",
+    name: "Digital Social",
+    description:
+      "Elevating online interactions with cutting-edge social platforms.",
     image_url: "/Fando-img.png",
     logo: "/logos/fando-blacklogo.png",
-    text: "Explore More"
+    text: "Explore More",
   },
   {
-    name : "The Binary Network",
-    description : "Building a blockchain ecosystem for seamless collaboration and innovation.",
+    name: "The Binary Network",
+    description:
+      "Building a blockchain ecosystem for seamless collaboration and innovation.",
     image_url: "/BNRYLab-img.png",
     logo: "/logos/BNRY-blacklogo.png",
-    text: "Coming Soon"
+    text: "Coming Soon",
   },
   {
-    name : "Digital Finance",
-    description : "Streamlining finance with secure, digital-first solutions.",
+    name: "Digital Finance",
+    description: "Streamlining finance with secure, digital-first solutions.",
     image_url: "/digital_finance.png",
     logo: "/digital_finance.png",
-    text: "Coming Soon"
+    text: "Coming Soon",
   },
   {
-    name : "Digital Enterprise",
-    description : "Driving business growth through digital innovation.",
+    name: "Digital Enterprise",
+    description: "Driving business growth through digital innovation.",
     image_url: "/digital_enterprise.png",
     logo: "/digital_enterprise.png",
-    text: "Coming Soon"
+    text: "Coming Soon",
   },
   {
-    name : "Incubator and Accelerator",
-    description : "Accelerating startups with resources and mentorship.",
+    name: "Incubator and Accelerator",
+    description: "Accelerating startups with resources and mentorship.",
     image_url: "/incubator_and_accelerator.png",
     logo: "/incubator_and_accelerator.png",
-    text: "Coming Soon"
+    text: "Coming Soon",
   },
 
   // {
@@ -131,15 +140,15 @@ export const BUSINESSES: IBusiness[] = [
   //   description:
   //     "Discover the BNRY Token: The First Telco Token Revolutionizing the Journey from Web2 to Web3!",
   //   link: "https://bnrytoken.com",
-//
+  //
   // },
   // {
   //   name: "Fando",
   //   description:
   //     "The Ultimate Web3 Loyalty and Entertainment App, Crafted for Effortless Web3 Rewards!",
   //   link: "https://fando.ai",
-    // image_url: "/Fando-img.png",
-    // logo: "/logos/fando-blacklogo.png",
+  // image_url: "/Fando-img.png",
+  // logo: "/logos/fando-blacklogo.png",
   // },
   // {
   //   name: "The lost club toys",
@@ -269,7 +278,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     subItems: [
       {
         name: "Digital Social",
-        href: "#",
+        href: "/digital-social",
       },
       {
         name: "Digital Finance",
@@ -329,7 +338,6 @@ export interface ISocial {
 }
 
 export const SOCIALS: ISocial[] = [
-
   {
     type: "twitter",
     link: "https://twitter.com/thebinaryhldgs",
