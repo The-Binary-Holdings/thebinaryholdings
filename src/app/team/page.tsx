@@ -8,61 +8,61 @@ const Team: NextPage = () => {
     {
       name: "Manit Parikh",
       role: "Founder and CEO",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/manit_parikh.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/manitparikh/",
     },
     {
       name: "Manit Ghogar",
       role: "CMO",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/manit_ghogar.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/manitghogar/",
     },
     {
       name: "Elton Tay",
       role: "VP Product",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/elton_tay.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/eltontay/",
     },
     {
       name: "Patricia Auer",
       role: "CIO",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/patricia_auer.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/patricia-auer-91b7518/",
     },
     {
       name: "Eric Lin",
       role: "MD - Digital RW",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/eric_liu.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/ericliutmt/",
     },
     {
       name: "Prashant Gupta",
       role: "CTO",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/prashant_gupta.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/pmgupta911/",
     },
     {
       name: "Siddarth Sahi",
       role: "CBO",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/siddharth_sahi.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/sidsahi/",
     },
     {
       name: "Lavine Hemiani",
       role: "MD - Learn to Earn",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/lavine_hemlani.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/lavine-hemlani-17932826/",
     },
     {
       name: "Manish Jha ",
       role: "MD - Digital Social",
-      imageUrl: "/path-to-image.jpg", // Replace with actual path to image
+      imageUrl: "/team/manish_jha.jpeg", 
       linkedinUrl: "https://www.linkedin.com/in/mjha86/",
     },
   ];
 
   return (
-    <div className="pt-16 md:px-8 ">
+    <div className="pt-16 md:px-8">
       <Head>
         <title>Our Team</title>
       </Head>
