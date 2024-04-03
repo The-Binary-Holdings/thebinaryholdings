@@ -16,19 +16,19 @@ export const PRODUCTS: IProduct[] = [
     name: "Fando",
     description: "Integral blockchain features and infrastructure",
     logo: "/logos/fando-logo.png",
-    link: "#",
+    link: "https://fando.ai",
   },
   {
     name: "Lost club toys",
     description: "Integral blockchain features and infrastructure",
     logo: "/logos/lostClubToy-logo.png",
-    link: "#",
+    link: "https://lostclubtoys.com/",
   },
   {
     name: "Twin Matrix",
     description: "Integral blockchain features and infrastructure",
     logo: "/logos/twinMatrix-logo.png",
-    link: "#",
+    link: "https://www.twinmatrix.net/",
   }
 ]
 
@@ -230,7 +230,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     subItems: [
       {
         name: "Documentation",
-        href: "#",
+        href: "https://docs.thebinaryholdings.com",
       },
     ],
   },
@@ -263,33 +263,22 @@ export interface ISocial {
 }
 
 export const SOCIALS: ISocial[] = [
+
   {
-    type: "youtube",
-    link: "#",
+    type: "twitter",
+    link: "https://twitter.com/thebinaryhldgs",
   },
   {
     type: "telegram",
-    link: "#",
-  },
-  {
-    type: "tiktok",
-    link: "#",
-  },
-  {
-    type: "instagram",
-    link: "#",
+    link: "https://t.me/tbhofficialchat",
   },
   {
     type: "discord",
-    link: "#",
+    link: "https://discord.gg/wCXJmTBGr2",
   },
   {
-    type: "twitter",
-    link: "#",
-  },
-  {
-    type: "medium",
-    link: "#",
+    type: "youtube",
+    link: "https://www.youtube.com/@TheBinaryHoldings",
   },
 ];
 
@@ -300,24 +289,24 @@ export interface ICertificate {
 }
 
 export const CERTIFICATES: ICertificate[] = [
-  {
-    name: "Original WEB3",
-    image: "/certificate.png",
-    description: "Certified",
-  },
-  {
-    name: "Original WEB3",
-    image: "/certificate.png",
-    description: "Certified",
-  },
-  {
-    name: "Original WEB3",
-    image: "/certificate.png",
-    description: "Certified",
-  },
-  {
-    name: "Original WEB3",
-    image: "/certificate.png",
-    description: "Certified",
-  },
+  // {
+  //   name: "Original WEB3",
+  //   image: "/certificate.png",
+  //   description: "Certified",
+  // },
+  // {
+  //   name: "Original WEB3",
+  //   image: "/certificate.png",
+  //   description: "Certified",
+  // },
+  // {
+  //   name: "Original WEB3",
+  //   image: "/certificate.png",
+  //   description: "Certified",
+  // },
+  // {
+  //   name: "Original WEB3",
+  //   image: "/certificate.png",
+  //   description: "Certified",
+  // },
 ];

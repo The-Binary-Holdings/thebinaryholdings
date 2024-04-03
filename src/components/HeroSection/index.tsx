@@ -4,6 +4,9 @@ import localFont from "next/font/local";
 import WrapperContent from "../WrapperContent";
 import { Button } from "@nextui-org/react";
 import ParallaxText from "../ParallaxText";
+import { FaDiscord } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaTelegram } from "react-icons/fa6";
 
 const monumentExtended = localFont({
   src: [
@@ -22,7 +25,10 @@ const monumentExtended = localFont({
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="h-screen w-full bg-heros-bg bg-no-repeat bg-cover bg-center relative">
+    <section
+      id="hero"
+      className="h-screen w-full bg-heros-bg bg-no-repeat bg-cover bg-center relative"
+    >
       {/* <Image src="/gate.svg" alt='image' width={100} height={100} className='fixed w-full bg-cover'/> */}
       <WrapperContent className="flex flex-col justify-evenly overflow-hidden h-full z-20 md:z-0 bg-black/50 md:bg-transparent relative md:static">
         <div
@@ -41,8 +47,38 @@ const HeroSection = () => {
         </div>
         <div className="w-full flex flex-col md:flex-row justify-between items-end font-medium">
           <div className="flex flex-col items-center md:items-start md:w-2/5 text-white space-y-10 z-20 order-2 md:order-1 mt-10 md:mt-0">
-            <p className="text-center md:text-left">The Binary Holdings seamlessly guides telecommunication companies through their transition from Web2 to Web3, prioritising a human-first approach.</p>
-            <Button className="px-10 py-6 w-fit font-medium uppercase">Join the community</Button>
+            <p className="text-center md:text-left">
+              The Binary Holdings seamlessly guides telecommunication companies
+              through their transition from Web2 to Web3, prioritising a
+              human-first approach.
+            </p>
+            <div className="flex items-center">
+              <div className="px-6 py-4 bg-white text-black font-medium uppercase rounded-md shadow-md flex items-center">
+                <span className="pr-6">Join the community</span>
+                <a
+                  key="twitter"
+                  href="https://twitter.com/thebinaryhldgs"
+                  className="bg-white p-3 text-xl rounded-full me-2 mb-2 text-black flex items-center justify-center"
+                >
+                  <FaXTwitter className="text-black" />
+                </a>
+                <a
+                  key="telegram"
+                  href="https://t.me/tbhofficialchat"
+                  className="bg-white p-3 text-xl rounded-full me-2 mb-2 text-black flex items-center justify-center"
+                >
+                  <FaTelegram className="text-black" />
+                </a>
+
+                <a
+                  key="discord"
+                  href="https://discord.gg/wCXJmTBGr2"
+                  className="bg-white p-3 text-xl rounded-full me-2 mb-2 text-black flex items-center justify-center"
+                >
+                  <FaDiscord className="text-black" />
+                </a>
+              </div>
+            </div>
           </div>
           <div
             className={`hidden sm:flex text-[4.5rem] text-end font-normal order-2 leading-none text-highlight flex-col items-end -translate-y-[1000px] ${monumentExtended.className}`}
@@ -60,8 +96,14 @@ const HeroSection = () => {
           </div>
         </div>
       </WrapperContent>
-      <div className="w-full bg-heros-gate bg-no-repeat bg-cover h-full bg-center absolute z-0 md:z-10 top-0 flex items-end" >
-        <Image src="/hero-shadow.png" alt='image' width={100} height={100} className="w-full h-1/2"/>
+      <div className="w-full bg-heros-gate bg-no-repeat bg-cover h-full bg-center absolute z-0 md:z-10 top-0 flex items-end">
+        <Image
+          src="/hero-shadow.png"
+          alt="image"
+          width={100}
+          height={100}
+          className="w-full h-1/2"
+        />
       </div>
     </section>
   );
