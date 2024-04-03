@@ -14,7 +14,7 @@ export default function DigitalSocial() {
       link: "http://lostclubtoys.com",
     },
     {
-      title: "Digital Matrix",
+      title: "Twin Matrix",
       description: "TwinMatrix is a one-stop spatial computing platform that merges their data, saves time, and offers a quick time-to-deployment.",
       imageUrl: "/twinmatrix_background.jpg",
       link: "https://www.twinmatrix.net/",
