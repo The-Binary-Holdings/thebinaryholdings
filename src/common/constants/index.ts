@@ -11,15 +11,17 @@ export const PRODUCTS: IProduct[] = [
     description:
       "Elevating online interactions with cutting-edge social platforms.",
     link: "/digital-social",
+    
+  },
+
+  {
+    name: "Digital Enterprise",
+    description: "Driving business growth through digital innovation.",
+    link: "digital-enterprise",
   },
   {
     name: "Digital Finance",
     description: "Streamlining finance with secure, digital-first solutions.",
-    link: "#",
-  },
-  {
-    name: "Digital Enterprise",
-    description: "Driving business growth through digital innovation.",
     link: "#",
   },
   {
@@ -280,12 +282,13 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         name: "Digital Social",
         href: "/digital-social",
       },
-      {
-        name: "Digital Finance",
-        href: "#",
-      },
+
       {
         name: "Digital Enterprise",
+        href: "digital-enterprise",
+      },
+      {
+        name: "Digital Finance",
         href: "#",
       },
 
