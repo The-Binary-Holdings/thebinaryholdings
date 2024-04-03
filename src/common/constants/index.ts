@@ -93,7 +93,7 @@ export const BUSINESSES: IBusiness[] = [
   {
     name : "Digital Social",
     description : "Elevating online interactions with cutting-edge social platforms.",
-    image_url: "/fando-01.svg",
+    image_url: "/Fando-img.png",
     logo: "/logos/fando-blacklogo.png",
     text: "Explore More"
   },
