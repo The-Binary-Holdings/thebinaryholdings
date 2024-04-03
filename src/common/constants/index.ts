@@ -196,16 +196,16 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     subItems: [
       {
         name: "Home",
-        href: "#",
+        href: "/",
       },
-      {
-        name: "Articles",
-        href: "#",
-      },
-      {
-        name: "Products",
-        href: "#",
-      },
+      // {
+      //   name: "Articles",
+      //   href: "#",
+      // },
+      // {
+      //   name: "Products",
+      //   href: "#",
+      // },
     ],
   },
   {
@@ -226,7 +226,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     ],
   },
   {
-    title: "Build",
+    title: "Learn",
     subItems: [
       {
         name: "Documentation",

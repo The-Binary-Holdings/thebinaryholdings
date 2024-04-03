@@ -33,8 +33,8 @@ let tabs = [
     tab: <ProductTab />,
   },
   {
-    id: "BUILD",
-    label: "BUILD",
+    id: "LEARN",
+    label: "LEARN",
     tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
   },
   {
@@ -42,11 +42,11 @@ let tabs = [
     label: "About us",
     tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
   },
-  {
-    id: "BNRYLAB",
-    label: "BNRY LAB",
-    tab: <ItemTab items={LAYOUT_ITEMS[0]} />,
-  },
+  // {
+  //   id: "BNRYLAB",
+  //   label: "BNRY LAB",
+  //   tab: <ItemTab items={LAYOUT_ITEMS[0]} />,
+  // },
 ];
 
 const NavbarMenuContent = () => {
