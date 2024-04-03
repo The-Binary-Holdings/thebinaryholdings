@@ -73,7 +73,7 @@ export const BUSINESSES: IBusiness[] = [
     name: "BNRY Token",
     description:
       "Discover the BNRY Token: The First Telco Token Revolutionizing the Journey from Web2 to Web3!",
-    link: "#",
+    link: "https://bnrytoken.com",
     image_url: "/BNRYLab-img.png",
     logo: "/logos/BNRY-blacklogo.png",
   },
@@ -81,7 +81,7 @@ export const BUSINESSES: IBusiness[] = [
     name: "Fando",
     description:
       "The Ultimate Web3 Loyalty and Entertainment App, Crafted for Effortless Web3 Rewards!",
-    link: "#",
+    link: "https://fando.ai",
     image_url: "/Fando-img.png",
     logo: "/logos/fando-blacklogo.png",
   },
@@ -89,7 +89,7 @@ export const BUSINESSES: IBusiness[] = [
     name: "The lost club toys",
     description:
       "Discover the Teddy Sticker, Your Key to Move2Earn - A Sticker That Transforms into an Investment!",
-    link: "#",
+    link: "https://lostclubtoys.com/",
     image_url: "/toyClub-img.png",
     logo: "/logos/lostClubToy-blacklogo.png",
   },
@@ -213,15 +213,15 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     subItems: [
       {
         name: "BNRY",
-        href: "#",
+        href: "https://bnrytoken.com",
       },
       {
         name: "Fando",
-        href: "#",
+        href: "https://fando.ai",
       },
       {
         name: "Lost Club Toys",
-        href: "#",
+        href: "https://lostclubtoys.com/",
       },
     ],
   },

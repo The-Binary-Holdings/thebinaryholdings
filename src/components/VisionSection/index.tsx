@@ -28,7 +28,7 @@ const VisionSection = () => {
             </VariantsComponent>
             <VariantsComponent direction="x" startDistance={-100}>
               <Button className="w-full md:w-fit px-16 py-8 bg-white font-semibold ">
-                CLICK TO EXPLORE
+                Coming Soon
               </Button>
             </VariantsComponent>
           </div>
