@@ -12,8 +12,8 @@ const Footer = () => {
         <div className="w-full pt-32 border-t-2 flex flex-col">
           <div className="flex flex-col md:flex-row md:space-x-40 space-y-10 md:space-y-0 w-full text-white">
             <div className="md:w-1/2">
-              <div className="flex flex-col space-y-10 md:w-2/3">
-                <h1 className="text-5xl md:text-6xl font-medium">
+              {/* <div className="flex flex-col space-y-10 md:w-2/3"> */}
+                {/* <h1 className="text-5xl md:text-6xl font-medium">
                   Subscribe to our newsletter
                 </h1>
                 <span className="flex space-x-5">
@@ -26,12 +26,12 @@ const Footer = () => {
                   <Button className="bg-white aspect-square h-14 w-14">
                     <GoArrowRight />
                   </Button>
-                </span>
-                <span className="hidden md:flex flex-col pt-20">
+                </span> */}
+                <span className="hidden md:flex flex-col">
                   <p className="uppercase text-white/60 text-sm">Contact us</p>
                   <h2 className="text-3xl">support@thebinaryholdings.com</h2>
                 </span>
-              </div>
+              {/* </div> */}
             </div>
             <div className="grid grid-cols-2 grid-rows-2 md:w-1/2 gap-5 md:gap-10">
               {LAYOUT_ITEMS.map((item, index) => {

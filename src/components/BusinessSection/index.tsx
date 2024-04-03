@@ -17,7 +17,7 @@ const BusinessSection = () => {
                 Our Businesses
               </h1>
             </VariantsComponent>
-            <Link href="#" className="text-white uppercase underline font-medium hidden md:inline-block">view all</Link>
+            {/* <Link href="#" className="text-white uppercase underline font-medium hidden md:inline-block">view all</Link> */}
           </div>
           <Carousel>
             {BUSINESSES.map((item, index) => {
@@ -30,7 +30,7 @@ const BusinessSection = () => {
               );
             })}
           </Carousel>
-          <Link href="#" className="text-white uppercase underline font-medium md:hidden self-center">view all</Link>
+          {/* <Link href="#" className="text-white uppercase underline font-medium md:hidden self-center">view all</Link> */}
         </div>
       </WrapperContent>
     </section>

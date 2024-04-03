@@ -76,7 +76,7 @@ export const PARTNERS: IPartner[] = [
   },
   {
     name: "fando",
-    image: "/logos/fando-01.svg",
+    image: "/fando-01.svg",
   }
 ]
 
@@ -93,7 +93,7 @@ export const BUSINESSES: IBusiness[] = [
   {
     name : "Digital Social",
     description : "Elevating online interactions with cutting-edge social platforms.",
-    image_url: "/Fando-img.png",
+    image_url: "/fando-01.svg",
     logo: "/logos/fando-blacklogo.png",
     text: "Explore More"
   },
