@@ -239,20 +239,20 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     subItems: [
       {
         name: "Team",
-        href: "#",
+        href: "/team",
       },
       {
         name: "Get in touch",
-        href: "#",
+        href: "mailto:support@thebinaryholdings.com",
       },
-      {
-        name: "Terms of use",
-        href: "#",
-      },
-      {
-        name: "Privacy Policy",
-        href: "#",
-      },
+      // {
+      //   name: "Terms of use",
+      //   href: "#",
+      // },
+      // {
+      //   name: "Privacy Policy",
+      //   href: "#",
+      // },
     ],
   },
 ];

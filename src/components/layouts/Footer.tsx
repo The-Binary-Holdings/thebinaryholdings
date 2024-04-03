@@ -29,7 +29,7 @@ const Footer = () => {
                 </span>
                 <span className="hidden md:flex flex-col pt-20">
                   <p className="uppercase text-white/60 text-sm">Contact us</p>
-                  <h2 className="text-3xl">Support@thebinaryholdings.com</h2>
+                  <h2 className="text-3xl">support@thebinaryholdings.com</h2>
                 </span>
               </div>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
             <span className="md:hidden flex flex-col">
               <p className="uppercase text-white/60 text-sm">Contact us</p>
-              <h2 className="text-2xl">Support@thebinaryholdings.com</h2>
+              <h2 className="text-2xl">support@thebinaryholdings.com</h2>
             </span>
           </div>
           <div className="w-full py-16 flex flex-col md:flex-row justify-between items-start md:items-center space-y-10 md:space-y-0">
