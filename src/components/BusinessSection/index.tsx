@@ -25,7 +25,7 @@ const BusinessSection = () => {
                 <BusinessCard
                   key={index}
                   data={item}
-                  className="text-white bg-black w-[80vw] md:w-[55vw] h-auto md:h-[55vh] hover:border-white transition-border duration-1000 hover:shadow-[0_4px_55px_20px_#AD00FF40] transition-shadow"
+                  className="text-white bg-black w-[80vw] md:w-[55vw] h-auto md:min-h-[55vh] hover:border-white transition-border duration-1000 hover:shadow-[0_4px_55px_20px_#AD00FF40] transition-shadow"
                 />
               );
             })}
