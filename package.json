@@ -11,6 +11,7 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.10",
     "@smakss/react-scroll-direction": "^4.0.4",
+    "@vercel/analytics": "^1.2.2",
     "framer-motion": "^11.0.24",
     "next": "14.1.4",
     "react": "^18",
