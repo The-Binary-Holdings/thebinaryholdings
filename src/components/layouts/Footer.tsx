@@ -1,20 +1,14 @@
 import React from "react";
 import WrapperContent from "../WrapperContent";
 import {
-  Button,
-  Input,
   Image,
   Link,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  useDisclosure,
 } from "@nextui-org/react";
 import { LAYOUT_ITEMS, SOCIALS, CERTIFICATES, IBusiness } from "@/common/constants";
 import GetIcon from "@/common/icons";
 import { BUSINESSES } from "@/common/constants";
 import { ProviderContext } from "../Provider";
+import EmailFormModal from "../EmailFormModal";
 
 const Footer = () => {
   const { onOpen, setData } = React.useContext(ProviderContext);
@@ -66,6 +60,7 @@ const Footer = () => {
                       {item.title}
                     </h1>
                     {item.subItems.map((subItem, index) => {
+                      if(subItem.href == "openModal") return (<EmailFormModal className="cursor-pointer" key={index}>{subItem.name}</EmailFormModal>)
                       return (
                         <a
                           key={index}

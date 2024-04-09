@@ -327,7 +327,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       },
       {
         name: "Get in touch",
-        href: "mailto:support@thebinaryholdings.com",
+        href: "openModal",
       },
       // {
       //   name: "Terms of use",
@@ -364,6 +364,57 @@ export const SOCIALS: ISocial[] = [
     link: "https://www.youtube.com/@TheBinaryHoldings",
   },
 ];
+
+export const BACKERS = [
+  {
+    name: "IBC",
+    image: "/logos/IBC-logo.png",
+  },
+  {
+    name: "Mana Partners",
+    image: "/logos/ManaPartners-logo.png",
+  },
+  {
+    name: "SOSV",
+    image: "/logos/SOSV-logo.png",
+  },
+  {
+    name: "Plug and Play",
+    image: "/logos/PlugAndPlay-logo.png",
+  },
+  {
+    name: "Dutch Sport Tech Fund",
+    image: "/logos/DutchSportTechFund-logo.png",
+  },
+  {
+    name: "Miti Ventures",
+    image: "/logos/MitiVentures-logo.png",
+  },
+  {
+    name: "DIFC Innovation Hub",
+    image: "/logos/DIFCInnovationHub-logo.png",
+  },
+  {
+    name: "Point Carbon Zero",
+    image: "/logos/PointCarbonZero-logo.png",
+  },
+  {
+    name: "Luna Capital",
+    image: "/logos/LunaCapital-logo.png",
+  },
+  {
+    name: "Orbit Startups",
+    image: "/logos/OrbitStartups-logo.png",
+  },
+  {
+    name: "Private Office of His Highness Sheikh Hamdan Bin Mohammed Al Nahyan",
+    image: "/logos/PrivateOffice-logo.png",
+  },
+  {
+    name: "Hustle Fund",
+    image: "/logos/HustleFund-logo.png",
+  },
+]
 
 export interface ICertificate {
   name: string;
