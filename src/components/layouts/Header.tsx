@@ -7,6 +7,7 @@ import {
   NavbarMenu,
   Link,
   Button,
+  NavbarItem,
 } from "@nextui-org/react";
 import Image from "next/image";
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
@@ -43,7 +44,7 @@ export default function Header() {
           <NavbarContent>
             <a
               href="https://app.v2.fjordfoundry.com/pools/0x0747dDa359C8b3D9145695aE8271A6a0EB0d2217"
-              className="w-full h-full bg-black text-white flex items-center justify-center md:px-16 py-10"
+              className="w-full h-full bg-black text-white flex items-center justify-center md:px-16 py-8"
             >
               $BNRY Presale 1 is live!{" "}
               <LiaTimesSolid
@@ -67,13 +68,15 @@ export default function Header() {
               />
             </Link>
           </NavbarBrand>
-          <div className="flex h-3/4 space-x-4">
+          <div className="flex h-3/4 space-x-10 items-center text-white">
             {/* <Button className="text-white group bg-transparent border px-12 hover:bg-white hover:text-black h-full hidden md:block">
             <p className="h group-hover:-translate-x-4 transition-transform relative flex items-center">
               START A PROJECT
               <IoIosArrowRoundForward className="absolute top-[-2px] -right-6 bottom-0 text-2xl opacity-0 transition-opacity group-hover:opacity-100"/>
             </p>
           </Button> */}
+            <NavbarItem><Link href="https://docs.thebinaryholdings.com/" className="text-white">Documentation</Link></NavbarItem>
+            <NavbarItem><Link href="/team" className="text-white">Team</Link></NavbarItem>
             <NavbarMenuToggle
               className="border px-6 text-white"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}

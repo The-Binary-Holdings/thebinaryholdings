@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Layout from "@/components/layouts/Layout";
-import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title:
@@ -15,12 +14,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <Layout>
-      <body>
-        {children}
-        <Analytics />
-      </body>
-    </Layout>
-  );
+  return <Layout>{children}</Layout>;
 }
