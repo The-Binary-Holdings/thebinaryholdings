@@ -52,12 +52,13 @@ export default function Header() {
           <NavbarMenuToggle
             className="border px-6 text-white"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            id="menu-toggle"
           />
         </div>
       </NavbarContent>
 
       <NavbarMenu className="bg-black px-0">
-        <NavbarMenuContent />
+        <NavbarMenuContent/>
       </NavbarMenu>
     </Navbar>
   );

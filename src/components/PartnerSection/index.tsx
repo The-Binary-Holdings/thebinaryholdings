@@ -7,11 +7,11 @@ import { PARTNERS } from "@/common/constants";
 
 const PartnerSection = () => {
   return (
-    <section id="partner" className="w-full py-16 md:py-32">
+    <section id="partner" className="w-full py-16 md:pt-16 lg:pt-32">
       <WrapperContent className="hidden md:block">
         <div className="w-full bg-partners rounded-3xl bg-no-repeat bg-cover bg-center">
           <div className="bg-black/50 flex flex-col w-full items-center text-center py-40">
-            <p className="uppercase text-white text-sm">partners</p>
+            <p className="uppercase text-white text-sm">partners &  Backers</p>
             <VariantsComponent
               direction="y"
               startDistance={-100}

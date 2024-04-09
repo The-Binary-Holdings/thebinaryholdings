@@ -23,11 +23,6 @@ const monumentExtended = localFont({
 
 let tabs = [
   {
-    id: "navigation",
-    label: "navigation",
-    tab: <ItemTab items={LAYOUT_ITEMS[0]} />,
-  },
-  {
     id: "BUSINESS",
     label: "BUSINESS",
     tab: <ProductTab />,
@@ -35,12 +30,12 @@ let tabs = [
   {
     id: "LEARN",
     label: "LEARN",
-    tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
+    tab: <ItemTab items={LAYOUT_ITEMS[1]} />,
   },
   {
     id: "ABOUTUS",
     label: "About us",
-    tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
+    tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
   },
   // {
   //   id: "BNRYLAB",
@@ -56,7 +51,7 @@ const NavbarMenuContent = () => {
     <div className="w-full h-full text-white">
       <WrapperContent className="h-full py-16">
         <div className="w-full h-full flex">
-          <div className="w-1/2 border-e h-full pe-32">
+          <div className="w-1/2 border-e h-full md:pe-8 lg:pe-16 xl:pe-32">
             {/* tabs */}
             <div className="grid grid-cols-1 h-full">
               {tabs.map((tab) => (
@@ -65,7 +60,7 @@ const NavbarMenuContent = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`${
                     activeTab === tab.id ? "" : "hover:text-white/60"
-                  } relative px-3 py-1.5 text-7xl font-medium text-white cursor-pointer transition focus-visible:outline-2 uppercase flex items-center last:border-b-0 border-b ${
+                  } relative px-3 py-1.5 md:text-3xl lg:text-5xl xl:text-7xl font-medium text-white cursor-pointer transition focus-visible:outline-2 uppercase flex items-center last:border-b-0 border-b ${
                     monumentExtended.className
                   }`}
                   style={{
@@ -90,7 +85,7 @@ const NavbarMenuContent = () => {
               ))}
             </div>
           </div>
-          <div className="w-1/2 border-s h-full ps-32">
+          <div className="w-1/2 border-s h-full md:ps-8 lg:ps-16 xl:ps-32">
             {tabs.find((tab) => tab.id === activeTab)?.tab}
           </div>
         </div>

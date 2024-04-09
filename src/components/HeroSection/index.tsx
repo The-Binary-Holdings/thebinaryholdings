@@ -32,7 +32,7 @@ const HeroSection = () => {
       {/* <Image src="/gate.svg" alt='image' width={100} height={100} className='fixed w-full bg-cover'/> */}
       <WrapperContent className="flex flex-col justify-evenly overflow-hidden h-full z-20 md:z-0 bg-black/50 md:bg-transparent relative md:static">
         <div
-          className={`hidden sm:flex flex-col text-[4.5rem] font-normal leading-none w-full text-highlight ${monumentExtended.className} translate-y-[1000px]`}
+          className={`hidden sm:flex flex-col md:text-[3.5rem] xl:text-[4.5rem] md:z-20 xl:z-0 font-normal leading-none w-full text-highlight ${monumentExtended.className} translate-y-[1000px]`}
         >
           <ParallaxText distance={1000}>
             <h1 className="tracking-tight">SEAMLESSLY</h1>
@@ -81,7 +81,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div
-            className={`hidden sm:flex text-[4.5rem] text-end font-normal order-2 leading-none text-highlight flex-col items-end -translate-y-[1000px] ${monumentExtended.className}`}
+            className={`hidden sm:flex md:text-[3.5rem] xl:text-[4.5rem] md:z-20 xl:z-0 text-end font-normal order-2 leading-none text-highlight flex-col items-end -translate-y-[1000px] ${monumentExtended.className}`}
           >
             <ParallaxText distance={-1000}>
               <h1 className="tracking-tight">SECURELY</h1>

@@ -1,6 +1,8 @@
 "use client";
-import { useState, useEffect, useRef, ReactNode } from "react";
+import { useState, useEffect, useRef, ReactNode, useContext } from "react";
 import clsx from "clsx";
+import { ProviderContext } from "./Provider";
+import {BUSINESSES} from "@/common/constants";
 
 const Carousel = ({
   children,
@@ -14,6 +16,12 @@ const Carousel = ({
   const [itemWidth, setItemWidth] = useState(0);
   const [startX, setStartX] = useState(0);
   const carousel = useRef<HTMLDivElement>(null);
+  const { data } = useContext(ProviderContext);
+
+  useEffect(() => {
+    let index = BUSINESSES.findIndex((business) => business.name === data.name);
+    carousel.current!.scrollLeft = itemWidth * index;
+  }, [data, itemWidth])
 
   const dragStart = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
@@ -47,7 +55,7 @@ const Carousel = ({
     <div className={clsx("relative wrapper transition-[height] ease-in-out md:px-0 w-full", className)}>
       <div
         className={clsx(
-          "grid grid-flow-col overflow-x-auto scroll-smooth no-scrollbar gap-x-4 md:gap-x-10 py-14 md:py-20 px-4 md:px-16 w-full cursor-grab overflow-y-hidden",
+          "grid grid-flow-col overflow-x-auto scroll-smooth no-scrollbar gap-x-4 md:gap-x-10 py-14 md:py-20 px-4 lg:px-16 w-full cursor-grab overflow-y-hidden",
           isDragging && "cursor-grabbing"
         )}
         ref={carousel}

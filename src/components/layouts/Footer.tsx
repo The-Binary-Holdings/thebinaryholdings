@@ -1,19 +1,39 @@
 import React from "react";
 import WrapperContent from "../WrapperContent";
-import { Button, Input, Image } from "@nextui-org/react";
-import { GoArrowRight } from "react-icons/go";
-import { LAYOUT_ITEMS, SOCIALS, CERTIFICATES } from "@/common/constants";
+import {
+  Button,
+  Input,
+  Image,
+  Link,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  useDisclosure,
+} from "@nextui-org/react";
+import { LAYOUT_ITEMS, SOCIALS, CERTIFICATES, IBusiness } from "@/common/constants";
 import GetIcon from "@/common/icons";
+import { BUSINESSES } from "@/common/constants";
+import { ProviderContext } from "../Provider";
 
 const Footer = () => {
+  const { onOpen, setData } = React.useContext(ProviderContext);
+
+  const handleClick = (data : IBusiness) => {
+    setData(data);
+    setTimeout(() => {
+      onOpen();
+    }, 1000)
+  }
+
   return (
     <footer className="w-full">
       <WrapperContent>
-        <div className="w-full pt-32 border-t-2 flex flex-col">
-          <div className="flex flex-col md:flex-row md:space-x-40 space-y-10 md:space-y-0 w-full text-white">
-            <div className="md:w-1/2">
+        <div className="w-full md:pt-16 xl:pt-32 flex flex-col">
+          <div className="flex flex-col xl:flex-row xl:space-x-40 space-y-10 md:space-y-0 w-full text-white">
+            <div className="xl:w-1/2">
               {/* <div className="flex flex-col space-y-10 md:w-2/3"> */}
-                {/* <h1 className="text-5xl md:text-6xl font-medium">
+              {/* <h1 className="text-5xl md:text-6xl font-medium">
                   Subscribe to our newsletter
                 </h1>
                 <span className="flex space-x-5">
@@ -27,13 +47,18 @@ const Footer = () => {
                     <GoArrowRight />
                   </Button>
                 </span> */}
-                <span className="hidden md:flex flex-col">
-                  <p className="uppercase text-white/60 text-sm">Contact us</p>
-                  <h2 className="text-3xl">support@thebinaryholdings.com</h2>
-                </span>
+              <span className="hidden xl:flex flex-col">
+                <p className="uppercase text-white/60 text-sm">Contact us</p>
+                <Link
+                  className="text-3xl text-white cursor-pointer"
+                  href="mailto:support@thebinaryholdings.com"
+                >
+                  support@thebinaryholdings.com
+                </Link>
+              </span>
               {/* </div> */}
             </div>
-            <div className="grid grid-cols-2 grid-rows-2 md:w-1/2 gap-5 md:gap-10">
+            <div className="grid grid-cols-2 grid-rows-2 xl:w-1/2 gap-5 md:gap-10">
               {LAYOUT_ITEMS.map((item, index) => {
                 return (
                   <div key={index} className="flex flex-col space-y-5">
@@ -42,7 +67,23 @@ const Footer = () => {
                     </h1>
                     {item.subItems.map((subItem, index) => {
                       return (
-                        <a key={index} href={subItem.href}>
+                        <a
+                          key={index}
+                          href={
+                            item.title.toLowerCase() === "business"
+                              ? "#business"
+                              : subItem.href
+                          }
+                          onClick={(e) => {
+                            if (item.title.toLowerCase() === "business") {
+                              e.preventDefault();
+                              const data = BUSINESSES.find((business) => business.name === subItem.name) || BUSINESSES[0];
+                              const element = document.getElementById("business");
+                              element?.scrollIntoView({ behavior: "smooth" });
+                              handleClick(data);
+                            }
+                          }}
+                        >
                           {subItem.name}
                         </a>
                       );
@@ -51,9 +92,14 @@ const Footer = () => {
                 );
               })}
             </div>
-            <span className="md:hidden flex flex-col">
+            <span className="xl:hidden flex flex-col">
               <p className="uppercase text-white/60 text-sm">Contact us</p>
-              <h2 className="text-2xl">support@thebinaryholdings.com</h2>
+              <Link
+                className="text-2xl text-white cursor-pointer"
+                href="mailto:support@thebinaryholdings.com"
+              >
+                support@thebinaryholdings.com
+              </Link>
             </span>
           </div>
           <div className="w-full py-16 flex flex-col md:flex-row justify-between items-start md:items-center space-y-10 md:space-y-0">
