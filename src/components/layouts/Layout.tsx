@@ -5,6 +5,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Provider from "../Provider";
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <Footer />
           </Provider>
         </NextUIProvider>
+        <Analytics />
       </body>
     </html>
   );
