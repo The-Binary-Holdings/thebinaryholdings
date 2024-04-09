@@ -7,6 +7,7 @@ import { PARTNERS, BACKERS } from "@/common/constants";
 
 const PartnerSection = () => {
   return (
+    
     <section id="partner" className="w-full py-16 md:pt-16 lg:pt-32">
       <WrapperContent className="hidden md:block">
         <div className="w-full bg-partners rounded-3xl bg-no-repeat bg-cover bg-center">
@@ -54,21 +55,7 @@ const PartnerSection = () => {
           )
         })}
       </div>
-      <Marquee
-        className="w-full mt-10 grid grid-cols-5 border-y-2 border-white overflow-y-hidden"
-        autoFill
-      >
-        {PARTNERS.map((partner, index) => (
-          <div key={index} className="flex justify-center p-16">
-            <Image
-              src={partner.image}
-              alt="partner-logo"
-              removeWrapper
-              className="w-full h-[60px]"
-            />
-          </div>
-        ))}
-      </Marquee>
+      
     </section>
   );
 };

@@ -85,12 +85,12 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/mario-nawfal/",
     },
 
-    {
-      name: "Dave Shin",
-      role: "BD @ Immutable",
-      imageUrl: "/team/dave_shin.jpg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/shin-novation/",
-    },
+    // {
+    //   name: "Dave Shin",
+    //   role: "BD @ Immutable",
+    //   imageUrl: "/team/dave_shin.jpg", // Replace with actual path to image
+    //   linkedinUrl: "https://www.linkedin.com/in/shin-novation/",
+    // },
     {
       name: "David Ng",
       role: "Serial Entrepreneur & Investor",
@@ -103,30 +103,30 @@ const Team: NextPage = () => {
       imageUrl: "/team/male_placeholder.png", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/henry-ondo-b18a5765/",
     },
-    {
-      name: "Daniel Yang",
-      role: "Head of Treasury - Algorand Foundation",
-      imageUrl: "/team/daniel_yang.jpeg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/daniel-yang-b7989217/",
-    },
-    {
-      name: "Kai Kono",
-      role: "CEO at Zodia Custody",
-      imageUrl: "/team/kai_kono.jpeg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/kai-kono-86542b1b",
-    },
+    // {
+    //   name: "Daniel Yang",
+    //   role: "Head of Treasury - Algorand Foundation",
+    //   imageUrl: "/team/daniel_yang.jpeg", // Replace with actual path to image
+    //   linkedinUrl: "https://www.linkedin.com/in/daniel-yang-b7989217/",
+    // },
+    // {
+    //   name: "Kai Kono",
+    //   role: "CEO at Zodia Custody",
+    //   imageUrl: "/team/kai_kono.jpeg", // Replace with actual path to image
+    //   linkedinUrl: "https://www.linkedin.com/in/kai-kono-86542b1b",
+    // },
     {
       name: "Nathnael Seat",
       role: "Investor at Ninepine Technologies",
       imageUrl: "/team/nathanael_seet.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/nathanael-seet-9726371aa",
     },
-    {
-      name: "Sky Wee",
-      role: "Crypto & Gaming Influencer",
-      imageUrl: "/team/sky_wee.jpeg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/skywee97",
-    },
+    // {
+    //   name: "Sky Wee",
+    //   role: "Crypto & Gaming Influencer",
+    //   imageUrl: "/team/sky_wee.jpeg", // Replace with actual path to image
+    //   linkedinUrl: "https://www.linkedin.com/in/skywee97",
+    // },
     {
       name: "Nikita Sachdev",
       role: "CEO, Luna Media",
@@ -167,7 +167,7 @@ const Team: NextPage = () => {
       <div className="pt-16 md:px-8">
         <main className="bg-black text-white p-10">
           <section>
-            <h2 className="text-4xl font-bold mb-10">Our Partners</h2>
+            <h2 className="text-4xl font-bold mb-10">Our Advisors</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {partnerMembers.map((member, index) => (
                 <TeamMember key={index} {...member} />
