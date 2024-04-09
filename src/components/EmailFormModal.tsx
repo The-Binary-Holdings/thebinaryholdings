@@ -7,8 +7,9 @@ import {
   useDisclosure,
   Input,
   Textarea,
-  Button
+  Button,
 } from "@nextui-org/react";
+import axios from "axios";
 
 const EmailFormModal = ({
   children,
@@ -18,6 +19,34 @@ const EmailFormModal = ({
   className?: string;
 }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [form, setForm] = React.useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [errorMessage, setErrorMessage] = React.useState("");
+
+  const handleSubmit = async () => {
+    if(!form.firstName || !form.lastName || !form.email || !form.subject || !form.message) return setErrorMessage("Please fill all fields");
+    const data = {
+      firstName: form.firstName,
+      lastName: form.lastName,
+      email: form.email,
+      subject: form.subject,
+      message: form.message,
+    };
+    try {
+      const response = await axios.post(
+        "https://www.thebinaryholdings.com/api/send",
+        data
+      );
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <div>
       <span onClick={onOpen} className={className}>
@@ -48,12 +77,18 @@ const EmailFormModal = ({
                       label="First name"
                       placeholder="Enter your first name here"
                       labelPlacement="outside"
+                      onChange={(e) => {
+                        setForm({ ...form, firstName: e.target.value });
+                      }}
                     />
                     <Input
                       type="text"
                       label="Last name"
                       placeholder="Enter your last name here"
                       labelPlacement="outside"
+                      onChange={(e) => {
+                        setForm({ ...form, lastName: e.target.value });
+                      }}
                     />
                   </span>
                   <Input
@@ -61,20 +96,31 @@ const EmailFormModal = ({
                     label="Email"
                     placeholder="you@example.com"
                     labelPlacement="outside"
+                    onChange={(e) => {
+                      setForm({ ...form, email: e.target.value });
+                    }}
                   />
                   <Input
                     type="text"
                     label="Subject"
                     placeholder="Enter subject here"
                     labelPlacement="outside"
+                    onChange={(e) => {
+                      setForm({ ...form, subject: e.target.value });
+                    }}
                   />
                   <Textarea
                     label="Description"
                     labelPlacement="outside"
                     placeholder="Enter your message"
                     className="max-w-full !mt-4"
+                    onChange={(e) => {
+                      setForm({ ...form, message: e.target.value });
+                    }}
                   />
-                  <Button className="w-fit px-16 bg-white text-black">Submit</Button>
+                  <Button className="w-fit px-16 bg-white text-black" onClick={handleSubmit}>
+                    Submit
+                  </Button>
                 </div>
               </ModalBody>
             </>
