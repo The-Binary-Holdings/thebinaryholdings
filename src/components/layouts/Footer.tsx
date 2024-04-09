@@ -105,7 +105,7 @@ const Footer = () => {
               height={20}
               radius="none"
             />
-            <span className="flex md:space-x-10 flex-wrap text-2xl">
+            <span className="flex md:space-x-5 flex-wrap text-2xl">
               {SOCIALS.map((social, index) => {
                 return (
                   <a
