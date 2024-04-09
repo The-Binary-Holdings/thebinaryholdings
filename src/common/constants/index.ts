@@ -96,6 +96,7 @@ export interface IBusiness {
   image_url: string;
   logo: string;
   text: string;
+  detail: string;
 }
 
 export const BUSINESSES: IBusiness[] = [
@@ -106,6 +107,7 @@ export const BUSINESSES: IBusiness[] = [
     image_url: "/Fando-img.png",
     logo: "/logos/fando-blacklogo.png",
     text: "Explore More",
+    detail: "At the heart of Binary Holdings, the Digital Social vertical aims to redefine how we connect, share, and engage within digital spaces. This initiative is dedicated to building platforms and tools that foster meaningful interactions, prioritize user privacy, and create inclusive communities. By leveraging cutting-edge technology, Digital Social envisions a world where digital interactions are as rich and rewarding as face-to-face connections, empowering users to form deeper relationships and engage with content that truly matters to them."
   },
   {
     name: "The Binary Network",
@@ -114,6 +116,7 @@ export const BUSINESSES: IBusiness[] = [
     image_url: "/BNRYLab-img.png",
     logo: "/logos/BNRY-blacklogo.png",
     text: "Coming Soon",
+    detail: "At its core, The Binary Network is Binary Holdings’ initiative to weave a fabric of connectivity across all its verticals, creating a synergistic ecosystem that amplifies the impact of each. This network serves as a collaborative platform where ideas, resources, and opportunities intersect, facilitating innovation and growth. Through The Binary Network, members can access a wealth of knowledge, partnerships, and technologies, driving forward the vision of Binary Holdings by leveraging the collective strength of its diverse verticals."
   },
   {
     name: "Digital Finance",
@@ -121,6 +124,7 @@ export const BUSINESSES: IBusiness[] = [
     image_url: "/digital_finance.png",
     logo: "/digital_finance.png",
     text: "Coming Soon",
+    detail: "The Digital Finance vertical of Binary Holdings is committed to transforming the financial landscape through technology. With a focus on accessibility, security, and innovation, this vertical seeks to democratize financial services, making them available to everyone, everywhere. Whether it's through blockchain technology, digital banking solutions, or fintech innovations, Digital Finance is dedicated to creating a more inclusive financial ecosystem that empowers individuals and businesses to manage, grow, and secure their financial futures with confidence."
   },
   {
     name: "Digital Enterprise",
@@ -128,6 +132,7 @@ export const BUSINESSES: IBusiness[] = [
     image_url: "/digital_enterprise.png",
     logo: "/digital_enterprise.png",
     text: "Coming Soon",
+    detail: "Binary Holdings' Digital Enterprise vertical focuses on revolutionizing how businesses operate, compete, and grow in the digital age. By providing innovative solutions that streamline operations, enhance productivity, and drive digital transformation, this vertical aims to be the cornerstone of future enterprises. From advanced analytics and AI-driven insights to customizable digital platforms, Digital Enterprise equips businesses of all sizes with the tools they need to thrive in an ever-evolving market landscape."
   },
   {
     name: "Incubator and Accelerator",
@@ -135,6 +140,7 @@ export const BUSINESSES: IBusiness[] = [
     image_url: "/incubator_and_accelerator.png",
     logo: "/incubator_and_accelerator.png",
     text: "Coming Soon",
+    detail: "Binary Holdings' Incubator and Accelerator vertical serves as a catalyst for growth and innovation in the startup ecosystem. By providing early-stage companies with the resources, mentorship, and network they need to succeed, this vertical aims to nurture groundbreaking ideas and turn them into scalable businesses. With a focus on disruptive technologies and market-driven solutions, the Incubator and Accelerator program is designed to propel startups to their full potential, fostering a new generation of entrepreneurs who are ready to change the world."
   },
 
   // {
@@ -258,23 +264,23 @@ export interface ILayoutItem {
 }
 
 export const LAYOUT_ITEMS: ILayoutItem[] = [
-  {
-    title: "navigation",
-    subItems: [
-      {
-        name: "Home",
-        href: "/",
-      },
-      // {
-      //   name: "Articles",
-      //   href: "#",
-      // },
-      // {
-      //   name: "Products",
-      //   href: "#",
-      // },
-    ],
-  },
+  // {
+  //   title: "navigation",
+  //   subItems: [
+  //     {
+  //       name: "Home",
+  //       href: "/",
+  //     },
+  //     {
+  //       name: "Articles",
+  //       href: "#",
+  //     },
+  //     {
+  //       name: "Products",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
   {
     title: "Business",
     subItems: [

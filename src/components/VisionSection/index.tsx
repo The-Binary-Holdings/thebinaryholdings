@@ -7,7 +7,7 @@ const VisionSection = () => {
   return (
     <section className="w-full text-white md:mt-32 py-16 md:py-32">
       <WrapperContent>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-44 gap-y-20">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:gap-x-44 gap-y-20">
           <div className="flex flex-col space-y-10 md:p-10 justify-center">
             <VariantsComponent direction="x" startDistance={-100}>
               <p className="text-sm text-[#AD00FF]">VISION</p>
@@ -17,17 +17,21 @@ const VisionSection = () => {
             </VariantsComponent>
             <VariantsComponent direction="x" startDistance={-100}>
               <p className="">
-                The Binary Holdings is focused on assisting our
-                telecommunication partners to to solve challenges across user
-                activation, user engagement and retention, and sustainable
-                incremental revenue per user.
+                The Binary Holdings (TBH) aims to dismantle the existing
+                barriers to entry for telecommunication companies looking to
+                explore and integrate Web3 functionalities. By providing an
+                infrastructure that supports high transaction throughput at
+                significantly reduced costs, TBH is not just facilitating a
+                smoother transition to Web3 for telcos but is also unlocking a
+                myriad of opportunities for innovation, enhanced user activation
+                and engagement, enhanced security, and decentralized services.
               </p>
             </VariantsComponent>
-            <VariantsComponent direction="x" startDistance={-100}>
+            {/* <VariantsComponent direction="x" startDistance={-100}>
               <Button className="w-full md:w-fit px-16 py-8 bg-white font-semibold ">
                 Coming Soon
               </Button>
-            </VariantsComponent>
+            </VariantsComponent> */}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VariantsComponent

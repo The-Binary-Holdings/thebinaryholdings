@@ -14,7 +14,7 @@ const ItemTab = ({ items }: { items: ILayoutItem }) => {
           <VariantsComponent direction="x" key={index} startDistance={-100} delay={index * 0.2} isOnce={false}>
             <Link
               href={subItem.href}
-              className="text-white text-5xl cursor-pointer"
+              className="text-white md:text-3xl lg:text-5xl cursor-pointer"
             >
               {subItem.name}
             </Link>

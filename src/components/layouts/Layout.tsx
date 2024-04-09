@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Provider from "../Provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,9 +15,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header />
-        <NextUIProvider>{children}</NextUIProvider>
-        <Footer />
+        <NextUIProvider>
+          <Provider>
+            <Header />
+            {children}
+            <Footer />
+          </Provider>
+        </NextUIProvider>
       </body>
     </html>
   );
