@@ -195,7 +195,7 @@ export default function Header() {
                       href="https://mainnet.optimism.io"
                       className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
                     >
-                      https://mainnet.optimism.io
+                      https://www.optimism.io/
                     </a>
                   </li>
                 </ul>
