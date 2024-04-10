@@ -227,7 +227,7 @@ export default function Header() {
                   {address}
                   <button
                     onClick={() => copyToClipboard(address)}
-                    className="absolute right-4 top-4 text-lg md:text-2xl"
+                    className="pl-4 right-4 top-4 text-lg md:text-2xl"
                     aria-label="Copy address"
                   >
                     <FiCopy />
