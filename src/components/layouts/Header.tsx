@@ -22,11 +22,11 @@ import { LiaTimesSolid } from "react-icons/lia";
 import { useState } from "react";
 import { FiCopy } from "react-icons/fi";
 import Link from "next/link";
+import NavbarMenuContentMobile from "./NavbarMenuContentMobile";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { scrollPosition } = useDetectScroll();
-  const [isBannerOpen, setIsBannerOpen] = React.useState(true);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [copied, setCopied] = useState(false);
   const address = "0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e";
@@ -43,18 +43,13 @@ export default function Header() {
         onMenuOpenChange={setIsMenuOpen}
         isBlurred={scrollPosition.top !== 0}
         className={clsx(
-          "md:px-8 py-4 fixed",
-          isBannerOpen && "!pt-0 !px-0",
+          "md:px-8 py-2 fixed",
           isMenuOpen
             ? "bg-black"
             : "bg-transparent transition-colors delay-[220ms]"
         )}
         maxWidth="full"
         shouldHideOnScroll
-        classNames={{
-          wrapper: isBannerOpen ? "flex flex-col h-20 px-0" : "flex flex-col",
-          content: "w-full",
-        }}
       >
         <NavbarContent className="md:px-16">
           <NavbarBrand>
@@ -67,7 +62,7 @@ export default function Header() {
               />
             </Link>
           </NavbarBrand>
-          <div className="flex h-full space-x-10 items-center text-white">
+          <div className={clsx("flex md:h-3/4 space-x-10 items-center text-white h-full")}>
             {/* <Button className="text-white group bg-transparent border px-12 hover:bg-white hover:text-black h-full hidden md:block">
             <p className="h group-hover:-translate-x-4 transition-transform relative flex items-center">
               START A PROJECT
@@ -93,7 +88,7 @@ export default function Header() {
               </Link>
             </NavbarItem>
             <NavbarMenuToggle
-              className="border px-6 text-white"
+              className="border px-6 text-white h-3/4"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               id="menu-toggle"
             />
@@ -102,6 +97,7 @@ export default function Header() {
 
         <NavbarMenu className="bg-black px-0">
           <NavbarMenuContent />
+          <NavbarMenuContentMobile />
         </NavbarMenu>
       </Navbar>
       <Modal
@@ -111,6 +107,9 @@ export default function Header() {
         radius="none"
         size="lg"
         backdrop="blur"
+        classNames={{
+          wrapper: "items-start",
+        }}
       >
         <ModalContent>
           <ModalHeader className="flex flex-col gap-1 h-full text-[40px] font-normal items-center justify-center">

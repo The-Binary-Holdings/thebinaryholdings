@@ -27,7 +27,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="h-screen w-full bg-heros-bg bg-no-repeat bg-cover bg-center relative"
+      className="h-screen w-full bg-heros-bg-mobile md:bg-heros-bg-tablet lg:bg-heros-bg bg-no-repeat bg-cover bg-center relative"
     >
       {/* <Image src="/gate.svg" alt='image' width={100} height={100} className='fixed w-full bg-cover'/> */}
       <WrapperContent className="flex flex-col justify-evenly overflow-hidden h-full z-20 md:z-0 bg-black/50 md:bg-transparent relative md:static">
@@ -58,14 +58,14 @@ const HeroSection = () => {
                 <a
                   key="twitter"
                   href="https://twitter.com/thebinaryhldgs"
-                  className="bg-white p-3 text-xl rounded-full me-2 mb-2 text-black flex items-center justify-center"
+                  className="bg-white p-3 text-xl rounded-full text-black flex items-center justify-center"
                 >
                   <FaXTwitter className="text-black" />
                 </a>
                 <a
                   key="telegram"
                   href="https://t.me/tbhofficialchat"
-                  className="bg-white p-3 text-xl rounded-full me-2 mb-2 text-black flex items-center justify-center"
+                  className="bg-white p-3 text-xl rounded-full text-black flex items-center justify-center"
                 >
                   <FaTelegram className="text-black" />
                 </a>
@@ -73,7 +73,7 @@ const HeroSection = () => {
                 <a
                   key="discord"
                   href="https://discord.gg/wCXJmTBGr2"
-                  className="bg-white p-3 text-xl rounded-full me-2 mb-2 text-black flex items-center justify-center"
+                  className="bg-white p-3 text-xl rounded-full text-black flex items-center justify-center"
                 >
                   <FaDiscord className="text-black" />
                 </a>

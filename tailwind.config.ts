@@ -14,6 +14,8 @@ const config: Config = {
       backgroundImage: {
         "about": "url('/about-img.jpg')",
         "heros-bg": "url('/heros-bg.png')",
+        "heros-bg-mobile": "url('/heros-bg-mobile.png')",
+        "heros-bg-tablet": "url('/heros-bg-tablet.png')",
         "heros-gate": "url('/gate.png')",
         "partners": "url('/partners-bg.png')",
       },
