@@ -1,11 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 import EmailTemplate from "@/components/EmailTemplate";
 import { Resend } from "resend";
 import React from "react";
 
 const resend = new Resend("re_eA9AANR3_AE7Vi9wryCgWC7wRk977wdr1");
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextResponse) {
     try {
         const data = await resend.emails.send({
                 from: "heu@gmail.com",

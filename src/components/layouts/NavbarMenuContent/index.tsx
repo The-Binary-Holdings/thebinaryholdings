@@ -48,7 +48,7 @@ const NavbarMenuContent = () => {
   let [activeTab, setActiveTab] = React.useState(tabs[0].id);
 
   return (
-    <div className="w-full h-full text-white">
+    <div className="w-full h-full text-white hidden md:block">
       <WrapperContent className="h-full py-16">
         <div className="w-full h-full flex">
           <div className="w-1/2 border-e h-full md:pe-8 lg:pe-16 xl:pe-32">
