@@ -97,12 +97,12 @@ const Team: NextPage = () => {
       imageUrl: "/team/david_ng.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/davidngmw/",
     },
-    {
-      name: "Henry Ondo",
-      role: "COO/CFO/BD Coach",
-      imageUrl: "/team/male_placeholder.png", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/henry-ondo-b18a5765/",
-    },
+    // {
+    //   name: "Henry Ondo",
+    //   role: "COO/CFO/BD Coach",
+    //   imageUrl: "/team/male_placeholder.png", // Replace with actual path to image
+    //   linkedinUrl: "https://www.linkedin.com/in/henry-ondo-b18a5765/",
+    // },
     // {
     //   name: "Daniel Yang",
     //   role: "Head of Treasury - Algorand Foundation",

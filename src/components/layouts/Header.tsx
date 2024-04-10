@@ -5,7 +5,6 @@ import {
   NavbarContent,
   NavbarMenuToggle,
   NavbarMenu,
-  Link,
   Button,
   NavbarItem,
   useDisclosure,
@@ -18,13 +17,26 @@ import Image from "next/image";
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import clsx from "clsx";
 import NavbarMenuContent from "./NavbarMenuContent";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { LiaTimesSolid } from "react-icons/lia";
+import { useState } from "react";
+import { FiCopy } from "react-icons/fi";
+import Link from "next/link";
 import NavbarMenuContentMobile from "./NavbarMenuContentMobile";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { scrollPosition } = useDetectScroll();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [copied, setCopied] = useState(false);
+  const address = "0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e";
 
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset copied state after 2s
+    });
+  };
   return (
     <>
       <Navbar
@@ -39,24 +51,7 @@ export default function Header() {
         maxWidth="full"
         shouldHideOnScroll
       >
-        {/* {isBannerOpen && !isMenuOpen && (
-          <NavbarContent>
-            <a
-              href="https://app.v2.fjordfoundry.com/pools/0x0747dDa359C8b3D9145695aE8271A6a0EB0d2217"
-              className="w-full h-full bg-black text-white flex items-center justify-center md:px-16 py-4"
-            >
-              $BNRY Presale 1 is live!{" "}
-              <LiaTimesSolid
-                className="absolute right-8 lg:right-16"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsBannerOpen(false);
-                }}
-              />
-            </a>
-          </NavbarContent>
-        )} */}
-        <NavbarContent>
+        <NavbarContent className="md:px-16">
           <NavbarBrand>
             <Link href="/">
               <Image
@@ -79,16 +74,16 @@ export default function Header() {
                 Presale is live!
               </Button>
             </NavbarItem>
-            <NavbarItem className=" hidden md:block">
+            {/* <NavbarItem>
               <Link
                 href="https://docs.thebinaryholdings.com/"
                 className="text-white"
               >
                 Documentation
               </Link>
-            </NavbarItem>
-            <NavbarItem className=" hidden md:block">
-              <Link href="/team" className="text-white hidden md:block">
+            </NavbarItem> */}
+            <NavbarItem>
+              <Link href="/team" className="text-white">
                 Team
               </Link>
             </NavbarItem>
@@ -108,7 +103,7 @@ export default function Header() {
       <Modal
         isOpen={isOpen}
         onClose={onClose}
-        className="dark text-white bg-[#0E0E10] w-full p-2 md:p-10 md:top-28 md:right-8 text-lg max-w-6xl mx-auto" // Adjusted padding for consistent spacing
+        className="dark text-white bg-[#0E0E10] p-5 md:p-10 md:top-8 md:right-8 text-lg max-w-6xl mx-auto h-full overflow-y-auto" // Adjusted padding for consistent spacing
         radius="none"
         size="lg"
         backdrop="blur"
@@ -117,7 +112,7 @@ export default function Header() {
         }}
       >
         <ModalContent>
-          <ModalHeader className="flex flex-col gap-1 text-4xl font-normal items-center justify-center">
+          <ModalHeader className="flex flex-col gap-1 h-full text-[40px] font-normal items-center justify-center">
             $BNRY Early Bird Presale
           </ModalHeader>
           <ModalBody>
@@ -125,8 +120,8 @@ export default function Header() {
               <p>
                 Join us in the Early Bird $BNRY presale, designed for our early
                 supporters and cherished TBH community members. As a token of
-                appreciation for your steadfast support, we&apos;ve curated a special
-                discount of 25% for this presale along with a bonus token
+                appreciation for your steadfast support, we&apos;ve curated a
+                special discount for this presale along with a bonus token
                 structure for this presale event.
               </p>
               <p>
@@ -174,26 +169,51 @@ export default function Header() {
                   </ul>
                 </li>
               </ul>
-              <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black">
+              <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black break-words">
                 <p className="font-bold text-red-800">
-                  Important: Ensure You Are on the Optimism Mainnet
+                  Important: Ensure You Are on the Optimism Mainnet and
+                  transferring USDT.
                 </p>
-                <ul className="list-inside space-y-1">
+
+                <ul className="list-inside space-y-2">
                   <li>
-                    <span className="font-semibold">Chain ID:</span> 10
+                    <span className="font-semibold">Network Name: </span>
+                    Optimism
                   </li>
                   <li>
-                    <span className="font-semibold">Network Name:</span> OP
-                    Mainnet
+                    <span className="font-semibold">Chain ID: </span>10
                   </li>
                   <li>
-                    <span className="font-semibold">Public RPC URL:</span>{" "}
-                    <a
-                      href="https://mainnet.optimism.io"
-                      className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                    <span className="font-semibold">Public RPC Endpoint: </span>
+                    <Link href={"https://mainnet.optimism.io/"}>
+                      https://mainnet.optimism.io/
+                    </Link>
+                  </li>
+                  <li>
+                    <span className="font-semibold">Block Explorer: </span>
+                    <Link href={"https://explorer.optimism.io"}>
+                      https://explorer.optimism.io
+                    </Link>
+                  </li>
+                  <li>
+                    <span className="font-semibold">
+                      Adding network to EVM-Wallet (Guide):{" "}
+                    </span>
+                    <Link
+                      href={
+                        "https://www.coingecko.com/learn/add-optimism-op-to-metamask"
+                      }
                     >
-                      https://www.optimism.io/
-                    </a>
+                      https://www.coingecko.com/learn/add-optimism-op-to-metamask
+                    </Link>
+                  </li>
+                  <li>
+                    <span className="font-semibold">
+                      Swapping USDT (Guide):{" "}
+                    </span>
+                    <Link href={"https://app.uniswap.org/swap?chain=optimism"}>
+                      https://app.uniswap.org/swap?chain=optimism
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -201,10 +221,20 @@ export default function Header() {
                 To participate, transfer your funds (USDT) to the following EVM
                 Wallet Address on the Optimism Chain (Gas Fees on Us):
               </p>
-              <div className="mt-4 p-4 border-l-4 border-green-600 bg-green-200">
-                <p className="font-bold text-xs md:text-2xl text-black text-start break-words">
-                  0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e
+              <div className="mt-4 p-4 border-l-4 border-green-600 bg-green-200 relative">
+                <p className="font-bold text-lg md:text-2xl text-black text-center break-words">
+                  {address}
+                  <button
+                    onClick={() => copyToClipboard(address)}
+                    className="pl-4 right-4 top-4 text-lg md:text-2xl"
+                    aria-label="Copy address"
+                  >
+                    <FiCopy />
+                  </button>
                 </p>
+                {copied && (
+                  <span className="text-black text-center">Copied!</span>
+                )}
               </div>
               <p>
                 50% of BNRY Tokens will be transferred within 48 hours, and the
