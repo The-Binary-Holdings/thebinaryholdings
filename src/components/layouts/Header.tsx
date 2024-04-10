@@ -128,37 +128,37 @@ export default function Header() {
               <p>
                 Join us in the Early Bird $BNRY presale, designed for our early
                 supporters and cherished TBH community members. As a token of
-                appreciation for your steadfast support, we've curated a special
+                appreciation for your steadfast support, we&apos;ve curated a special
                 discount of 25% for this presale along with a bonus token
                 structure for this presale event.
               </p>
               <p>
-                Presale Starts at $0.15 with the bonus structure as follows:
+                Presale price is at $0.15 with the bonus structure as follows:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <p>Transfers Up to 99 USDT: Receive 10% Bonus $BNRY Tokens</p>
-                  <ul className="list-inside space-y-1">
+                  <ul className="list-inside space-y-2">
                     <li className="text-sm">
                       For example, if you transfer 60 USDT, You Get Total 440
-                      $BNRY Tokens (400 $BNRY Tokens at $0.15 and 40 $BNRY Tokens
-                      as a Bonus)
+                      $BNRY Tokens (400 $BNRY Tokens at $0.15 and 40 $BNRY
+                      Tokens as a Bonus)
                     </li>
                   </ul>
                 </li>
                 <li>
                   <p>Transfers Between 100-499 USDT: 15% Bonus $BNRY Tokens</p>
-                  <ul className="list-inside space-y-1">
+                  <ul className="list-inside space-y-2">
                     <li className="text-sm">
                       For example, if you transfer 450 USDT, You Get Total 3450
-                      $BNRY Tokens (3000 $BNRY Tokens at $0.15 and 450 $BNRY Tokens
-                      as a Bonus)
+                      $BNRY Tokens (3000 $BNRY Tokens at $0.15 and 450 $BNRY
+                      Tokens as a Bonus)
                     </li>
                   </ul>
                 </li>
                 <li>
                   <p>Transfers Between 500-999 USDT: 25% Bonus $BNRY Tokens</p>
-                  <ul className="list-inside space-y-1">
+                  <ul className="list-inside space-y-2">
                     <li className="text-sm">
                       For example, if you transfer 900 USDT, You Get Total 7500
                       $BNRY Tokens (6000 $BNRY Tokens at $0.15 and 1500 $BNRY
@@ -168,7 +168,7 @@ export default function Header() {
                 </li>
                 <li>
                   <p>Transfers of 1000 USDT Onwards: 50% Bonus $BNRY Tokens</p>
-                  <ul className="list-inside space-y-1">
+                  <ul className="list-inside space-y-2">
                     <li className="text-sm">
                       For example, if you transfer 1200 USDT, You Get Total
                       12,000 $BNRY Tokens (8000 $BNRY Tokens at $0.15 and 4000
@@ -177,19 +177,44 @@ export default function Header() {
                   </ul>
                 </li>
               </ul>
+              <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black">
+                <p className="font-bold text-red-800">
+                  Important: Ensure You Are on the Optimism Mainnet
+                </p>
+                <ul className="list-inside space-y-1">
+                  <li>
+                    <span className="font-semibold">Chain ID:</span> 10
+                  </li>
+                  <li>
+                    <span className="font-semibold">Network Name:</span> OP
+                    Mainnet
+                  </li>
+                  <li>
+                    <span className="font-semibold">Public RPC URL:</span>{" "}
+                    <a
+                      href="https://mainnet.optimism.io"
+                      className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                    >
+                      https://mainnet.optimism.io
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <p>
                 To participate, transfer your funds (USDT) to the following EVM
                 Wallet Address on the Optimism Chain (Gas Fees on Us):
               </p>
-              <p className="font-bold text-2xl text-center">
-                0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e
-              </p>
+              <div className="mt-4 p-4 border-l-4 border-green-600 bg-green-200">
+                <p className="font-bold text-2xl text-black text-center">
+                  0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e
+                </p>
+              </div>
               <p>
                 50% of BNRY Tokens will be transferred within 48 hours, and the
                 remaining 50% on May 31st, 2024.
               </p>
               <p>
-                Don't miss this opportunity to secure your $BNRY tokens at
+                Don&apos;t miss this opportunity to secure your $BNRY tokens at
                 exclusive rates while contributing to the growth of The Binary
                 Holdings community. Join us as we pave the way for a brighter
                 future together.
