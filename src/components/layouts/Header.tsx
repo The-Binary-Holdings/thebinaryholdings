@@ -179,24 +179,20 @@ export default function Header() {
               </ul>
               <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black">
                 <p className="font-bold text-red-800">
-                  Important: Ensure You Are on the Optimism Mainnet
+                  Important: Ensure You Are on the Optimism Mainnet. You can add the network directly to your wallet with the following information and follow the guide here if needed https://www.coingecko.com/learn/add-optimism-op-to-metamask
                 </p>
                 <ul className="list-inside space-y-1">
+                <li>
+                    <span className="font-semibold">Network Name</span> Optimism
+                  </li>
                   <li>
                     <span className="font-semibold">Chain ID:</span> 10
                   </li>
                   <li>
-                    <span className="font-semibold">Network Name:</span> OP
-                    Mainnet
+                  <span className="font-semibold">Public RPC Endpoint</span> https://mainnet.optimism.io/
                   </li>
                   <li>
-                    <span className="font-semibold">Public RPC URL:</span>{" "}
-                    <a
-                      href="https://mainnet.optimism.io"
-                      className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                    >
-                      https://www.optimism.io/
-                    </a>
+                  <span className="font-semibold">Block Explorer</span> 	https://explorer.optimism.io
                   </li>
                 </ul>
               </div>
