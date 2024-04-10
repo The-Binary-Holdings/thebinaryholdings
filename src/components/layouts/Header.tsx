@@ -44,25 +44,7 @@ export default function Header() {
         classNames={{
           wrapper: isBannerOpen ? "flex flex-col h-20 px-0" : "flex flex-col",
           content: "w-full",
-        }}
-      >
-        {/* {isBannerOpen && !isMenuOpen && (
-          <NavbarContent>
-            <a
-              href="https://app.v2.fjordfoundry.com/pools/0x0747dDa359C8b3D9145695aE8271A6a0EB0d2217"
-              className="w-full h-full bg-black text-white flex items-center justify-center md:px-16 py-8"
-            >
-              $BNRY Presale 1 is live!{" "}
-              <LiaTimesSolid
-                className="absolute right-16"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsBannerOpen(false);
-                }}
-              />
-            </a>
-          </NavbarContent>
-        )} */}
+        }}>
         <NavbarContent className="md:px-16">
           <NavbarBrand>
             <Link href="/">
@@ -74,7 +56,7 @@ export default function Header() {
               />
             </Link>
           </NavbarBrand>
-          <div className="flex h-3/4 space-x-10 items-center text-white">
+          <div className="flex h-full space-x-10 items-center text-white">
             {/* <Button className="text-white group bg-transparent border px-12 hover:bg-white hover:text-black h-full hidden md:block">
             <p className="h group-hover:-translate-x-4 transition-transform relative flex items-center">
               START A PROJECT
@@ -114,13 +96,13 @@ export default function Header() {
       <Modal
         isOpen={isOpen}
         onClose={onClose}
-        className="dark text-white bg-[#0E0E10] p-5 md:p-10 md:top-8 md:right-8 text-lg max-w-6xl mx-auto" // Adjusted padding for consistent spacing
+        className="dark text-white bg-[#0E0E10] p-5 md:p-10 md:top-8 md:right-8 text-lg max-w-6xl mx-auto h-full overflow-y-auto" // Adjusted padding for consistent spacing
         radius="none"
         size="lg"
         backdrop="blur"
       >
         <ModalContent>
-          <ModalHeader className="flex flex-col gap-1 text-[40px] font-normal items-center justify-center">
+          <ModalHeader className="flex flex-col gap-1 h-full text-[40px] font-normal items-center justify-center">
             $BNRY Early Bird Presale
           </ModalHeader>
           <ModalBody>
@@ -179,20 +161,27 @@ export default function Header() {
               </ul>
               <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black">
                 <p className="font-bold text-red-800">
-                  Important: Ensure You Are on the Optimism Mainnet. You can add the network directly to your wallet with the following information and follow the guide here if needed https://www.coingecko.com/learn/add-optimism-op-to-metamask
+                  Important: Ensure You Are on the Optimism Mainnet and transferring USDT.
                 </p>
-                <ul className="list-inside space-y-1">
+               
+                <ul className="list-inside space-y-2">
                 <li>
-                    <span className="font-semibold">Network Name</span> Optimism
+                    <span className="font-semibold">Network Name: </span>Optimism
                   </li>
                   <li>
-                    <span className="font-semibold">Chain ID:</span> 10
+                    <span className="font-semibold">Chain ID: </span>10
                   </li>
                   <li>
-                  <span className="font-semibold">Public RPC Endpoint</span> https://mainnet.optimism.io/
+                  <span className="font-semibold">Public RPC Endpoint: </span>https://mainnet.optimism.io/
                   </li>
                   <li>
-                  <span className="font-semibold">Block Explorer</span> 	https://explorer.optimism.io
+                  <span className="font-semibold">Block Explorer: </span>https://explorer.optimism.io
+                  </li>
+                  <li>
+                  <span className="font-semibold">Adding network to EVM-Wallet (Guide): </span>https://www.coingecko.com/learn/add-optimism-op-to-metamask
+                  </li>
+                  <li>
+                  <span className="font-semibold">Swapping USDT (Guide): </span>https://app.uniswap.org/swap?chain=optimism
                   </li>
                 </ul>
               </div>
@@ -201,7 +190,7 @@ export default function Header() {
                 Wallet Address on the Optimism Chain (Gas Fees on Us):
               </p>
               <div className="mt-4 p-4 border-l-4 border-green-600 bg-green-200">
-                <p className="font-bold text-2xl text-black text-center">
+                <p className="font-bold text-lg md:text-2xl text-black text-center">
                   0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e
                 </p>
               </div>
