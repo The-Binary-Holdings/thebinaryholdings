@@ -44,7 +44,8 @@ export default function Header() {
         classNames={{
           wrapper: isBannerOpen ? "flex flex-col h-20 px-0" : "flex flex-col",
           content: "w-full",
-        }}>
+        }}
+      >
         <NavbarContent className="md:px-16">
           <NavbarBrand>
             <Link href="/">
@@ -68,14 +69,14 @@ export default function Header() {
                 Presale is live!
               </Button>
             </NavbarItem>
-            <NavbarItem>
+            {/* <NavbarItem>
               <Link
                 href="https://docs.thebinaryholdings.com/"
                 className="text-white"
               >
                 Documentation
               </Link>
-            </NavbarItem>
+            </NavbarItem> */}
             <NavbarItem>
               <Link href="/team" className="text-white">
                 Team
@@ -110,9 +111,9 @@ export default function Header() {
               <p>
                 Join us in the Early Bird $BNRY presale, designed for our early
                 supporters and cherished TBH community members. As a token of
-                appreciation for your steadfast support, we&apos;ve curated a special
-                discount of 25% for this presale along with a bonus token
-                structure for this presale event.
+                appreciation for your steadfast support, we&apos;ve curated a
+                special discount of 25% for this presale along with a bonus
+                token structure for this presale event.
               </p>
               <p>
                 Presale price is at $0.15 with the bonus structure as follows:
@@ -161,27 +162,37 @@ export default function Header() {
               </ul>
               <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black">
                 <p className="font-bold text-red-800">
-                  Important: Ensure You Are on the Optimism Mainnet and transferring USDT.
+                  Important: Ensure You Are on the Optimism Mainnet and
+                  transferring USDT.
                 </p>
-               
+
                 <ul className="list-inside space-y-2">
-                <li>
-                    <span className="font-semibold">Network Name: </span>Optimism
+                  <li>
+                    <span className="font-semibold">Network Name: </span>
+                    Optimism
                   </li>
                   <li>
                     <span className="font-semibold">Chain ID: </span>10
                   </li>
                   <li>
-                  <span className="font-semibold">Public RPC Endpoint: </span>https://mainnet.optimism.io/
+                    <span className="font-semibold">Public RPC Endpoint: </span>
+                    https://mainnet.optimism.io/
                   </li>
                   <li>
-                  <span className="font-semibold">Block Explorer: </span>https://explorer.optimism.io
+                    <span className="font-semibold">Block Explorer: </span>
+                    https://explorer.optimism.io
                   </li>
                   <li>
-                  <span className="font-semibold">Adding network to EVM-Wallet (Guide): </span>https://www.coingecko.com/learn/add-optimism-op-to-metamask
+                    <span className="font-semibold">
+                      Adding network to EVM-Wallet (Guide):{" "}
+                    </span>
+                    https://www.coingecko.com/learn/add-optimism-op-to-metamask
                   </li>
                   <li>
-                  <span className="font-semibold">Swapping USDT (Guide): </span>https://app.uniswap.org/swap?chain=optimism
+                    <span className="font-semibold">
+                      Swapping USDT (Guide):{" "}
+                    </span>
+                    https://app.uniswap.org/swap?chain=optimism
                   </li>
                 </ul>
               </div>
@@ -190,7 +201,7 @@ export default function Header() {
                 Wallet Address on the Optimism Chain (Gas Fees on Us):
               </p>
               <div className="mt-4 p-4 border-l-4 border-green-600 bg-green-200">
-                <p className="font-bold text-lg md:text-2xl text-black text-center">
+                <p className="font-bold text-lg md:text-2xl text-black text-center break-words">
                   0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e
                 </p>
               </div>
