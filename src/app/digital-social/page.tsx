@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DigitalSocial() {
   const products = [
     {
@@ -33,7 +35,7 @@ export default function DigitalSocial() {
               rel="noopener noreferrer"
               className="flex-grow"
             >
-              <img
+              <Image
                 src={product.imageUrl}
                 alt={product.title}
                 className="w-full h-64 object-cover"

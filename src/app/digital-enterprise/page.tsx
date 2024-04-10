@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DigitalEnterprise() {
     const products = [
       {
@@ -26,7 +28,7 @@ export default function DigitalEnterprise() {
                 rel="noopener noreferrer"
                 className="flex-grow"
               >
-                <img
+                <Image
                   src={product.imageUrl}
                   alt={product.title}
                   className="w-full h-64 object-cover"
