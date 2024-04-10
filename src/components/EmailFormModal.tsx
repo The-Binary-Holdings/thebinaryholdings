@@ -8,8 +8,11 @@ import {
   Input,
   Textarea,
   Button,
+  Spinner,
 } from "@nextui-org/react";
 import axios from "axios";
+
+const url = process.env.NEXT_PUBLIC_API_URL;
 
 const EmailFormModal = ({
   children,
@@ -27,9 +30,21 @@ const EmailFormModal = ({
     message: "",
   });
   const [errorMessage, setErrorMessage] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [status, setStatus] = React.useState({ status: "", message: "" });
 
   const handleSubmit = async () => {
-    if(!form.firstName || !form.lastName || !form.email || !form.subject || !form.message) return setErrorMessage("Please fill all fields");
+    setErrorMessage("");
+    if (
+      form.firstName == "" ||
+      form.lastName == "" ||
+      form.email == "" ||
+      form.subject == "" ||
+      form.message == ""
+    ) {
+      setErrorMessage("Please fill all fields");
+      return;
+    }
     const data = {
       firstName: form.firstName,
       lastName: form.lastName,
@@ -38,15 +53,25 @@ const EmailFormModal = ({
       message: form.message,
     };
     try {
+      setIsLoading(true);
       const response = await axios.post(
-        "https://www.thebinaryholdings.com/api/send",
-        data
+        `${url}/api/send`,
+        JSON.stringify(data),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
+      setIsLoading(false);
       console.log(response);
+      setStatus(response.data);
     } catch (error) {
+      setIsLoading(false);
       console.error(error);
     }
   };
+
   return (
     <div>
       <span onClick={onOpen} className={className}>
@@ -64,66 +89,80 @@ const EmailFormModal = ({
         backdrop="blur"
       >
         <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1 text-[40px] font-normal w-full items-center">
-                Get in touch
-              </ModalHeader>
-              <ModalBody>
-                <div className="w-2/3 flex flex-col space-y-10 self-center mt-10">
-                  <span className="grid grid-cols-2 gap-4">
+          {status.status !== "" ? (
+            <p>{status.message}</p>
+          ) : (
+            (onClose) => (
+              <>
+                <ModalHeader className="flex flex-col gap-1 text-[40px] font-normal w-full items-center">
+                  Get in touch
+                </ModalHeader>
+                <ModalBody>
+                  <div className="w-2/3 flex flex-col space-y-10 self-center mt-10">
+                    <span className="grid grid-cols-2 gap-4">
+                      <Input
+                        type="text"
+                        label="First name"
+                        placeholder="Enter your first name here"
+                        labelPlacement="outside"
+                        errorMessage={errorMessage}
+                        onChange={(e) => {
+                          setForm({ ...form, firstName: e.target.value });
+                        }}
+                      />
+                      <Input
+                        type="text"
+                        label="Last name"
+                        placeholder="Enter your last name here"
+                        labelPlacement="outside"
+                        errorMessage={errorMessage}
+                        onChange={(e) => {
+                          setForm({ ...form, lastName: e.target.value });
+                        }}
+                      />
+                    </span>
                     <Input
-                      type="text"
-                      label="First name"
-                      placeholder="Enter your first name here"
+                      type="email"
+                      label="Email"
+                      placeholder="you@example.com"
                       labelPlacement="outside"
+                      errorMessage={errorMessage}
                       onChange={(e) => {
-                        setForm({ ...form, firstName: e.target.value });
+                        setForm({ ...form, email: e.target.value });
                       }}
                     />
                     <Input
                       type="text"
-                      label="Last name"
-                      placeholder="Enter your last name here"
+                      label="Subject"
+                      placeholder="Enter subject here"
                       labelPlacement="outside"
+                      errorMessage={errorMessage}
                       onChange={(e) => {
-                        setForm({ ...form, lastName: e.target.value });
+                        setForm({ ...form, subject: e.target.value });
                       }}
                     />
-                  </span>
-                  <Input
-                    type="email"
-                    label="Email"
-                    placeholder="you@example.com"
-                    labelPlacement="outside"
-                    onChange={(e) => {
-                      setForm({ ...form, email: e.target.value });
-                    }}
-                  />
-                  <Input
-                    type="text"
-                    label="Subject"
-                    placeholder="Enter subject here"
-                    labelPlacement="outside"
-                    onChange={(e) => {
-                      setForm({ ...form, subject: e.target.value });
-                    }}
-                  />
-                  <Textarea
-                    label="Description"
-                    labelPlacement="outside"
-                    placeholder="Enter your message"
-                    className="max-w-full !mt-4"
-                    onChange={(e) => {
-                      setForm({ ...form, message: e.target.value });
-                    }}
-                  />
-                  <Button className="w-fit px-16 bg-white text-black" onClick={handleSubmit}>
-                    Submit
-                  </Button>
-                </div>
-              </ModalBody>
-            </>
+                    <Textarea
+                      label="Description"
+                      labelPlacement="outside"
+                      placeholder="Enter your message"
+                      className="max-w-full !mt-4"
+                      errorMessage={errorMessage}
+                      onChange={(e) => {
+                        setForm({ ...form, message: e.target.value });
+                      }}
+                    />
+                    <Button
+                      className="w-fit px-16 bg-white text-black"
+                      onClick={handleSubmit}
+                      isLoading={isLoading}
+                      spinner={<Spinner />}
+                    >
+                      Submit
+                    </Button>
+                  </div>
+                </ModalBody>
+              </>
+            )
           )}
         </ModalContent>
       </Modal>

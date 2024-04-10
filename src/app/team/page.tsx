@@ -63,7 +63,7 @@ const Team: NextPage = () => {
 
     {
       name: "Man Pham",
-      role: "CEO - Move To Earn",
+      role: "Business Development Director - SEA",
       imageUrl: "/team/man_pham.jpeg",
       linkedinUrl:
         "https://www.linkedin.com/in/Business Development Director - SEA",
