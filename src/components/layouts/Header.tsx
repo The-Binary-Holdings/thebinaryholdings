@@ -5,7 +5,6 @@ import {
   NavbarContent,
   NavbarMenuToggle,
   NavbarMenu,
-  Link,
   Button,
   NavbarItem,
   useDisclosure,
@@ -20,13 +19,24 @@ import clsx from "clsx";
 import NavbarMenuContent from "./NavbarMenuContent";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { LiaTimesSolid } from "react-icons/lia";
+import { useState } from "react";
+import { FiCopy } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { scrollPosition } = useDetectScroll();
   const [isBannerOpen, setIsBannerOpen] = React.useState(true);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [copied, setCopied] = useState(false);
+  const address = "0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e";
 
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset copied state after 2s
+    });
+  };
   return (
     <>
       <Navbar
@@ -112,8 +122,8 @@ export default function Header() {
                 Join us in the Early Bird $BNRY presale, designed for our early
                 supporters and cherished TBH community members. As a token of
                 appreciation for your steadfast support, we&apos;ve curated a
-                special discount of 25% for this presale along with a bonus
-                token structure for this presale event.
+                special discount for this presale along with a bonus token
+                structure for this presale event.
               </p>
               <p>
                 Presale price is at $0.15 with the bonus structure as follows:
@@ -160,7 +170,7 @@ export default function Header() {
                   </ul>
                 </li>
               </ul>
-              <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black">
+              <div className="mt-4 p-4 border-l-4 border-red-500 bg-red-100 text-black break-words">
                 <p className="font-bold text-red-800">
                   Important: Ensure You Are on the Optimism Mainnet and
                   transferring USDT.
@@ -176,23 +186,35 @@ export default function Header() {
                   </li>
                   <li>
                     <span className="font-semibold">Public RPC Endpoint: </span>
-                    https://mainnet.optimism.io/
+                    <Link href={"https://mainnet.optimism.io/"}>
+                      https://mainnet.optimism.io/
+                    </Link>
                   </li>
                   <li>
                     <span className="font-semibold">Block Explorer: </span>
-                    https://explorer.optimism.io
+                    <Link href={"https://explorer.optimism.io"}>
+                      https://explorer.optimism.io
+                    </Link>
                   </li>
                   <li>
                     <span className="font-semibold">
                       Adding network to EVM-Wallet (Guide):{" "}
                     </span>
-                    https://www.coingecko.com/learn/add-optimism-op-to-metamask
+                    <Link
+                      href={
+                        "https://www.coingecko.com/learn/add-optimism-op-to-metamask"
+                      }
+                    >
+                      https://www.coingecko.com/learn/add-optimism-op-to-metamask
+                    </Link>
                   </li>
                   <li>
                     <span className="font-semibold">
                       Swapping USDT (Guide):{" "}
                     </span>
-                    https://app.uniswap.org/swap?chain=optimism
+                    <Link href={"https://app.uniswap.org/swap?chain=optimism"}>
+                      https://app.uniswap.org/swap?chain=optimism
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -200,10 +222,20 @@ export default function Header() {
                 To participate, transfer your funds (USDT) to the following EVM
                 Wallet Address on the Optimism Chain (Gas Fees on Us):
               </p>
-              <div className="mt-4 p-4 border-l-4 border-green-600 bg-green-200">
+              <div className="mt-4 p-4 border-l-4 border-green-600 bg-green-200 relative">
                 <p className="font-bold text-lg md:text-2xl text-black text-center break-words">
-                  0xfB1dA2bA2B6c1e73e4Ace7aF2A38Fea4C289508e
+                  {address}
+                  <button
+                    onClick={() => copyToClipboard(address)}
+                    className="absolute right-4 top-4 text-lg md:text-2xl"
+                    aria-label="Copy address"
+                  >
+                    <FiCopy />
+                  </button>
                 </p>
+                {copied && (
+                  <span className="text-black text-center">Copied!</span>
+                )}
               </div>
               <p>
                 50% of BNRY Tokens will be transferred within 48 hours, and the
