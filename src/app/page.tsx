@@ -14,8 +14,8 @@ export default function Home() {
       <VisionSection />
       <BusinessSection />
       <PartnerSection />
-      <ServiceSection />
-      <CommunicationSection />
+      {/* <ServiceSection />
+      <CommunicationSection /> */}
     </main>
   );
 }
