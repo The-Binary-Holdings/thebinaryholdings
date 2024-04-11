@@ -31,11 +31,11 @@ const monumentExtended = localFont({
 const flipVariants = {
   flipped: {
     rotateX: 360,
-    duration: 1
+    duration: 1,
   },
   unflipped: {
     rotateX: 0,
-    duration: 1
+    duration: 1,
   },
 };
 
@@ -55,30 +55,42 @@ const HeroSection = () => {
     }
 
     const interval1 = setInterval(() => {
-      setIsFlipped(prev => [true, prev[1], prev[2], prev[3]]);
-      setTimeout(() => setIsFlipped(prev => [false, prev[1], prev[2], prev[3]]), getRandomInterval(15000, 50000));
+      setIsFlipped((prev) => [true, prev[1], prev[2], prev[3]]);
+      setTimeout(
+        () => setIsFlipped((prev) => [false, prev[1], prev[2], prev[3]]),
+        getRandomInterval(15000, 50000)
+      );
     }, getRandomInterval(3000, 5000));
 
     const interval2 = setInterval(() => {
-      setIsFlipped(prev => [prev[0], true, prev[2], prev[3]]);
-      setTimeout(() => setIsFlipped(prev => [prev[0], false, prev[2], prev[3]]), getRandomInterval(15000, 50000));
+      setIsFlipped((prev) => [prev[0], true, prev[2], prev[3]]);
+      setTimeout(
+        () => setIsFlipped((prev) => [prev[0], false, prev[2], prev[3]]),
+        getRandomInterval(15000, 50000)
+      );
     }, getRandomInterval(3000, 5000));
 
     const interval3 = setInterval(() => {
-      setIsFlipped(prev => [prev[0], prev[1], true, prev[3]]);
-      setTimeout(() => setIsFlipped(prev => [prev[0], prev[1], false, prev[3]]), getRandomInterval(15000, 50000));
+      setIsFlipped((prev) => [prev[0], prev[1], true, prev[3]]);
+      setTimeout(
+        () => setIsFlipped((prev) => [prev[0], prev[1], false, prev[3]]),
+        getRandomInterval(15000, 50000)
+      );
     }, getRandomInterval(3000, 5000));
 
     const interval4 = setInterval(() => {
-      setIsFlipped(prev => [prev[0], prev[1], prev[2], true]);
-      setTimeout(() => setIsFlipped(prev => [prev[0], prev[1], prev[2], false]), getRandomInterval(15000, 50000));
+      setIsFlipped((prev) => [prev[0], prev[1], prev[2], true]);
+      setTimeout(
+        () => setIsFlipped((prev) => [prev[0], prev[1], prev[2], false]),
+        getRandomInterval(15000, 50000)
+      );
     }, getRandomInterval(3000, 5000));
 
     return () => {
-      clearInterval(interval1)
-      clearInterval(interval2)
-      clearInterval(interval3)
-      clearInterval(interval4)
+      clearInterval(interval1);
+      clearInterval(interval2);
+      clearInterval(interval3);
+      clearInterval(interval4);
     };
   }, []);
 
@@ -172,7 +184,7 @@ const HeroSection = () => {
                 <LuUsers />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                18.5 B
+                43.6 M
               </h3>
               <p className="text-sm text-[#DCDCDC]">Total Users</p>
             </div>
@@ -220,7 +232,7 @@ const HeroSection = () => {
                 <RxClock />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                13.84 Mins
+                13.87 Mins
               </h3>
               <p className="text-sm text-[#DCDCDC]">
                 Avg. time spent across apps
