@@ -44,7 +44,7 @@ const Footer = () => {
               <span className="hidden xl:flex flex-col">
                 <p className="uppercase text-white/60 text-sm">Contact us</p>
                 <Link
-                  className="text-3xl text-white cursor-pointer"
+                  className="ld:text-3xl text-white cursor-pointer"
                   href="mailto:support@thebinaryholdings.com"
                 >
                   support@thebinaryholdings.com
@@ -90,7 +90,7 @@ const Footer = () => {
             <span className="xl:hidden flex flex-col">
               <p className="uppercase text-white/60 text-sm">Contact us</p>
               <Link
-                className="text-2xl text-white cursor-pointer"
+                className="text-base lg:text-2xl text-white cursor-pointer"
                 href="mailto:support@thebinaryholdings.com"
               >
                 support@thebinaryholdings.com

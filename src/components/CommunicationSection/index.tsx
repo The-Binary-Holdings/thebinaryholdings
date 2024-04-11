@@ -13,7 +13,7 @@ const CommunicationSection = () => {
         <div className="w-full flex flex-col md:space-y-20">
           <div className="w-full flex justify-between items-center">
             <VariantsComponent direction="x" startDistance={-100}>
-              <h1 className="text-highlight text-5xl md:text-6xl font-medium">
+              <h1 className="text-highlight text-4xl lg:text-5xl md:text-6xl font-medium">
                 Communication
               </h1>
             </VariantsComponent>

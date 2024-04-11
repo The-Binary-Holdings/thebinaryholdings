@@ -62,7 +62,11 @@ export default function Header() {
               />
             </Link>
           </NavbarBrand>
-          <div className={clsx("flex md:h-3/4 space-x-10 items-center text-white h-full")}>
+          <div
+            className={clsx(
+              "flex md:h-3/4 space-x-10 items-center text-white h-full"
+            )}
+          >
             {/* <Button className="text-white group bg-transparent border px-12 hover:bg-white hover:text-black h-full hidden md:block">
             <p className="h group-hover:-translate-x-4 transition-transform relative flex items-center">
               START A PROJECT
@@ -165,6 +169,26 @@ export default function Header() {
                       For example, if you transfer 1200 USDT, You Get Total
                       12,000 $BNRY Tokens (8000 $BNRY Tokens at $0.15 and 4000
                       $BNRY Tokens as a Bonus)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Transfers of 5000 USDT Onwards: 75% Bonus $BNRY Tokens</p>
+                  <ul className="list-inside space-y-2">
+                    <li className="text-sm">
+                      For example, if you transfer 6000 USDT, You Get Total
+                      70,000 $BNRY Tokens (40,000 $BNRY Tokens at $0.15 and
+                      30,000 $BNRY Tokens as a Bonus)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Transfers of 10000 USDT Onwards: 100% Bonus $BNRY Tokens</p>
+                  <ul className="list-inside space-y-2">
+                    <li className="text-sm">
+                      For example, if you transfer 12,000 USDT, You Get Total
+                      160,000 $BNRY Tokens (80,000 $BNRY Tokens at $0.15 and
+                      80,000 $BNRY Tokens as a Bonus)
                     </li>
                   </ul>
                 </li>

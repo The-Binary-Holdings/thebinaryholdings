@@ -7,7 +7,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="w-full flex justify-center md:pt-16 lg:pt-32 xl:pt-64 flex-col items-center relative"
+      className="w-full flex justify-center pt-80 md:pt-20 flex-col items-center relative"
     >
       <div className="inline-table w-0 flex-col items-center text-start md:text-center space-y-20 z-10 translate-y-10">
         <VariantsComponent startDistance={-100}>
