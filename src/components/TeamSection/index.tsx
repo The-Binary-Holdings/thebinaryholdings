@@ -22,6 +22,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     <div className="rounded-lg">
       <div className="relative w-full h-96 mx-auto overflow-hidden rounded-lg">
         <Image
+          unoptimized
           src={imageUrl}
           alt={name}
           layout="fill"
