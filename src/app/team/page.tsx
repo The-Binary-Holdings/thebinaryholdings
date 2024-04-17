@@ -75,6 +75,13 @@ const Team: NextPage = () => {
       imageUrl: "/team/daniel_grove.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/daniel-grove-81b3501a3/",
     },
+
+    {
+      name: "Tuty Business",
+      role: "Development Director - Indonesia",
+      imageUrl: "/team/tuty.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/tuty-sakke-6a76963b",
+    },
   ];
 
   const partnerMembers = [
@@ -138,15 +145,35 @@ const Team: NextPage = () => {
       name: "Gilly Strauss",
       role: "Chairman, Strauss Capital",
       imageUrl: "/team/gilly_strauss.jpeg",
-      linkedinUrl: "https://www.linkedin.com/in/gilly-strauss-6ba149/",
+      linkedinUrl: "https://www.linkedin.com/in/gilly-strauss-6ba149",
     },
-
     {
-      name: "Joanne Wood",
-      role: "Founder & Chairman, Capital Eight",
-      imageUrl: "/team/joanne_wood.jpeg",
+      name: "Bhawnish Agarwal",
+      role: "Global Head of Solution, Nokia",
+      imageUrl: "/team/bhawnish_agarwal.jpeg",
       linkedinUrl:
-        "https://www.linkedin.com/in/joanne-wood-a4a2486/",
+        "http://linkedin.com/in/bhawnish-bobby-malhotra-84a8212",
+    },
+    {
+      name: "Dr. Joseph Thomas",
+      role: "Director, Diebold Nixdorf",
+      imageUrl: "/team/dr_joseph_thomas.jpeg",
+      linkedinUrl:
+        "http://linkedin.com/in/drjosephthomas",
+    },
+    {
+      name: "Subin Bhatia",
+      role: "Sr. Advisor & Bain & Co.",
+      imageUrl: "/team/subin_bhatia.jpeg",
+      linkedinUrl:
+        "https://www.linkedin.com/in/subinbhatia",
+    },
+    {
+      name: "Olivier Letant",
+      role: "Partner & Kearney",
+      imageUrl: "/team/oliver_letant.jpeg",
+      linkedinUrl:
+        "https://www.linkedin.com/in/olivier-letant-wharton",
     },
   ];
 

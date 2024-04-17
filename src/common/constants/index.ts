@@ -414,10 +414,14 @@ export const BACKERS = [
     name: "Hustle Fund",
     image: "/logos/HustleFund-logo.png",
   },
-  {
-    name: "A3S Group",
-    image: "/logos/a3s_group.png"
-  }
+  // {
+  //   name: "A3S Group",
+  //   image: "/logos/a3s_group.png"
+  // },
+  // {
+  //   name: "Binance Labs",
+  //   image: "/logos/BinanceLabs-logo.png"
+  // }
 ]
 
 export interface ICertificate {
