@@ -157,7 +157,7 @@ const Team: NextPage = () => {
     {
       name: "Dr. Joseph Thomas",
       role: "Director, Diebold Nixdorf",
-      imageUrl: "/team/dr_joseph_thomas.jpeg",
+      imageUrl: "/team/joseph_thomas.jpeg",
       linkedinUrl:
         "http://linkedin.com/in/drjosephthomas",
     },
