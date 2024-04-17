@@ -74,7 +74,7 @@ export default function Header() {
             </p>
           </Button> */}
             <NavbarItem>
-              <Button className="text-white bg-black" onClick={onOpen}>
+              <Button className="text-white bg-black" href="https://bnrytoken.vercel.app/presale" as={Link} target="_blank">
                 Presale is live!
               </Button>
             </NavbarItem>
