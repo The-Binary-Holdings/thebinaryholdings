@@ -1,17 +1,23 @@
+"use client";
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import BlogPost from "@/components/BlogpostSection"; // Adjust the import path based on your directory structure
+import { useEffect, useState } from "react";
+import { articlesDAO } from '@/common/DAO/articles.dao';
 
 const Team: NextPage = () => {
-  // You would fetch these details from an API or have them in some state management
-  const blogs = [
-    {
-      title: "Revolutionizing Reality: A Dive into Twin Matrix Technologies",
-      type: "Podcast",
-      thumbnail: "/blog-post.png",
-      date: "16-04-2024",
-    }
-  ];
+  
+  const [articles, setArticles] = useState<Array<any>>([]);
+  useEffect(() => {
+    const getArticles = async () => {
+      articlesDAO.getAllAtricles().then((articles: Array<any>) => {
+        setArticles(articles);      
+      });
+    };
+    getArticles();
+  }, []);
+
 
   return (
     <div className="w-full">
@@ -29,8 +35,8 @@ const Team: NextPage = () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24">
-              {blogs.map((blog, index) => (
-                <BlogPost key={index} {...blog} />
+              {articles.map((article, index) => (
+                <BlogPost key={index} {...article} />
               ))}
             </div>
           </section>
