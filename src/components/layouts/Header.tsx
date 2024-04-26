@@ -74,9 +74,9 @@ export default function Header() {
             </p>
           </Button> */}
             <NavbarItem>
-              <Button className="text-white bg-black" href="https://www.bnrytoken.com/presale" as={Link} target="_blank">
+              {/* <Button className="text-white bg-black" href="https://www.bnrytoken.com/presale" as={Link} target="_blank">
                 Presale is live!
-              </Button>
+              </Button> */}
             </NavbarItem>
             {/* <NavbarItem>
               <Link
