@@ -1,14 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { articlesDAO } from "@/common/DAO/articles.dao";
 import { useNavigate, useParams } from "react-router-dom";
 import { NextPage } from "next";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem, Image } from "@nextui-org/react";
 import GradientText from "@/components/GradientText";
 import Author from "@/components/AuthorSection";
+import { useSearchParams, useRouter } from "next/navigation";
 
 interface ArticleProps {
+  id: string;
   img: string;
   title: string;
   desc: string;
@@ -29,6 +31,7 @@ interface ArticleProps {
 
 const Article: NextPage = () => {
   const [article, setArticle] = useState<ArticleProps>({
+    id: '',
     img: '',
     title: '',
     desc: '',
@@ -46,7 +49,9 @@ const Article: NextPage = () => {
       }
     }
   });
-  const { id } = useParams();
+  const qParams = useSearchParams();
+  const id = qParams.get('id') as string;
+  const router = useRouter()
   useEffect(() => {
     const getArticle = async () => {
       if(id) {
@@ -54,6 +59,8 @@ const Article: NextPage = () => {
           window.scrollTo(0, 0);
           setArticle(article);
         });
+      } else {
+        router.push('/articles');
       }
     };
     getArticle();
@@ -63,14 +70,14 @@ const Article: NextPage = () => {
     <div className="w-5/6 m-auto">
       <div className="pt-16 md:px-8">
         <main className="bg-black text-white p-10">
-          <section>
+          {article?.id && <section>
             <div className="text-center">
               <button className="mb-4 rounded-full border-1 border-green-600 text-green-600 px-6 py-2 text-xs">{article.type}</button>
               <h2 className="text-4xl mb-6">{article.title}</h2>
               <h6 className="text-xs opacity-75 mb-4">The Binary Holdings (TBH)</h6>
             </div>
             <div className="w-full h-[400px] bg-no-repeat bg-cover bg-center relative rounded-[100px]">
-              {article?.img && <img src={article?.img} alt="" className="h-[400px] mx-auto" />}
+              {article?.img && <div className="w-fit mx-auto"><Image src={article?.img} alt="" className="h-[400px]" /></div>}
             </div>
 
             <div className="flex mt-12">
@@ -102,11 +109,19 @@ const Article: NextPage = () => {
                 </Accordion>}
               </div>
             </div>
-          </section>
+          </section> }
         </main>
       </div>
     </div>
   );
 };
 
-export default Article;
+const App = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Article />
+    </Suspense>
+  );
+};
+
+export default App;

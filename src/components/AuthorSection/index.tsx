@@ -1,3 +1,4 @@
+import { Image } from "@nextui-org/react";
 import Link from "next/link";
 import { BiSolidUser } from "react-icons/bi";
 import { BsTwitterX } from "react-icons/bs";
@@ -25,7 +26,7 @@ const Author: React.FC<author> = ({
     <div>
 
       <div className="inline-block text-2xl bg-gray-800 rounded-full p-2 mb-4">
-        {thumbnail ? <img src={thumbnail} /> : <BiSolidUser />}</div>
+        {thumbnail ? <Image src={thumbnail} alt="" /> : <BiSolidUser />}</div>
       <div className="font-medium text-sm">by {name}</div>
       <div className="text-sm opacity-75 pb-2">{role}</div>
       <div className="border-t border-white/10">

@@ -1,3 +1,4 @@
+import { Link } from "@nextui-org/react";
 import moment from "moment";
 import Image from "next/image";
 import { useNavigate } from "react-router-dom";
@@ -18,10 +19,10 @@ const BlogPost: React.FC<BlogPostProps> = ({
   id
 }) => {
 
-  const navigate = useNavigate();
 
   return (
-      <div className="rounded-lg" onClick={() => navigate(`/articles/${id}`)}>
+    <Link href={`/article?id=${id}`}>
+      <div className="rounded-lg">
         <div className="relative w-full h-72 mx-auto overflow-hidden rounded-lg">
           <Image
             unoptimized
@@ -37,6 +38,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
         </p>
         <p className="text-lg md:text-xl pt-2">{title}</p>
       </div>
+      </Link>
   );
 };
 
