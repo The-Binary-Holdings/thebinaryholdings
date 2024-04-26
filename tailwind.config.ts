@@ -18,6 +18,7 @@ const config: Config = {
         "heros-bg-tablet": "url('/heros-bg-tablet.png')",
         "heros-gate": "url('/gate.png')",
         "partners": "url('/partners-bg.png')",
+        "articles-banner": "url('/articles-banner.svg')",
       },
       colors: {
         'highlight': '#EBEABA',
@@ -25,6 +26,6 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [require("@tailwindcss/line-clamp"), nextui()],
 };
 export default config;
