@@ -21,24 +21,19 @@ const BlogPost: React.FC<BlogPostProps> = ({
 
 
   return (
-    <Link href={`/article?id=${id}`}>
-      <div className="rounded-lg">
-        <div className="relative w-full h-72 mx-auto overflow-hidden rounded-lg">
-          <Image
-            unoptimized
-            src={img}
-            alt={title}
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
-          />
+    <Link href={`/blog?id=${id}`}>
+      <div className="rounded-lg self-start flex lg:block md:block">
+        <div className="relative lg:w-full md:w-full w-36">
+          <img src={img} alt={title} width="100%" />
         </div>
-        <p className="text-xs text-white pt-2">
-          <span className="mr-4">{type}</span><span>{moment(created_at).format('DD-MM-YYYY')}</span>
-        </p>
-        <p className="text-lg md:text-xl pt-2 text-white">{title}</p>
+        <div className="text-white pt-2 flex-1 lg:flex-none md:flex-none pl-2 md:pl-0">
+          <p className="text-xs">
+            <span className="mr-4">{type}</span><span>{moment(created_at).format('DD-MM-YYYY')}</span>
+          </p>
+          <p className="lg:text-lg md:text-base text-sm pt-2 text-white line-clamp-2">{title}</p>
+        </div>
       </div>
-      </Link>
+    </Link>
   );
 };
 
