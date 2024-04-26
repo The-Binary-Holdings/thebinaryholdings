@@ -22,8 +22,8 @@ const Author: React.FC<author> = ({
   return (
     <div className="flex lg:block lg:justify-normal justify-between relative">
       <div className="lg:block flex items-center self-start">
-        <div className="lg:block md:block hidden">
-          {thumbnail ? <Image src={thumbnail} alt="" className="inline-block rounded-full mb-4 size-16" /> :
+        <div className="block">
+          {thumbnail ? <Image src={thumbnail} alt="" className="inline-block rounded-full mb-4 size-[48px] md:size-16" /> :
             <div className="inline-block text-2xl bg-gray-800 rounded-full p-2 mb-4"> <BiSolidUser /> </div>}
         </div>
         <div className="lg:block lg:pl-0 pl-4">
@@ -41,10 +41,10 @@ const Author: React.FC<author> = ({
               <FaTelegram />
             </Link>
 
-            <Link href="#" target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
+            {/* <Link href="#" target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
             >
               <FaDiscord />
-            </Link>
+            </Link> */}
 
             <Link href={`https://twitter.com/intent/tweet?url=${location.href}&text=${pageTitle}`} target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
             >

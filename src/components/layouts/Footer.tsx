@@ -111,7 +111,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={social.link}
-                    className="bg-white p-3 text-xl rounded-full me-2 mb-2 text-black"
+                    className="bg-white p-3 text-xl rounded-full mb-2 text-black"
                   >
                     <GetIcon iconName={social.type} />
                   </a>
