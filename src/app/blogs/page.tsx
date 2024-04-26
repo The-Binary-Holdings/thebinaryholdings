@@ -25,7 +25,7 @@ const ArticlesHome = () => {
           <section>
             <div className="text-center">                
                 <button className="mb-4 rounded-full border-1 border-green-600 text-green-600 px-6 py-2 text-xs">Latest</button>
-                <h2 className="text-4xl mb-10">Articles</h2>
+                <h2 className="text-4xl mb-10">Blog</h2>
             </div>
             <div className="bg-articles-banner w-full h-[600px] bg-no-repeat bg-cover bg-center relative">
                 <div className="absolute bottom-0 left-10 md:w-5/6">

@@ -21,7 +21,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
 
 
   return (
-    <Link href={`/article?id=${id}`}>
+    <Link href={`/blog?id=${id}`}>
       <div className="rounded-lg">
         <div className="relative w-full h-72 mx-auto overflow-hidden rounded-lg">
           <Image

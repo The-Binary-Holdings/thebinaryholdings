@@ -18,38 +18,36 @@ interface author {
 const Author: React.FC<author> = ({
   thumbnail,
   name,
-  role,
-  socials
+  role
 }) => {
 
   return (
     <div>
-
-      <div className="inline-block text-2xl bg-gray-800 rounded-full p-2 mb-4">
-        {thumbnail ? <Image src={thumbnail} alt="" /> : <BiSolidUser />}</div>
+      {thumbnail ? <Image src={thumbnail} alt="" className="inline-block rounded-full mb-4 size-16" /> :
+        <div className="inline-block text-2xl bg-gray-800 rounded-full p-2 mb-4"> <BiSolidUser /> </div>}
       <div className="font-medium text-sm">by {name}</div>
       <div className="text-sm opacity-75 pb-2">{role}</div>
       <div className="border-t border-white/10">
-        {socials && <div>
+        <div>
           <div className="py-4 text-xs opacity-60">Share</div>
           <div className="flex w-full items-center space-x-4">
 
-            {socials?.telegram && <Link href={socials.telegram} target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
+            <Link href="#" target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
             >
               <FaTelegram />
-            </Link>}
+            </Link>
 
-            {socials?.discord && <Link href={socials.discord} target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
+            <Link href="#" target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
             >
               <FaDiscord />
-            </Link>}
+            </Link>
 
-            {socials?.twitter && <Link href={socials.twitter} target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
+            <Link href="#" target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
             >
               <BsTwitterX />
-            </Link>}
+            </Link>
           </div>
-        </div>}
+        </div>
       </div>
     </div>
   );
