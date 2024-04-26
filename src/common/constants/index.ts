@@ -417,6 +417,10 @@ export const BACKERS = [
   {
     name: "A3S Group",
     image: "/logos/a3s_group.png"
+  },
+  {
+    name: "Binance Labs",
+    image: "/logos/BinanceLabs-logo.png"
   }
 ]
 
