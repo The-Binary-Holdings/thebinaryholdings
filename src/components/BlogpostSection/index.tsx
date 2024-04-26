@@ -36,7 +36,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
         <p className="text-xs text-white pt-2">
           <span className="mr-4">{type}</span><span>{moment(created_at).format('DD-MM-YYYY')}</span>
         </p>
-        <p className="text-lg md:text-xl pt-2">{title}</p>
+        <p className="text-lg md:text-xl pt-2 text-white">{title}</p>
       </div>
       </Link>
   );
