@@ -91,6 +91,11 @@ export default function Header() {
                 Team
               </Link>
             </NavbarItem>
+            <NavbarItem>
+              <Link href="/blogs" className="text-white">
+                Blog
+              </Link>
+            </NavbarItem>
             <NavbarMenuToggle
               className="border px-6 text-white h-3/4"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}

@@ -3,22 +3,20 @@ import Link from "next/link";
 import { BiSolidUser } from "react-icons/bi";
 import { BsTwitterX } from "react-icons/bs";
 import { FaDiscord, FaTelegram } from "react-icons/fa";
+import {isMobile} from 'react-device-detect';
 
 interface author {
   name: string;
   thumbnail: string;
   role: string;
-  socials: {
-    telegram: string;
-    discord: string;
-    twitter: string
-  }
+  pageTitle: string;
 }
 
 const Author: React.FC<author> = ({
   thumbnail,
   name,
-  role
+  role,
+  pageTitle
 }) => {
 
   return (
@@ -38,7 +36,7 @@ const Author: React.FC<author> = ({
           <div className="py-4 text-xs opacity-60 lg:block hidden">Share</div>
           <div className="flex w-full items-center space-x-4">
 
-            <Link href="#" target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
+            <Link href={`https://telegram.me/share/url?url=${location.href}&text=${pageTitle}`} target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
             >
               <FaTelegram />
             </Link>
@@ -48,7 +46,7 @@ const Author: React.FC<author> = ({
               <FaDiscord />
             </Link>
 
-            <Link href="#" target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
+            <Link href={`https://twitter.com/intent/tweet?url=${location.href}&text=${pageTitle}`} target="_blank" className="border border-[#363636] bg-[#FFF] rounded-full md:p-2 p-1 md:text-md text-xl text-black"
             >
               <BsTwitterX />
             </Link>

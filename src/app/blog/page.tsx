@@ -81,8 +81,8 @@ const Article: NextPage = () => {
             </div>
 
             <div className="lg:flex mt-12">
-              <div className="lg:w-1/4 px-6">
-                <Author thumbnail={article.author.thumbnail} name={article.author.name} role={article.author.role} socials={article.author.socials} />
+              <div className="lg:w-1/4 sm:px-0 px-6">
+                <Author thumbnail={article.author.thumbnail} name={article.author.name} role={article.author.role} pageTitle={article.title} />
               </div>
               <div className="lg:w-3/4 lg:p-0 pt-2">
                 <div className="text-sm opacity-75 leading-6">{article.desc}</div>
