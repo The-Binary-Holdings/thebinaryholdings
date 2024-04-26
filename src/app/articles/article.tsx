@@ -28,12 +28,6 @@ interface ArticleProps {
 }
 
 const Article: NextPage = () => {
-  const navigate = useNavigate();
-  const { id } = useParams();
-  if (!id) {
-    navigate(`/articles`);
-    return;
-  }
   const [article, setArticle] = useState<ArticleProps>({
     img: '',
     title: '',
@@ -52,12 +46,15 @@ const Article: NextPage = () => {
       }
     }
   });
+  const { id } = useParams();
   useEffect(() => {
     const getArticle = async () => {
-      articlesDAO.getArticleById(id).then((article: ArticleProps) => {
-        window.scrollTo(0, 0);
-        setArticle(article);
-      });
+      if(id) {
+        articlesDAO.getArticleById(id).then((article: ArticleProps) => {
+          window.scrollTo(0, 0);
+          setArticle(article);
+        });
+      }
     };
     getArticle();
   }, []);
