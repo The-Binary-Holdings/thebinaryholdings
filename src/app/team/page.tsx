@@ -125,7 +125,7 @@ const Team: NextPage = () => {
     {
       name: "Nathnael Seat",
       role: "Investor at Ninepine Technologies",
-      imageUrl: "/team/nathanael_seet.jpeg", // Replace with actual path to image
+      imageUrl: "/team/nathanael_seet.png", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/nathanael-seet-9726371aa",
     },
     // {
