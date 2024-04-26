@@ -67,24 +67,24 @@ const Article: NextPage = () => {
   }, []);
 
   return (
-    <div className="w-5/6 m-auto">
+    <div className="lg:w-5/6 m-auto">
       <div className="pt-16 md:px-8">
         <main className="bg-black text-white p-10">
           {article?.id && <section>
             <div className="text-center">
               <button className="mb-4 rounded-full border-1 border-green-600 text-green-600 px-6 py-2 text-xs">{article.type}</button>
-              <h2 className="text-4xl mb-6">{article.title}</h2>
+              <h2 className="lg:text-4xl md:text-2xl sm:text-xl mb-6">{article.title}</h2>
               <h6 className="text-xs opacity-75 mb-4">The Binary Holdings (TBH)</h6>
             </div>
-            <div className="w-full h-[400px] bg-no-repeat bg-cover bg-center relative rounded-[100px]">
-              {article?.img && <div className="w-fit mx-auto"><Image src={article?.img} alt="" className="h-[400px]" /></div>}
+            <div className="w-full lg:h-[400px] md:h-[300px] sm:h-[200px] bg-no-repeat bg-cover bg-center relative">
+              {article?.img && <div className="w-fit mx-auto"><Image src={article?.img} alt="" className="lg:h-[400px] md:h-[300px] sm:h-[200px]" /></div>}
             </div>
 
-            <div className="flex mt-12">
-              <div className="w-1/4 px-6">
+            <div className="lg:flex mt-12">
+              <div className="lg:w-1/4 px-6">
                 <Author thumbnail={article.author.thumbnail} name={article.author.name} role={article.author.role} socials={article.author.socials} />
               </div>
-              <div className="w-3/4">
+              <div className="lg:w-3/4 lg:p-0 pt-2">
                 <div className="text-sm opacity-75 leading-6">{article.desc}</div>
                 {article?.addons?.length && <Accordion className="w-full border-y border-white/10 mt-14" selectionMode="multiple">
                   {article.addons.map((data, index) => {
@@ -93,11 +93,11 @@ const Article: NextPage = () => {
                         key={index}
                         aria-label={data.title}
                         title={
-                          <GradientText className="font-medium text-2xl">
+                          <GradientText className="font-medium lg:text-2xl md:text-xl text-base">
                             {data.title}
                           </GradientText>
                         }
-                        className="border-t border-white/10 py-3"
+                        className="border-t border-white/10 lg:py-3 md:py-2 py-1"
                         classNames={{
                           title: "text-white text-lg",
                         }}
