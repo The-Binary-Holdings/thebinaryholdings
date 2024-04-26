@@ -72,16 +72,14 @@ const Article: NextPage = () => {
         <main className="bg-black text-white p-10">
           {article?.id && <section>
             <div className="text-center">
-              <button className="mb-4 rounded-full border-1 border-green-600 text-green-600 px-6 py-2 text-xs">{article.type}</button>
-              <h2 className="lg:text-4xl md:text-2xl sm:text-xl mb-6">{article.title}</h2>
-              <h6 className="text-xs opacity-75 mb-4">The Binary Holdings (TBH)</h6>
+              <h2 className="lg:text-4xl md:text-2xl sm:text-xl lg:mb-6 mb-2">{article.title}</h2>
             </div>
             <div className="w-full lg:h-[400px] md:h-[300px] sm:h-[200px] bg-no-repeat bg-cover bg-center relative">
               {article?.img && <div className="w-fit mx-auto"><Image src={article?.img} alt="" className="lg:h-[400px] md:h-[300px] sm:h-[200px]" /></div>}
             </div>
 
             <div className="lg:flex mt-12">
-              <div className="lg:w-1/4 sm:px-0 px-6">
+              <div className="lg:w-1/4 px-0 lg:px-6">
                 <Author thumbnail={article.author.thumbnail} name={article.author.name} role={article.author.role} pageTitle={article.title} />
               </div>
               <div className="lg:w-3/4 lg:p-0 pt-2">
