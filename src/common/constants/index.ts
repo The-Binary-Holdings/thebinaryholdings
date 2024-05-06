@@ -1,11 +1,18 @@
 export interface IProduct {
   name: string;
   description: string;
-  // logo: string;
   link: string;
+  logo?: string;
+  target?: string;
 }
 
 export const PRODUCTS: IProduct[] = [
+  {
+    name: "The Binary Network",
+    description:
+      "Building a blockchain ecosystem for seamless collaboration and innovation.",
+    link: "http://bnrytoken.com/",
+  },
   {
     name: "Digital Social",
     description:
@@ -13,7 +20,6 @@ export const PRODUCTS: IProduct[] = [
     link: "/digital-social",
     
   },
-
   {
     name: "Digital Enterprise",
     description: "Driving business growth through digital innovation.",
@@ -27,12 +33,6 @@ export const PRODUCTS: IProduct[] = [
   {
     name: "Incubator and Accelerator",
     description: " Accelerating startups with resources and mentorship.",
-    link: "#",
-  },
-  {
-    name: "The Binary Network",
-    description:
-      "Building a blockchain ecosystem for seamless collaboration and innovation.",
     link: "#",
   },
   // {
@@ -60,6 +60,14 @@ export const PRODUCTS: IProduct[] = [
   //   link: "https://www.twinmatrix.net/",
   // }
 ];
+
+export const PRODUCTS2: IProduct[] = [{
+  name: "$BNRY",
+  description: "Unleashing Decentralized Possibilities",
+  logo: "/logos/BNRY-logo.png",
+  link: "https://www.bnrytoken.com",
+  target: "_blank",
+}]
 
 export interface IPartner {
   name: string;
@@ -101,15 +109,6 @@ export interface IBusiness {
 
 export const BUSINESSES: IBusiness[] = [
   {
-    name: "Digital Social",
-    description:
-      "Elevating online interactions with cutting-edge social platforms.",
-    image_url: "/Fando-img.png",
-    logo: "/logos/fando-blacklogo.png",
-    text: "Explore More",
-    detail: "At the heart of Binary Holdings, the Digital Social vertical aims to redefine how we connect, share, and engage within digital spaces. This initiative is dedicated to building platforms and tools that foster meaningful interactions, prioritize user privacy, and create inclusive communities. By leveraging cutting-edge technology, Digital Social envisions a world where digital interactions are as rich and rewarding as face-to-face connections, empowering users to form deeper relationships and engage with content that truly matters to them."
-  },
-  {
     name: "The Binary Network",
     description:
       "Building a blockchain ecosystem for seamless collaboration and innovation.",
@@ -117,6 +116,15 @@ export const BUSINESSES: IBusiness[] = [
     logo: "/logos/BNRY-blacklogo.png",
     text: "Coming Soon",
     detail: "At its core, The Binary Network is Binary Holdings’ initiative to weave a fabric of connectivity across all its verticals, creating a synergistic ecosystem that amplifies the impact of each. This network serves as a collaborative platform where ideas, resources, and opportunities intersect, facilitating innovation and growth. Through The Binary Network, members can access a wealth of knowledge, partnerships, and technologies, driving forward the vision of Binary Holdings by leveraging the collective strength of its diverse verticals."
+  },
+  {
+    name: "Digital Social",
+    description:
+      "Elevating online interactions with cutting-edge social platforms.",
+    image_url: "/Fando-img.png",
+    logo: "/logos/fando-blacklogo.png",
+    text: "Explore More",
+    detail: "At the heart of Binary Holdings, the Digital Social vertical aims to redefine how we connect, share, and engage within digital spaces. This initiative is dedicated to building platforms and tools that foster meaningful interactions, prioritize user privacy, and create inclusive communities. By leveraging cutting-edge technology, Digital Social envisions a world where digital interactions are as rich and rewarding as face-to-face connections, empowering users to form deeper relationships and engage with content that truly matters to them."
   },
   {
     name: "Digital Finance",
@@ -256,6 +264,8 @@ export const COMMUNICATIONS: ICommunication[] = [
 export interface ILayoutSubItem {
   name: string;
   href: string;
+  icon?: string;
+  target?: string;
 }
 
 export interface ILayoutItem {
@@ -285,6 +295,10 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
     title: "Business",
     subItems: [
       {
+        name: "The Binary Network",
+        href: "#",
+      },
+      {
         name: "Digital Social",
         href: "/digital-social",
       },
@@ -297,21 +311,29 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         name: "Digital Finance",
         href: "#",
       },
-
       {
         name: "Incubator and Accelerator",
         href: "#",
       },
-
+    ],
+  },
+  {
+    title: "Products",
+    subItems: [
       {
-        name: "The Binary Network",
-        href: "#",
+        name: "$BNRY Portal",
+        href: "https://www.bnrytoken.com/",
+        target: "_blank",
       },
     ],
   },
   {
     title: "Learn",
     subItems: [
+      {
+        name: "Blog",
+        href: "/blogs",
+      },
       {
         name: "Documentation",
         href: "https://docs.thebinaryholdings.com",

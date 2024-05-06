@@ -64,6 +64,7 @@ const Footer = () => {
                       return (
                         <a
                           key={index}
+                          target={subItem.target || "_self"}
                           href={
                             item.title.toLowerCase() === "business"
                               ? "#business"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import localFont from "next/font/local";
 import { LAYOUT_ITEMS } from "@/common/constants";
 import ItemTab from "./ItemTab";
+import BusinessTab from "./BusinessTab";
 import ProductTab from "./ProductTab";
 
 const monumentExtended = localFont({
@@ -25,17 +26,22 @@ let tabs = [
   {
     id: "BUSINESS",
     label: "BUSINESS",
+    tab: <BusinessTab />,
+  },
+  {
+    id: "PRODUCTS", 
+    label: "PRODUCTS",
     tab: <ProductTab />,
   },
   {
     id: "LEARN",
     label: "LEARN",
-    tab: <ItemTab items={LAYOUT_ITEMS[1]} />,
+    tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
   },
   {
     id: "ABOUTUS",
     label: "About us",
-    tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
+    tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
   },
   // {
   //   id: "BNRYLAB",
@@ -46,10 +52,9 @@ let tabs = [
 
 const NavbarMenuContent = () => {
   let [activeTab, setActiveTab] = React.useState(tabs[0].id);
-
   return (
     <div className="w-full h-full text-white hidden md:block">
-      <WrapperContent className="h-full py-16">
+      <WrapperContent className="h-full py-16 lg:px-16 md:px-8 sm:px-4">
         <div className="w-full h-full flex">
           <div className="w-1/2 border-e h-full md:pe-8 lg:pe-16 xl:pe-32">
             {/* tabs */}
@@ -60,7 +65,7 @@ const NavbarMenuContent = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`${
                     activeTab === tab.id ? "" : "hover:text-white/60"
-                  } relative px-3 py-1.5 md:text-3xl lg:text-5xl xl:text-7xl font-medium text-white cursor-pointer transition focus-visible:outline-2 uppercase flex items-center last:border-b-0 border-b ${
+                  } relative px-3 py-1.5 md:text-3xl lg:text-5xl xl:text-6xl font-medium text-white cursor-pointer transition focus-visible:outline-2 uppercase flex items-center last:border-b-0 border-b ${
                     monumentExtended.className
                   }`}
                   style={{
