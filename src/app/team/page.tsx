@@ -30,7 +30,7 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/patricia-auer-91b7518/",
     },
     {
-      name: "Eric Lin",
+      name: "Eric Liu",
       role: "MD - Digital RW",
       imageUrl: "/team/eric_liu.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/ericliutmt/",
