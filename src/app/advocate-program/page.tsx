@@ -7,6 +7,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import VariantsComponent from "@/components/VariantsComponent";
 import dynamic from "next/dynamic";
 import Carousel from "@/components/Carousel";
+import Link from "next/link";
 
 const AdvocateProgram = () => {
   const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
@@ -53,6 +54,9 @@ const AdvocateProgram = () => {
               <Button
                 className="w-full md:w-fit uppercase bg-white text-[#080729] px-8 py-6 font-semibold"
                 radius="md"
+                as={Link}
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfEGvQgZZn0Cd7mwrIkp1dg9T5LGBsP8L_ypzpSTTlA56j5jQ/viewform?usp=sf_link"
+                target="_blank"
               >
                 Join The Advocate Program{" "}
               </Button>
@@ -197,13 +201,22 @@ const AdvocateProgram = () => {
       >
         <VariantsComponent direction="y" startDistance={100}>
           <div className="flex flex-col items-center p-5 md:p-20 mx-auto w-[80vw] md:w-[50vw] rounded-3xl bg-white/10 backdrop-blur-lg text-white text-center space-y-4 md:space-y-6 text-xl font-medium">
-            <h1 className="text-sm md:text-3xl font-bold">Submit your Application</h1>
-            <p className="text-sm md:text-base">Don&apos;t miss your chance to become a BInary Advocate!</p>
+            <h1 className="text-sm md:text-3xl font-bold">
+              Submit your Application
+            </h1>
+            <p className="text-sm md:text-base">
+              Don&apos;t miss your chance to become a BInary Advocate!
+            </p>
             <p className="text-sm md:text-base">
               Applications are open - bring your skills and join our growing
               community now!
             </p>
-            <Button className="bg-white/35 text-white rounded-full w-fit px-8 py-6 text-sm md:text-xl">
+            <Button
+              className="bg-white/35 text-white rounded-full w-fit px-8 py-6 text-sm md:text-xl"
+              as={Link}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfEGvQgZZn0Cd7mwrIkp1dg9T5LGBsP8L_ypzpSTTlA56j5jQ/viewform?usp=sf_link"
+              target="_blank"
+            >
               Apply now
               <IoIosArrowRoundForward className="text-5xl" />
             </Button>
