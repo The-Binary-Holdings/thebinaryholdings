@@ -30,7 +30,7 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/patricia-auer-91b7518/",
     },
     {
-      name: "Eric Lin",
+      name: "Eric Liu",
       role: "MD - Digital RW",
       imageUrl: "/team/eric_liu.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/ericliutmt/",
@@ -42,7 +42,7 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/pmgupta911/",
     },
     {
-      name: "Siddarth Sahi",
+      name: "Siddharth Sahi",
       role: "CBO",
       imageUrl: "/team/siddharth_sahi.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/sidsahi/",
@@ -77,8 +77,8 @@ const Team: NextPage = () => {
     },
 
     {
-      name: "Tuty Business",
-      role: "Development Director - Indonesia",
+      name: "Tuty Sakke",
+      role: "Business Development Director - Indonesia",
       imageUrl: "/team/tuty.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/tuty-sakke-6a76963b",
     },
@@ -148,7 +148,7 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/gilly-strauss-6ba149",
     },
     {
-      name: "Bhawnish Agarwal",
+      name: "Bhawnish Malhotra",
       role: "Global Head of Solution, Nokia",
       imageUrl: "/team/bhawnish_agarwal.jpeg",
       linkedinUrl:
