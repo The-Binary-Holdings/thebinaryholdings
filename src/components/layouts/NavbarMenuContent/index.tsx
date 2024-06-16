@@ -28,11 +28,11 @@ let tabs = [
     label: "BUSINESS",
     tab: <BusinessTab />,
   },
-  {
-    id: "PRODUCTS", 
-    label: "PRODUCTS",
-    tab: <ProductTab />,
-  },
+  // {
+  //   id: "PRODUCTS", 
+  //   label: "PRODUCTS",
+  //   tab: <ProductTab />,
+  // },
   {
     id: "LEARN",
     label: "LEARN",

@@ -354,6 +354,10 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         href: "/team",
       },
       {
+        name: "Advocate Program",
+        href: "/advocate-program",
+      },
+      {
         name: "Get in touch",
         href: "openModal",
       },
