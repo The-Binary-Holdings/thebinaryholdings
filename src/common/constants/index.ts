@@ -344,6 +344,10 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         name: "Documentation",
         href: "https://docs.thebinaryholdings.com",
       },
+      {
+        name: "FAQs",
+        href: "/faqs",
+      },
     ],
   },
   {
@@ -544,5 +548,292 @@ export const ROLES: IRole[] = [
     title: "Educate the community about Web3 and TBH",
     description:
       "Teach and share your in depth knowledge about The Binary Holdings technology to others",
+  },
+];
+
+export interface IFaqSectionItem {
+  question: string;
+  answer: string;
+}
+
+export interface IFaqItem {
+  section: string;
+  items: IFaqSectionItem[];
+}
+
+export const FAQ_ITEMS: IFaqItem[] = [
+  {
+    section: "THE BINARY HOLDINGS",
+    items: [
+      {
+        question: "What is The Binary Holdings?",
+        answer: `<div>
+                <p>The Binary Holdings is Web3 infrastructure platform for Telecommunication and Banks in emerging economies across Southeast Asia, Africa, South Asia and Latam with over 40m users currently.</p>
+                <br/><p>The Binary Holdings integrates into these legacy industries via our Layer2, The Binary Network - a Web2.5 (bridge between Web2 and Web3). Upon which, various decentralised applications (dApps) can be built and put directly in front of the users of telco and banking apps.</p>
+                <br/><p>In essence, The Binary Holdings becomes the middleware or a backend for telcos and banks, that allows them to leverage our extensive ecosystem. This enables these legacy industries to enhance their services, streamline operations, and provide additional value to their customers through The Binary Holdings infrastructure, effectively embedding our ecosystem into their own service offerings.</p>
+                </div>`,
+      },
+      {
+        question: "What Does The Binary Holdings Do?",
+        answer: `<div>
+                <p>The Binary Holdings provides Web3 infrastructure designed to help large ecosystems like telecommunications companies and banks to enhance user engagement, retention, activation, and Average Revenue Per User (ARPU).By integrating its Layer2 platform, The Binary Network, with these legacy industries, it enables them to incorporate decentralised applications for their existing user base.</p>
+                </div>`,
+      },
+      {
+        question: "How Many Products Are Under The Binary Holdings?",
+        answer: `<span>
+                  <p>Under The Binary Holdings, there are currently several key products:</p><br/>
+                  <ul class="list-disc px-10">
+                    <li><b class="font-bold">The Binary Network</b>: Our Layer2 blockchain built on the Optimism stack, serving as a bridge on which dApps are built. The Binary Network plugs directly into telco apps and presents dApps to a user base of millions. It is also over which all $BNRY earn, spend, and transfers take place.</li>
+                    <li><b class="font-bold">Fando</b>: An Engage/Watch2Earn platform, similar to TikTok, focused on sports and e-sports content.</li>
+                  </ul>
+                  <br/>
+                  <p>Our portfolio companies include:</p><br/>
+                  <ul class="list-disc px-10">
+                    <li><b class="font-bold">Lost Club Toys</b>: An Animoca-backed NFT collection with products such as digital stickers, a Move2Earn platform, merchandise, stuffed toys, fashion accessories, and a Pokémon Go-styled AR game. These tools enhance user activation and engagement for our partners.</li>
+                    <li><b class="font-bold">TwinMatrix</b>: A high-tech digital twin software company specializing in spatial digital twins and location-based digitalization. Our robust backend systems and intuitive interfaces integrate seamlessly with existing IoT data sources, streamlining operations and enabling data-informed decision-making for businesses worldwide.</li>
+                  </ul>
+                </span>`,
+      },
+      {
+        question:
+          "Whom have they made it for?/ Whom do The Binary Holdings products serve?",
+        answer: `<div>
+                <p>The Binary Holdings products are built for banks and telco companies to increase user retention, engagement, activation and ARPU. Our Layer2, The Binary Network, is built for developers looking to build and integrate decentralised products to be used by the end users of telco and banking apps. We're a B2B infrastructure provider.</p>
+                </div>`,
+      },
+      {
+        question: "Whom do they target? Target Audience",
+        answer: `<div>
+                <p>Our infrastructure primarily targets B2B firms seeking to enhance user engagement and retention through the decentralized applications (dApps) we integrate. By bridging these dApps over to telecom and banking sectors, we empower businesses to enrich their service offerings and customer interactions.</p>
+                <br/>
+                <p>In the future, as our ecosystem grows, we aim to foster a B2G (Business-to-Government) approach, leveraging our technology to collaborate with governmental entities and further enhance public services and engagement.</p>
+                </div>`,
+      },
+      {
+        question: "Between the Web2 and Web3 where we operate out as a bridge:",
+        answer: `<div>
+                <p>None - we lead this space</p>
+                </div>`,
+      },
+      {
+        question: "How will TBH grow its market from 43 million to 1 billion?",
+        answer: `<div>
+                <p>The Binary Holdings plans to grow its market from 43 million to 1 billion users by forming strategic partnerships with major telecommunications companies and banks. Each partnership significantly increases the user base in our ecosystem. By 2025, our goal is to be integrated with telecom providers in 17-20 countries across Latin America, Africa, the Middle East, Southeast Asia, and South Asia, thereby rapidly expanding our reach and user adoption in these regions.</p>
+                </div>`,
+      },
+      {
+        question: "What is the vision and mission of TBH?",
+        answer: `<span>
+                  <ul class="list-disc px-10">
+                    <li>Vision - Our vision is to create a comprehensive and integrated platform that combines social, digital payments, and a wide range of services and products to enhance everyday life, making it a central hub for personal, social, and business activities.</li>
+                    <li>Mission - Empowering the unempowered by providing access to a suite of decentralised products that reward usage and engagement.</li>
+                  </ul>
+                </span>`,
+      },
+      {
+        question:
+          "Who are the founders and team members, their background and experience.",
+        answer: `<div>
+                <p>The founders and team members of The Binary Holdings come from diverse backgrounds. To learn more about each member and their unique expertise, please visit our team page: <a class="underline" href="https://www.thebinaryholdings.com/team" target="_blank">https://www.thebinaryholdings.com/team</a></p>
+                </div>`,
+      },
+      {
+        question: "Are there any whitepapers or technical documents available?",
+        answer: `<div>
+                <p>Yes, The Binary Holdings has a public documentation site where you can access whitepapers and technical documents. Visit: <a class="underline" href="https://docs.thebinaryholdings.com/" target="_blank">https://docs.thebinaryholdings.com/</a></p>
+                </div>`,
+      },
+    ],
+  },
+  {
+    section: "THE BINARY NETWORK",
+    items: [
+      {
+        question: "What Is The Binary Network?",
+        answer: `<div>
+                <p>The Binary Network is a Layer2 solution built by The Binary Holdings on the Optimism stack. It acts as a bridge between Web2 and Web3, integrating directly into telecommunications and banking applications. This integration allows for the development and deployment of various decentralized applications (dApps), which are currently used by over 40 million users.</p>
+                </div>`,
+      },
+      {
+        question: "What Network Is The Binary Network Built On?",
+        answer: `<div>
+                <p>The Binary Network is built on the Optimism tech stack.</p>
+                </div>`,
+      },
+      {
+        question: "Why Is The Binary Network Built on The Optimism Tech Stack?",
+        answer: `<div>
+                <p>The Binary Network is built on the Optimism (OP) tech stack to effectively serve both users and dApp developers with a scalable blockchain solution. The OP stack, known for its EVM compatibility, allows seamless integration with telecom providers and handles large-scale transactions while remaining developer-friendly. Optimism, being the most mature solution for optimistic rollups, aligns closely with Ethereum's values and ecosystem. This alignment ensures that The Binary Network can leverage Ethereum's larger ecosystem, making it the ideal choice for scalability, ease of dApp integration, and future growth.</p>
+                </div>`,
+      },
+      {
+        question:
+          "How can I build on The Binary Network and why should I choose it to build dApps?",
+        answer: `<div>
+                <p>To start building on The Binary Network, refer to our comprehensive guide: <a class="underline" href="https://docs.thebinaryholdings.com/" target="_blank">Get Started Here.</a> </p>
+                <br/>
+                <p>Choosing The Binary Network offers unique advantages:</p>
+                <br/>
+                <ul class="list-disc px-10">
+                  <li><b class="font-bold">Massive User Base</b>: As the only Layer 2 solution with 40 million users, your dApps will have instant access to a vast audience, unmatched by any other Layer 2 solution.</li>
+                  <li><b class="font-bold">Seamless Integration</b>: Our network supports easy and efficient deployment of dApps, providing a scalable and developer-friendly environment.</li>
+                </ul>
+                <br/>
+                <p>By building on The Binary Network, you tap into a robust infrastructure and a ready-made user base, maximising your dApp's potential for success.</p>
+                </div>`,
+      },
+      {
+        question: "What Is The Binary Network's Chain ID/RPC?",
+        answer: `<div>
+                <p>For detailed information about The Binary Network's Chain ID and RPC, please visit our <a class="underline" href="https://docs.thebinaryholdings.com/developers-corner/network-details" target="_blank">https://docs.thebinaryholdings.com/developers-corner/network-details</a></p>
+                </div>`,
+      },
+      {
+        question: "Can dApps on Binary Network interact with others?",
+        answer: `<div>
+                <p>Yes, dApps that are natively deployed on The Binary Network can interact with dApps in the Optimism Superchain, including Base, Frax, and Mode, as well as within the broader Ethereum ecosystem. This interoperability enhances the functionality and reach of dApps built on The Binary Network.</p>
+                </div>`,
+      },
+      {
+        question: "Is there an airdrop?",
+        answer: `<div>
+                <p>Yes, there is an ongoing retroactive airdrop program. To participate, please visit:  [zealy link] Additionally, we are planning to introduce developer-focused airdrops to further support and incentivize contributions on our network. Join our Discord here for more details and updates: <a class="underline" href="https://discord.com/invite/BYqBmRm73g" target="_blank">https://discord.com/invite/BYqBmRm73g</a></p>
+                </div>`,
+      },
+      {
+        question: "How reliable is the network?",
+        answer: `<span>
+                  <p>The reliability of The Binary Network is anchored in its use of the Optimism tech stack, which employs optimistic rollup technology to enhance scalability and transaction efficiency.</p>
+                  <br/>
+                  <p>Transactions from Layer 1 (L1) to Layer 2 (L2) on The Binary Network typically take up to 3 minutes, showcasing its capability to swiftly process and confirm operations.</p>
+                  <br/> 
+                  <p>However, when moving from Layer 2 back to Layer 1 (L2 to L1), the finality process involves waiting for approximately 7 days due to Ethereum's confirmation requirements.</p>
+                  </span>`,
+      },
+      {
+        question:
+          "Are there helpful guides for developers to get started within The Binary Network?",
+        answer: `<div>
+                <p>The testnet is live, so feel free to explore and experiment on the network. Comprehensive guides will be available soon as the team is actively working on them. In the meantime, join our Discord community for support and updates.</p>
+                </div>`,
+      },
+      {
+        question:
+          "Are there any language-specific guidelines or recommendations?",
+        answer: `<div>
+                <p>To develop smart contracts on The Binary Network, use Solidity. For best practices and standards, we recommend referencing resources from OpenZeppelin: <a class="underline" href="https://www.openzeppelin.com//" target="_blank">https://www.openzeppelin.com/</a></p>
+                <br/>
+                <p>This ensures your smart contracts are secure, efficient, and aligned with industry standards.</p>
+                </div>`,
+      },
+      {
+        question: "How Do We Bridge To The Binary Network?",
+        answer: `<div>
+                <p>To bridge to The Binary Network, visit <a class="underline" href="bridge.thebinaryholdings.com" target="_blank">bridge.thebinaryholdings.com</a>. This platform will guide you through the process of transferring assets between different blockchain networks and The Binary Network.</p>
+                </div>`,
+      },
+      {
+        question: "How can I get test tokens to start development?",
+        answer: `<div>
+                <p>Head over to <a class="underline" href="faucet.sepolia.thebinaryholdings.com" target="_blank">faucet.sepolia.thebinaryholdings.com</a> to obtain your $TBNRY tokens for development.</p>
+                </div>`,
+      },
+      {
+        question:
+          "Are there any notable successful dApps already on the network?",
+        answer: `<div>
+                <p>Yes, to validate our thesis, we integrated <b class="font-bold">Fando</b>, an Engage/Watch2Earn platform similar to TikTok, focused on sports and esports content, with telecom apps.</p>
+                <br/>
+                <p>By deploying The Binary Network solution with two major telecom providers in Southeast Asia, we now support 43.6 million users, with 3.34 million daily active users, who spend an average of 13.87 minutes within our ecosystem. This demonstrates significant value and engagement. To know more, visit: <a class="underline" href="https://www.fando.ai/" target="_blank">https://www.fando.ai/</a></p>
+                </div>`,
+      },
+      {
+        question:
+          "How does Binary Network compare to other Layer 2 solutions in terms of speed and efficiency?",
+        answer: `<div>
+                <p>The Binary Network, built on the Optimism tech stack, shares similar characteristics with other Layer 2 solutions regarding speed, fees, and efficiency. Leveraging Optimism's mature and reliable technology, The Binary Network ensures high transaction throughput and low fees, making it competitive with other leading Layer 2 solutions. This allows for seamless and efficient dApp integration, providing a robust environment for developers and users alike.</p>
+                </div>`,
+      },
+      {
+        question:
+          "How easy is it to integrate with third-party services and APIs?",
+        answer: `<div>
+                <p>Integration with third-party services and APIs is straightforward as long as the third party supports The Binary Network. For more information and assistance, join our Discord community, where our team is available to help you directly: <a class="underline" href="https://discord.com/invite/BYqBmRm73g" target="_blank">https://discord.com/invite/BYqBmRm73g</a></p>
+                </div>`,
+      },
+    ],
+  },
+  {
+    section: "$BNRY TOKEN",
+    items: [
+      {
+        question: "Where can I Get The $BNRY token?",
+        answer: `<div>
+                <p>The $BNRY token is currently listed on MEXC. We will soon be listing the token on various decentralized exchanges (DEXs) and centralised exchanges (CEXs). Follow our Twitter: <a class="underline" href="https://twitter.com/TheBinaryHoldings" target="_blank">https://twitter.com/TheBinaryHoldings</a> to stay updated on announcements.</p>
+                </div>`,
+      },
+      {
+        question: "What are the key features and benefits of $BNRY?",
+        answer: `<div>
+                <p>The $BNRY token offers several key features and benefits:</p>
+                <br/>
+                <ol class="block px-10">
+                  <li>1.  Utility Token: $BNRY serves as a gas token for transactions on The Binary Network.</li>
+                  <li>2. Earn and Spend: Telecom users can earn $BNRY by engaging with decentralised applications (dApps) on the network.</li>
+                  <li>3. Loyalty Program: $BNRY functions like loyalty points, allowing users to redeem tokens for internet packages, phone minutes, and other items within the telecom ecosystem.</li>
+                  <li>4. Integration: Facilitates seamless integration of Web3 capabilities into existing telco and banking apps, enhancing user engagement and retention.</li>
+                </ol>
+                <br/>
+                <p>These features make $BNRY a versatile and valuable token within The Binary Holdings ecosystem.</p>
+                </div>`,
+      },
+      {
+        question: "What is the maximum supply?",
+        answer: `<div>
+                <p>The maximum supply of $BNRY tokens is 10 billion. The token is deflationary, meaning that burning events may be conducted to reduce the supply over time.</p>
+                </div>`,
+      },
+      {
+        question:
+          "What security measures are in place to protect the token and its holders?",
+        answer: `<div>
+                  <p>TBH collaborates with reputable entities such as Thirdweb, Optimism, and Zeeve to ensure that all smart contracts used are rigorously audited and adhere to industry standards. This partnership helps to safeguard the token and protect the interests of its holders against potential vulnerabilities and risks.</p>
+                </div>`,
+      },
+      {
+        question: "What wallets support $BNRY? What exchanges is it listed on?",
+        answer: `<div>
+                  <p>$BNRY token is supported by any EVM-based wallet. It is currently listed on MEXC exchange.</p>
+                </div>`,
+      },
+      {
+        question: "Are there any whitepapers or technical documents available?",
+        answer: `<div>
+                <p>For whitepapers and technical documentation, please visit The Binary Holdings</p>
+                <p>Documentation: <a class="underline" href="https://docs.thebinaryholdings.com/ " target="_blank">https://docs.thebinaryholdings.com/ </a></p>
+                </div>`,
+      },
+      {
+        question: "How can $BNRY be used in the real world?",
+        answer: `<div>
+                  <p>The $BNRY token is designed for utility. Tokens earned through engagements with dApps on the Binary Network can be used in place of fiat for payments, such as for data packets, internet packages, and phone minutes. Our vision extends to enabling everyday transactions, allowing people to eventually use $BNRY for purchasing tangible goods like food and shopping items in the real world.</p>
+                </div>`,
+      },
+      {
+        question: "Are TBH smart contracts audited?",
+        answer: `<span>
+                  <p>Yes, TBH utilizes smart contracts developed by the Thirdweb and Zeeve teams, both of which have undergone auditing processes to ensure security and reliability.</p>
+                </span>`,
+      },
+      {
+        question: "Can I earn rewards by staking?",
+        answer: `<div>
+                <p>Yes, you can earn $BNRY points by staking. For detailed information, visit Staking $BNRY: <a class="underline" href="https://docs.thebinaryholdings.com/usdbnry/usdbnry-points/staking-usdbnry/" target="_blank">https://docs.thebinaryholdings.com/usdbnry/usdbnry-points/staking-usdbnry</a></p>
+                <br/>
+                <p>This page provides comprehensive guidance on how to participate in staking and earn rewards within The Binary Holdings ecosystem.</p>
+                </div>`,
+      },
+    ],
   },
 ];
