@@ -20,11 +20,16 @@ const FAQ = () => {
         <WrapperContent className=" max-w-screen-xl py-16 mx-auto">
           {FAQ_ITEMS.map((faq, index) => {
             return (
-              <div className="lg:mt-14 grid grid-cols-4 w-full" key={index}>
-                <div className="relative px-0 lg:px-6 text-green text-lg lg:text-3xl font-semibold h-full">
-                  <span className="sticky top-10">{faq.section}</span>
-                </div>
-                <div className="lg:p-0 pt-2 col-span-3">
+              <div
+                className="lg:mt-18 grid grid-cols-4 w-full relative"
+                key={index}
+              >
+                {/* <div className="absolute top-0 left-0 col-span-4 w-full text-green text-lg lg:text-3xl font-semibold h-full z-0">
+                </div> */}
+                <span className="sticky top-0 py-10 border-b border-white/10 bg-black inline-block text-center z-20 col-span-4 w-full text-green text-lg lg:text-3xl font-semibold">
+                  {faq.section}
+                </span>
+                <div className="lg:p-0 pt-2 col-span-4 relative z-10">
                   <Accordion className="w-full !mt-0" selectionMode="multiple">
                     {faq.items.map((data, index) => {
                       return (
@@ -36,7 +41,7 @@ const FAQ = () => {
                               {data.question}
                             </GradientText>
                           }
-                          className="border-t border-white/10 !border-b-0 lg:py-3 md:py-2 py-1"
+                          className="border-t border-white/10 first:border-t-0 !border-b-0 lg:py-3 md:py-2 py-1"
                           classNames={{
                             title: "text-white text-lg",
                           }}
