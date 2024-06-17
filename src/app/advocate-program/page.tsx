@@ -158,7 +158,7 @@ const AdvocateProgram = () => {
                     type: "spring",
                     duration: index + 0.3,
                   })}
-                  animateToNumber={3000}
+                  animateToNumber={73000}
                 />
                 <p>+</p>
               </div>
