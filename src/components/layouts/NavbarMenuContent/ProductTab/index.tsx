@@ -1,5 +1,5 @@
 import React, {use, useContext} from "react";
-import { IBusiness, PRODUCTS } from "@/common/constants";
+import { IBusiness, PRODUCTS, PRODUCTS2 } from "@/common/constants";
 import VariantsComponent from "@/components/VariantsComponent";
 import {
   Button,
@@ -26,31 +26,19 @@ const ProductTab = () => {
   };
 
   return (
-    <div className="w-full h-full grid xl:grid-cols-3 md:gap-3 xl:gap-10">
-      {PRODUCTS.map((product, index) => {
+    <div className="w-full h-full grid grid-cols-1 md:gap-3 xl:gap-4">
+      {PRODUCTS2.map((product, index) => {
         return (
-          <VariantsComponent key={index} className="w-full cursor-pointer" delay={index * 0.1}>
+          <VariantsComponent key={index} className="w-full cursor-pointer" delay={index + 1 * 0.1}>
             <Link
-              className="flex flex-col items-start text-white w-full space-y-3"
-              onClick={(e) => {
-                e.preventDefault();
-                  const data =
-                    BUSINESSES.find(
-                      (business) => business.name === product.name
-                    ) || BUSINESSES[0];
-                  const element = document.getElementById("business");
-                  const buttonCloseMenu = document.getElementById("menu-toggle");
-                  buttonCloseMenu?.click();
-                  setTimeout(() => {
-                    element?.scrollIntoView({ behavior: "smooth" });
-                    handleClick(data);
-                  }, 300);
-              }}
+              className="flex lg:flex-col items-start text-white w-full content-start mb-0 sm:mb-2"
+              href={product.link}
+              target={product.target || "_self"}
             >
-              {/* <Image src={product.logo} alt="logo" className='border w-2/3 aspect-square object-contain p-5' removeWrapper radius='lg'/> */}
-              <div className="space-y-3">
-                <h1 className="font-medium text-3xl">{product.name}</h1>
-                <p>{product.description}</p>
+              <Image src={product.logo} alt="logo" className='border w-1/5 p-5 mr-2 mb-2' removeWrapper radius='lg'/>
+              <div className="lg:px-2 lg:pl-0 lg:pt-2">
+                <h1 className="flex font-medium text-xl md:text-2xl lg:text-3xl w-full">{product.name}</h1>
+                <p className="flex text-sm lg:text-base">{product.description}</p>
               </div>
             </Link>
           </VariantsComponent>

@@ -86,12 +86,12 @@ export default function Header() {
                 Documentation
               </Link>
             </NavbarItem> */}
-            <NavbarItem>
+            <NavbarItem className="md:inline-block hidden">
               <Link href="/team" className="text-white">
                 Team
               </Link>
             </NavbarItem>
-            <NavbarItem>
+            <NavbarItem className="md:inline-block hidden">
               <Link href="/blogs" className="text-white">
                 Blog
               </Link>

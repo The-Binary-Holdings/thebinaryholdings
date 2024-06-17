@@ -21,9 +21,9 @@ const Footer = () => {
   }
 
   return (
-    <footer className="w-full">
+    <footer className="w-full pt-16">
       <WrapperContent>
-        <div className="w-full md:pt-16 xl:pt-32 flex flex-col">
+        <div className="w-full md:pt-16 xl:pt-32 flex flex-col border-t border-white/75">
           <div className="flex flex-col xl:flex-row xl:space-x-40 space-y-10 md:space-y-0 w-full text-white">
             <div className="xl:w-1/2">
               {/* <div className="flex flex-col space-y-10 md:w-2/3"> */}
@@ -64,6 +64,7 @@ const Footer = () => {
                       return (
                         <a
                           key={index}
+                          target={subItem.target || "_self"}
                           href={
                             item.title.toLowerCase() === "business"
                               ? "#business"
@@ -105,7 +106,7 @@ const Footer = () => {
               height={20}
               radius="none"
             />
-            <span className="flex md:space-x-5 flex-wrap text-2xl">
+            <span className="flex space-x-5 flex-wrap text-2xl">
               {SOCIALS.map((social, index) => {
                 return (
                   <a

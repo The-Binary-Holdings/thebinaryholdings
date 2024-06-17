@@ -28,7 +28,7 @@ function createVariants(direction: string, startDistance: number, endDistance: n
 const VariantsComponent = ({
   children,
   direction = "y",
-  startDistance = 100,
+  startDistance = 0,
   endDistance = 0,
   className,
   duration = 2,

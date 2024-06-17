@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import localFont from "next/font/local";
 import { LAYOUT_ITEMS } from "@/common/constants";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import ProductTab from "./ProductTab";
+import BusinessTab from "./BusinessTab";
 import ItemTab from "./ItemTab";
+import ProductTab from "../NavbarMenuContent/ProductTab";
 
 const monumentExtended = localFont({
   src: [
@@ -26,17 +27,22 @@ let tabs = [
     {
       id: "BUSINESS",
       label: "BUSINESS",
+      tab: <BusinessTab />,
+    },
+    {
+      id: "PRODUCTS", 
+      label: "PRODUCTS",
       tab: <ProductTab />,
     },
     {
       id: "LEARN",
       label: "LEARN",
-      tab: <ItemTab items={LAYOUT_ITEMS[1]} />,
+      tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
     },
     {
       id: "ABOUTUS",
       label: "About us",
-      tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
+      tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
     },
     // {
     //   id: "BNRYLAB",
