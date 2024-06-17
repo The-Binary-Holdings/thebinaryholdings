@@ -36,12 +36,12 @@ let tabs = [
   {
     id: "LEARN",
     label: "LEARN",
-    tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
+    tab: <ItemTab items={LAYOUT_ITEMS[1]} />,
   },
   {
-    id: "ABOUTUS",
+    id: "ABOUT US",
     label: "About us",
-    tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
+    tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
   },
   // {
   //   id: "BNRYLAB",
