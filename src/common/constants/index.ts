@@ -323,16 +323,16 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       },
     ],
   },
-  {
-    title: "Products",
-    subItems: [
-      {
-        name: "$BNRY Portal",
-        href: "https://www.bnrytoken.com/",
-        target: "_blank",
-      },
-    ],
-  },
+  // {
+  //   title: "Products",
+  //   subItems: [
+  //     {
+  //       name: "$BNRY Portal",
+  //       href: "https://www.bnrytoken.com/",
+  //       target: "_blank",
+  //     },
+  //   ],
+  // },
   {
     title: "Learn",
     subItems: [
