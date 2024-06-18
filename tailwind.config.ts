@@ -23,6 +23,7 @@ const config: Config = {
       },
       colors: {
         highlight: "#EBEABA",
+        green: "#01fb8a",
       },
     },
   },
