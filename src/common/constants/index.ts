@@ -30,7 +30,7 @@ export const PRODUCTS: IProduct[] = [
     link: "#",
   },
   {
-    name: "Pre-incubator programs",
+    name: "Pre-incubator program",
     description: "Accelerating startups with resources and mentorship.",
     link: "/incubators",
   },
@@ -148,7 +148,7 @@ export const BUSINESSES: IBusiness[] = [
       "Binary Holdings' Digital Enterprise vertical focuses on revolutionizing how businesses operate, compete, and grow in the digital age. By providing innovative solutions that streamline operations, enhance productivity, and drive digital transformation, this vertical aims to be the cornerstone of future enterprises. From advanced analytics and AI-driven insights to customizable digital platforms, Digital Enterprise equips businesses of all sizes with the tools they need to thrive in an ever-evolving market landscape.",
   },
   {
-    name: "pre-incubator programs",
+    name: "pre-incubator program",
     description: "Accelerating startups with resources and mentorship.",
     image_url: "/incubator_and_accelerator.png",
     logo: "/incubator_and_accelerator.png",
