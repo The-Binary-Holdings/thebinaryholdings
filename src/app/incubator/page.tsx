@@ -112,6 +112,7 @@ const Incubator = () => {
             as={Link}
             target="_blank"
             href="mailto:darpan@thebinaryholdings.com"
+            rel="noreferrer"
           >
             APPLY NOW
           </Button>
@@ -173,7 +174,7 @@ const Incubator = () => {
       </section>
 
       <section className="w-full py-8 md:py-16" id="roles">
-        <WrapperContent className=" max-w-screen-2xl pb-0 md:pb-16 mx-auto">
+        <WrapperContent className=" max-w-screen-2xl pb-0 mx-auto">
           <div className="flex flex-col space-y-8">
             <VariantsComponent direction="x" startDistance={-100}>
               <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal">
@@ -213,7 +214,7 @@ const Incubator = () => {
       </section>
 
       <section className="w-full py-8 md:py-16" id="works">
-        <WrapperContent className=" max-w-screen-2xl pb-0 md:pb-16 mx-auto">
+        <WrapperContent className=" max-w-screen-2xl pb-0 mx-auto">
           <div className="flex flex-col space-y-8 items-center">
             <VariantsComponent direction="x" startDistance={-100}>
               <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal">
@@ -260,7 +261,7 @@ const Incubator = () => {
       </section>
 
       <section className="w-full py-8 md:py-16" id="roles">
-        <WrapperContent className=" max-w-screen-2xl pb-0 md:pb-16 mx-auto">
+        <WrapperContent className=" max-w-screen-2xl pb-0 mx-auto">
           <div className="flex flex-col space-y-8 items-center">
             <VariantsComponent direction="x" startDistance={-100}>
               <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal">
@@ -304,11 +305,11 @@ const Incubator = () => {
       </section>
 
       <section className="w-full py-8 md:py-16" id="information">
-        <WrapperContent className=" max-w-screen-2xl pb-0 md:pb-16 mx-auto">
+        <WrapperContent className=" max-w-screen-2xl pb-0 mx-auto">
           <VariantsComponent direction="y" startDistance={100}>
-            <div className="w-full flex flex-col md:flex-row p-6 md:p-20 rounded-3xl bg-gradient-to-r from-[#402D98] to-black border border-white">
-              <div className="flex flex-col text-white items-center md:items-start justify-center space-y-4 md:space-y-6 w-full md:w-4/5 text-center md:text-start">
-                <h1 className=" text-2xl md:text-5xl text-highlight font-medium leading-normal md:whitespace-nowrap">
+            <div className="w-full flex flex-col md:flex-row p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#402D98] to-black border border-white">
+              <div className="flex flex-col text-white items-center md:items-start justify-center space-y-4 md:space-y-6 w-full text-center md:text-start">
+                <h1 className=" text-2xl md:text-5xl text-highlight font-medium leading-normal xl:whitespace-nowrap">
                   Ready to Ignite Your Startup Journey?
                 </h1>
                 <p className="text-lg md:text-base">
@@ -320,6 +321,7 @@ const Incubator = () => {
                   className="uppercase bg-green px-14 py-6 text-black w-fit text-xl"
                   as={Link}
                   target="_blank"
+                  rel="noreferrer"
                   href="mailto:darpan@thebinaryholdings.com"
                 >
                   APPLY NOW
@@ -328,7 +330,7 @@ const Incubator = () => {
               <Image
                 src="/icons/3D-rings.png"
                 alt="imgs"
-                className="w-full md:w-2/5"
+                className="w-full md:w-5/12"
                 removeWrapper
               />
             </div>
