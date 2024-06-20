@@ -110,7 +110,8 @@ const Incubator = () => {
           <Button
             className="uppercase bg-green px-14 py-6 text-black w-fit text-xl"
             as={Link}
-            href="mailto: darpan@thebinaryholdings.com "
+            target="_blank"
+            href="mailto:darpan@thebinaryholdings.com"
           >
             APPLY NOW
           </Button>
@@ -121,7 +122,9 @@ const Incubator = () => {
       <section className="w-full py-8 md:py-16" id="about">
         <WrapperContent className=" max-w-screen-2xl mx-auto flex flex-col items-center space-y-8 text-center">
           <VariantsComponent direction="y" startDistance={100}>
-            <h1 className=" text-3xl md:text-5xl text-highlight font-medium">About</h1>
+            <h1 className=" text-3xl md:text-5xl text-highlight font-medium">
+              About
+            </h1>
           </VariantsComponent>
           <VariantsComponent direction="y" startDistance={100} delay={0.1}>
             <p className="text-white text-base md:text-xl">
@@ -257,7 +260,7 @@ const Incubator = () => {
       </section>
 
       <section className="w-full py-8 md:py-16" id="roles">
-        <WrapperContent className=" max-w-screen-2xl pt-16 pb-0 md:pb-16 mx-auto">
+        <WrapperContent className=" max-w-screen-2xl pb-0 md:pb-16 mx-auto">
           <div className="flex flex-col space-y-8 items-center">
             <VariantsComponent direction="x" startDistance={-100}>
               <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal">
@@ -304,7 +307,7 @@ const Incubator = () => {
         <WrapperContent className=" max-w-screen-2xl pb-0 md:pb-16 mx-auto">
           <VariantsComponent direction="y" startDistance={100}>
             <div className="w-full flex flex-col md:flex-row p-6 md:p-20 rounded-3xl bg-gradient-to-r from-[#402D98] to-black border border-white">
-              <div className="flex flex-col text-white items-center space-y-4 md:space-y-6 w-full md:w-4/5 text-center md:text-start">
+              <div className="flex flex-col text-white items-center md:items-start justify-center space-y-4 md:space-y-6 w-full md:w-4/5 text-center md:text-start">
                 <h1 className=" text-2xl md:text-5xl text-highlight font-medium leading-normal md:whitespace-nowrap">
                   Ready to Ignite Your Startup Journey?
                 </h1>
@@ -316,7 +319,8 @@ const Incubator = () => {
                 <Button
                   className="uppercase bg-green px-14 py-6 text-black w-fit text-xl"
                   as={Link}
-                  href="mailto: darpan@thebinaryholdings.com "
+                  target="_blank"
+                  href="mailto:darpan@thebinaryholdings.com"
                 >
                   APPLY NOW
                 </Button>
