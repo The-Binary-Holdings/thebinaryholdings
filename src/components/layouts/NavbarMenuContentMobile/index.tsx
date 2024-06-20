@@ -29,20 +29,20 @@ let tabs = [
       label: "BUSINESS",
       tab: <BusinessTab />,
     },
-    {
-      id: "PRODUCTS", 
-      label: "PRODUCTS",
-      tab: <ProductTab />,
-    },
+    // {
+    //   id: "PRODUCTS", 
+    //   label: "PRODUCTS",
+    //   tab: <ProductTab />,
+    // },
     {
       id: "LEARN",
       label: "LEARN",
-      tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
+      tab: <ItemTab items={LAYOUT_ITEMS[1]} />,
     },
     {
       id: "ABOUTUS",
       label: "About us",
-      tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
+      tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
     },
     // {
     //   id: "BNRYLAB",
