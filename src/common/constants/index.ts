@@ -318,8 +318,8 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         href: "#",
       },
       {
-        name: "Incubator and Accelerator",
-        href: "#",
+        name: "Pre-incubator program",
+        href: "/incubator",
       },
     ],
   },

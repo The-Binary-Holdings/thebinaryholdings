@@ -10,6 +10,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { on } from "events";
+import { useRouter } from "next/navigation";
 
 const BusinessCard = ({
   data,
@@ -20,10 +21,15 @@ const BusinessCard = ({
 }) => {
   const [isMouseMove, setMouseMove] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const router = useRouter();
 
   return (
     <div
       onMouseDown={() => {
+        if (data.name.includes("incubator")) {
+          router.push("/incubator");
+          return;
+        }
         setMouseMove(false);
       }}
       onMouseUp={() => {
