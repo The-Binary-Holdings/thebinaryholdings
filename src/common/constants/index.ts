@@ -375,6 +375,15 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       // },
     ],
   },
+  {
+    title: "careers",
+    subItems: [
+      {
+        name: "Jobs",
+        href: "/career",
+      },
+    ],
+  },
 ];
 
 export interface ISocial {
