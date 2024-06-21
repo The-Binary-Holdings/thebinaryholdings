@@ -938,3 +938,17 @@ export const INCUBATOR_WORKS: IIncubatorBenefit[] = [
       "Ignition Accepted startups receive working capital, mentorship, and access to our vast network of resources, enabling them to start building and scaling.",
   },
 ];
+
+export const INCUBATOR_PARTNER_LOGOS = [
+  "/logos/Batal Gaming.png",
+  "/logos/BNRYMart.png",
+  "/logos/Enkrypted.png",
+  "/logos/fando.png",
+  "/logos/FNZ GLOBAL.png",
+  "/logos/Go2spin.png",
+  "/logos/lostclub toys-04.png",
+  "/logos/reelify 2-12.png",
+  "/logos/tmt.png",
+  "/logos/uplay2.png",
+  "/logos/WizzQuiz.png",
+];
