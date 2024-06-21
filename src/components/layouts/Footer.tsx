@@ -1,24 +1,28 @@
 import React from "react";
 import WrapperContent from "../WrapperContent";
+import { Image, Link } from "@nextui-org/react";
 import {
-  Image,
-  Link,
-} from "@nextui-org/react";
-import { LAYOUT_ITEMS, SOCIALS, CERTIFICATES, IBusiness } from "@/common/constants";
+  LAYOUT_ITEMS,
+  SOCIALS,
+  CERTIFICATES,
+  IBusiness,
+} from "@/common/constants";
 import GetIcon from "@/common/icons";
 import { BUSINESSES } from "@/common/constants";
 import { ProviderContext } from "../Provider";
 import EmailFormModal from "../EmailFormModal";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
   const { onOpen, setData } = React.useContext(ProviderContext);
+  const router = useRouter();
 
-  const handleClick = (data : IBusiness) => {
+  const handleClick = (data: IBusiness) => {
     setData(data);
     setTimeout(() => {
       onOpen();
-    }, 1000)
-  }
+    }, 1000);
+  };
 
   return (
     <footer className="w-full pt-16">
@@ -60,21 +64,38 @@ const Footer = () => {
                       {item.title}
                     </h1>
                     {item.subItems.map((subItem, index) => {
-                      if(subItem.href == "openModal") return (<EmailFormModal className="cursor-pointer" key={index}>{subItem.name}</EmailFormModal>)
+                      if (subItem.href == "openModal")
+                        return (
+                          <EmailFormModal
+                            className="cursor-pointer"
+                            key={index}
+                          >
+                            {subItem.name}
+                          </EmailFormModal>
+                        );
                       return (
                         <a
                           key={index}
                           target={subItem.target || "_self"}
                           href={
-                            item.title.toLowerCase() === "business"
+                            item.title.toLowerCase() === "business" &&
+                            !subItem.name.includes("incubator")
                               ? "#business"
                               : subItem.href
                           }
                           onClick={(e) => {
                             if (item.title.toLowerCase() === "business") {
                               e.preventDefault();
-                              const data = BUSINESSES.find((business) => business.name === subItem.name) || BUSINESSES[0];
-                              const element = document.getElementById("business");
+                              const data =
+                                BUSINESSES.find(
+                                  (business) => business.name === subItem.name
+                                ) || BUSINESSES[0];
+                              if (subItem.name.includes("incubator")) {
+                                router.push("/incubator");
+                                return;
+                              }
+                              const element =
+                                document.getElementById("business");
                               element?.scrollIntoView({ behavior: "smooth" });
                               handleClick(data);
                             }

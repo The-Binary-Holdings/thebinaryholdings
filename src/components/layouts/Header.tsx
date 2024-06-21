@@ -188,7 +188,9 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <p>Transfers of 10000 USDT Onwards: 100% Bonus $BNRY Tokens</p>
+                  <p>
+                    Transfers of 10000 USDT Onwards: 100% Bonus $BNRY Tokens
+                  </p>
                   <ul className="list-inside space-y-2">
                     <li className="text-sm">
                       For example, if you transfer 12,000 USDT, You Get Total

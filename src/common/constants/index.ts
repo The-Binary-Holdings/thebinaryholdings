@@ -30,9 +30,9 @@ export const PRODUCTS: IProduct[] = [
     link: "#",
   },
   {
-    name: "Incubator and Accelerator",
-    description: " Accelerating startups with resources and mentorship.",
-    link: "#",
+    name: "Pre-incubator program",
+    description: "Accelerating startups with resources and mentorship.",
+    link: "/incubators",
   },
   // {
   //   name: "BNRY",
@@ -148,7 +148,7 @@ export const BUSINESSES: IBusiness[] = [
       "Binary Holdings' Digital Enterprise vertical focuses on revolutionizing how businesses operate, compete, and grow in the digital age. By providing innovative solutions that streamline operations, enhance productivity, and drive digital transformation, this vertical aims to be the cornerstone of future enterprises. From advanced analytics and AI-driven insights to customizable digital platforms, Digital Enterprise equips businesses of all sizes with the tools they need to thrive in an ever-evolving market landscape.",
   },
   {
-    name: "Incubator and Accelerator",
+    name: "pre-incubator program",
     description: "Accelerating startups with resources and mentorship.",
     image_url: "/incubator_and_accelerator.png",
     logo: "/incubator_and_accelerator.png",
@@ -318,8 +318,8 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         href: "#",
       },
       {
-        name: "Incubator and Accelerator",
-        href: "#",
+        name: "Pre-incubator program",
+        href: "/incubator",
       },
     ],
   },
@@ -836,4 +836,119 @@ export const FAQ_ITEMS: IFaqItem[] = [
       },
     ],
   },
+];
+
+export const WHY_INCUBATOR = [
+  {
+    title: "Access 40 Million Users",
+    description:
+      "Plug into The Binary Network and put your dApp directly in front of 40 million telco users - scale like no project has ever before.",
+    image: "/why1.png",
+  },
+  {
+    title: "Equity Stake",
+    description:
+      "We invest in your vision, becoming a strategic partner committed to your success. Our equity stake signifies a shared commitment towards a thriving web3 project.",
+    image: "/why2.png",
+  },
+  {
+    title: "Working Capital",
+    description:
+      "Got an idea that works - but worried about runway? We take that burden off your shoulders by becoming your source for working capital in the long-run.",
+    image: "/why3.png",
+  },
+  {
+    title: "Dedicated Workspace",
+    description:
+      "Work in our Bangkok office, leverage our team of experts, and join other founders to build a community that supports you to the world's end.",
+    image: "/why4.png",
+  },
+  {
+    title: "Unit Economics Optimization",
+    description:
+      "Receive guidance on optimizing your unit economics to ensure profitability and sustainable growth.",
+    image: "/why5.png",
+  },
+  {
+    title: "Focused Approach",
+    description:
+      "We specialize in the critical phase between ideation and execution, offering tailored support to meet your needs.",
+    image: "/why6.png",
+  },
+];
+
+export interface IIncubatorBenefit {
+  id: number;
+  iconUrl: string;
+  title: string;
+  description: string;
+}
+
+export const INCUBATOR_BENEFITS: IIncubatorBenefit[] = [
+  {
+    id: 1,
+    iconUrl: "/icons/3D-community.png",
+    title: "Accessing Capital",
+    description:
+      "Securing funding in the early stages can be challenging, especially for web3 projects that require significant upfront investment for development and deployment. Binary’s Startup Takeoff provides the necessary working capital to power your ideas from the start.",
+  },
+  {
+    id: 2,
+    iconUrl: "/icons/3D-target.png",
+    title: "Accelerator and Incubator Programs Dilemma",
+    description:
+      "Many accelerator and incubator programs are not tailored to the unique needs of web3 startups. We offer specific and crypto-native expertise, and network connections necessary for your success.",
+  },
+  {
+    id: 3,
+    iconUrl: "/icons/3D-laptop.png",
+    title: "Scaling and Distribution",
+    description:
+      "Reaching a broad audience and scaling effectively are common hurdles, requiring robust marketing strategies and distribution networks. Binary’s Startup Takeoff connects you with established distribution networks, accelerating your project’s entry and growth in the market.",
+  },
+  {
+    id: 4,
+    iconUrl: "/icons/3D-hands.png",
+    title: "Building Trust and Credibility",
+    description:
+      "Establishing trust in the decentralized world of web3 can be daunting, but our team of seasoned professionals  and partners offers your project the needed trust and credibility.",
+  },
+];
+
+export const INCUBATOR_WORKS: IIncubatorBenefit[] = [
+  {
+    id: 1,
+    iconUrl: "/icons/3D-checker.png",
+    title: "Application",
+    description:
+      "Submit your innovative idea through our application form. Tell us about your vision, team, and the problem you aim to solve.",
+  },
+  {
+    id: 2,
+    iconUrl: "/icons/3D-research.png",
+    title: "Selection",
+    description:
+      "Our panel of experts reviews applications, selecting promising startups based on their potential impact, innovation, and feasibility.",
+  },
+  {
+    id: 3,
+    iconUrl: "/icons/3D-spaceship.png",
+    title: "Ignition",
+    description:
+      "Ignition Accepted startups receive working capital, mentorship, and access to our vast network of resources, enabling them to start building and scaling.",
+  },
+];
+
+export const INCUBATOR_PARTNER_LOGOS = [
+  "/logos/Batal Gaming.png",
+  "/logos/BNRYMart.png",
+  "/logos/Enkrypted.png",
+  "/logos/fando.png",
+  "/logos/FNZ GLOBAL.png",
+  "/logos/Go2spin.png",
+  "/logos/lostclub toys-04.png",
+  "/logos/reelify 2-12.png",
+  "/logos/tmt.png",
+  "/logos/uplay2.png",
+  "/logos/WizzQuiz.png",
 ];
