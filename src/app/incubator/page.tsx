@@ -325,7 +325,7 @@ const Incubator = () => {
         <Marquee className="w-full mt-10 flex overflow-y-hidden" autoFill>
           {INCUBATOR_PARTNER_LOGOS.map((logo, index) => {
             return (
-              <div key={index} className="rounded-full w-20 bg-white mx-6">
+              <div key={index} className="rounded-full w-36 bg-white mx-6">
                 <Image src={logo} radius="full" alt="logo" />
               </div>
             );
