@@ -32,20 +32,20 @@ const BusinessSection = () => {
             })}
           </Carousel>
           <Marquee
-        className="w-full mt-10 grid grid-cols-5 border-y-2 border-white overflow-y-hidden"
-        autoFill
-      >
-        {PARTNERS.map((partner, index) => (
-          <div key={index} className="flex justify-center p-16">
-            <Image
-              src={partner.image}
-              alt="partner-logo"
-              removeWrapper
-              className="w-full h-[60px]"
-            />
-          </div>
-        ))}
-      </Marquee>
+            className="w-full mt-10 grid grid-cols-5 border-y-2 border-white overflow-y-hidden"
+            autoFill
+          >
+            {PARTNERS.map((partner, index) => (
+              <div key={index} className="flex justify-center p-16">
+                <Image
+                  src={partner.image}
+                  alt="partner-logo"
+                  removeWrapper
+                  className="w-full h-[60px]"
+                />
+              </div>
+            ))}
+          </Marquee>
           {/* <Link href="#" className="text-white uppercase underline font-medium md:hidden self-center">view all</Link> */}
         </div>
       </WrapperContent>

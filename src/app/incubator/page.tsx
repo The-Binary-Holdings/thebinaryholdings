@@ -6,6 +6,7 @@ import {
   INCUBATOR_WORKS,
   INCUBATOR_BENEFITS,
   WHY_INCUBATOR,
+  INCUBATOR_PARTNER_LOGOS,
 } from "@/common/constants";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import VariantsComponent from "@/components/VariantsComponent";
@@ -14,6 +15,7 @@ import Link from "next/link";
 import ParallaxText from "@/components/ParallaxText";
 import localFont from "next/font/local";
 import clsx from "clsx";
+import Marquee from "react-fast-marquee";
 
 const monumentExtended = localFont({
   src: [
@@ -302,6 +304,33 @@ const Incubator = () => {
             </div>
           </div>
         </WrapperContent>
+      </section>
+
+      <section className="w-full py-8 md:py-16" id="roles">
+        <WrapperContent className=" max-w-screen-2xl pb-0 mx-auto">
+          <div className="flex flex-col space-y-8 items-center">
+            <VariantsComponent direction="y" startDistance={100}>
+              <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal">
+                Our Partners
+              </h1>
+            </VariantsComponent>
+            <VariantsComponent direction="y" startDistance={100} delay={0.1}>
+              <p className="text-white text-center">
+                We collaborate with industry leaders to provide unparalleled
+                support.
+              </p>
+            </VariantsComponent>
+          </div>
+        </WrapperContent>
+        <Marquee className="w-full mt-10 flex overflow-y-hidden" autoFill>
+          {INCUBATOR_PARTNER_LOGOS.map((logo, index) => {
+            return (
+              <div key={index} className="rounded-full w-36 bg-white mx-6">
+                <Image src={logo} radius="full" alt="logo" />
+              </div>
+            );
+          })}
+        </Marquee>
       </section>
 
       <section className="w-full py-8 md:py-16" id="information">
