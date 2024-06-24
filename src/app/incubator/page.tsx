@@ -7,10 +7,10 @@ import {
   INCUBATOR_BENEFITS,
   WHY_INCUBATOR,
   INCUBATOR_PARTNER_LOGOS,
+  TELECOMMUNICATION_PARTNER_LOGOS
 } from "@/common/constants";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import VariantsComponent from "@/components/VariantsComponent";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import ParallaxText from "@/components/ParallaxText";
 import localFont from "next/font/local";
@@ -177,11 +177,38 @@ const Incubator = () => {
 
       <section className="w-full py-8 md:py-16" id="roles">
         <WrapperContent className=" max-w-screen-2xl pb-0 mx-auto">
+          <div className="flex flex-col space-y-8 items-center">
+            <VariantsComponent direction="y" startDistance={100}>
+              <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal text-center">
+                Telecommunication Partners Integrated
+                <br /> With The Binary Network
+              </h1>
+            </VariantsComponent>
+            <VariantsComponent direction="y" startDistance={100} delay={0.1}>
+              <p className="text-white text-center">
+                Place your dApp in front of the next billion users
+              </p>
+            </VariantsComponent>
+          </div>
+        </WrapperContent>
+        <Marquee className="w-full mt-10 flex overflow-y-hidden" autoFill>
+          {TELECOMMUNICATION_PARTNER_LOGOS.map((logo, index) => {
+            return (
+              <div key={index} className=" w-52 mx-16">
+                <Image src={logo} radius="none" alt="logo" />
+              </div>
+            );
+          })}
+        </Marquee>
+      </section>
+
+      <section className="w-full py-8 md:py-16" id="roles">
+        <WrapperContent className=" max-w-screen-2xl pb-0 mx-auto">
           <div className="flex flex-col space-y-8">
             <VariantsComponent direction="x" startDistance={-100}>
-              <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal">
+              <h1 className=" text-3xl md:text-5xl text-highlight font-medium leading-normal text-center">
                 Tackling Web3 Challenges
-                <br /> with Binary&apos;s Startup Takeoff
+                 with Binary&apos;s<br /> Startup Takeoff
               </h1>
             </VariantsComponent>
             <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-8 gap-y-6">
@@ -275,13 +302,13 @@ const Incubator = () => {
                 <div className="flex flex-col px-10 py-8 h-full rounded-3xl text-white bg-[#402D98] items-center space-x-4">
                   <div className="space-y-2">
                     <h1 className="text-2xl text-green font-semibold">
-                      Equity Stake
+                      Equity Stake*
                     </h1>
                     <p className="text-base">
-                      The Binary Holdings takes a 5%stake in your project should
-                      you choose to participate in the program. This ensure we
-                      have skin in the game, and can help you grow in good
-                      faith.
+                      The Binary Holdings takes a 5% stake in your project
+                      should you choose to participate in the program. This
+                      ensure we have skin in the game, and can help you grow in
+                      good faith.
                     </p>
                   </div>
                 </div>

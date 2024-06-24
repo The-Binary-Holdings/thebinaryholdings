@@ -846,7 +846,7 @@ export const WHY_INCUBATOR = [
     image: "/why1.png",
   },
   {
-    title: "Equity Stake",
+    title: "Equity Stake*",
     description:
       "We invest in your vision, becoming a strategic partner committed to your success. Our equity stake signifies a shared commitment towards a thriving web3 project.",
     image: "/why2.png",
@@ -921,7 +921,7 @@ export const INCUBATOR_WORKS: IIncubatorBenefit[] = [
     iconUrl: "/icons/3D-checker.png",
     title: "Application",
     description:
-      "Submit your innovative idea through our application form. Tell us about your vision, team, and the problem you aim to solve.",
+      "Submit your innovative idea directly to our team",
   },
   {
     id: 2,
@@ -935,7 +935,7 @@ export const INCUBATOR_WORKS: IIncubatorBenefit[] = [
     iconUrl: "/icons/3D-spaceship.png",
     title: "Ignition",
     description:
-      "Ignition Accepted startups receive working capital, mentorship, and access to our vast network of resources, enabling them to start building and scaling.",
+      "Binary's Startup Takeoff accepted applications",
   },
 ];
 
@@ -952,3 +952,10 @@ export const INCUBATOR_PARTNER_LOGOS = [
   "/logos/uplay2.png",
   "/logos/WizzQuiz.png",
 ];
+
+export const TELECOMMUNICATION_PARTNER_LOGOS = [
+  "/logos/globe.png",
+  "/logos/atom.webp",
+  "logos/celcomdigi.png",
+  "/logos/indosat.svg",
+]
