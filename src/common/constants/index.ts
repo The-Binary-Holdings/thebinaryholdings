@@ -955,7 +955,7 @@ export const INCUBATOR_PARTNER_LOGOS = [
 
 export const TELECOMMUNICATION_PARTNER_LOGOS = [
   "/logos/globe.png",
-  "/logos/atom.webp",
+  "/logos/ATOM.webp",
   "logos/celcomdigi.png",
   "/logos/indosat.svg",
 ]
