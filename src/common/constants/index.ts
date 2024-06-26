@@ -605,14 +605,13 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </span>`,
       },
       {
-        question:
-          "Whom have they made it for?/ Whom do The Binary Holdings products serve?",
+        question: "Whom do The Binary Holdings Products Serve?",
         answer: `<div>
                 <p>The Binary Holdings products are built for banks and telco companies to increase user retention, engagement, activation and ARPU. Our Layer2, The Binary Network, is built for developers looking to build and integrate decentralised products to be used by the end users of telco and banking apps. We're a B2B infrastructure provider.</p>
                 </div>`,
       },
       {
-        question: "Whom do they target? Target Audience",
+        question: "Who are our users and clients?",
         answer: `<div>
                 <p>Our infrastructure primarily targets B2B firms seeking to enhance user engagement and retention through the decentralized applications (dApps) we integrate. By bridging these dApps over to telecom and banking sectors, we empower businesses to enrich their service offerings and customer interactions.</p>
                 <br/>
@@ -620,19 +619,20 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </div>`,
       },
       {
-        question: "Between the Web2 and Web3 where we operate out as a bridge:",
+        question: "Who are our competitiors?",
         answer: `<div>
                 <p>None - we lead this space</p>
                 </div>`,
       },
       {
-        question: "How will TBH grow its market from 43 million to 1 billion?",
+        question:
+          "How will The Binary Holdings grow our user base from 43 million to 1 billion?",
         answer: `<div>
-                <p>The Binary Holdings plans to grow its market from 43 million to 1 billion users by forming strategic partnerships with major telecommunications companies and banks. Each partnership significantly increases the user base in our ecosystem. By 2025, our goal is to be integrated with telecom providers in 17-20 countries across Latin America, Africa, the Middle East, Southeast Asia, and South Asia, thereby rapidly expanding our reach and user adoption in these regions.</p>
+                <p>The Binary Holdings plans to grow our user base from 43 million to 1 billion users by forming strategic partnerships with major telecommunications companies and banks. Each partnership significantly increases the user base in our ecosystem. By 2025, our goal is to be integrated with telecom providers in 17-20 countries across Latin America, Africa, the Middle East, Southeast Asia, and South Asia, thereby rapidly expanding our reach and user adoption in these regions.</p>
                 </div>`,
       },
       {
-        question: "What is the vision and mission of TBH?",
+        question: "What is the vision and mission of The Binary Holdings?",
         answer: `<span>
                   <ul class="list-disc px-10">
                     <li>Vision - Our vision is to create a comprehensive and integrated platform that combines social, digital payments, and a wide range of services and products to enhance everyday life, making it a central hub for personal, social, and business activities.</li>
@@ -641,8 +641,7 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </span>`,
       },
       {
-        question:
-          "Who are the founders and team members, their background and experience.",
+        question: "Who forms The Binary Holdings' Team?",
         answer: `<div>
                 <p>The founders and team members of The Binary Holdings come from diverse backgrounds. To learn more about each member and their unique expertise, please visit our team page: <a class="underline" href="https://www.thebinaryholdings.com/team" target="_blank">https://www.thebinaryholdings.com/team</a></p>
                 </div>`,
@@ -659,7 +658,7 @@ export const FAQ_ITEMS: IFaqItem[] = [
     section: "THE BINARY NETWORK",
     items: [
       {
-        question: "What Is The Binary Network?",
+        question: "What is The Binary Network?",
         answer: `<div>
                 <p>The Binary Network is a Layer2 solution built by The Binary Holdings on the Optimism stack. It acts as a bridge between Web2 and Web3, integrating directly into telecommunications and banking applications. This integration allows for the development and deployment of various decentralized applications (dApps), which are currently used by over 40 million users.</p>
                 </div>`,
@@ -737,7 +736,7 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </div>`,
       },
       {
-        question: "How Do We Bridge To The Binary Network?",
+        question: "How do we bridge to The Binary Network?",
         answer: `<div>
                 <p>To bridge to The Binary Network, visit <a class="underline" href="bridge.thebinaryholdings.com" target="_blank">bridge.thebinaryholdings.com</a>. This platform will guide you through the process of transferring assets between different blockchain networks and The Binary Network.</p>
                 </div>`,
@@ -777,7 +776,7 @@ export const FAQ_ITEMS: IFaqItem[] = [
     section: "$BNRY TOKEN",
     items: [
       {
-        question: "Where can I Get The $BNRY token?",
+        question: "Where can I get the $BNRY token?",
         answer: `<div>
                 <p>The $BNRY token is currently listed on MEXC. We will soon be listing the token on various decentralized exchanges (DEXs) and centralised exchanges (CEXs). Follow our Twitter: <a class="underline" href="https://twitter.com/TheBinaryHoldings" target="_blank">https://twitter.com/TheBinaryHoldings</a> to stay updated on announcements.</p>
                 </div>`,
@@ -830,9 +829,9 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </div>`,
       },
       {
-        question: "Are TBH smart contracts audited?",
+        question: "Are The Binary Network’s smart contracts audited?",
         answer: `<span>
-                  <p>Yes, TBH utilizes smart contracts developed by the Thirdweb and Zeeve teams, both of which have undergone auditing processes to ensure security and reliability.</p>
+                  <p>Yes, The Binary Network utilizes smart contracts developed by the Thirdweb and Zeeve teams, both of which have undergone auditing processes to ensure security and reliability.</p>
                 </span>`,
       },
       {
@@ -855,7 +854,7 @@ export const WHY_INCUBATOR = [
     image: "/why1.png",
   },
   {
-    title: "Equity Stake",
+    title: "Equity Stake*",
     description:
       "We invest in your vision, becoming a strategic partner committed to your success. Our equity stake signifies a shared commitment towards a thriving web3 project.",
     image: "/why2.png",
@@ -929,8 +928,7 @@ export const INCUBATOR_WORKS: IIncubatorBenefit[] = [
     id: 1,
     iconUrl: "/icons/3D-checker.png",
     title: "Application",
-    description:
-      "Submit your innovative idea through our application form. Tell us about your vision, team, and the problem you aim to solve.",
+    description: "Submit your innovative idea directly to our team",
   },
   {
     id: 2,
@@ -943,8 +941,7 @@ export const INCUBATOR_WORKS: IIncubatorBenefit[] = [
     id: 3,
     iconUrl: "/icons/3D-spaceship.png",
     title: "Ignition",
-    description:
-      "Ignition Accepted startups receive working capital, mentorship, and access to our vast network of resources, enabling them to start building and scaling.",
+    description: "Binary's Startup Takeoff accepted applications",
   },
 ];
 
@@ -960,4 +957,11 @@ export const INCUBATOR_PARTNER_LOGOS = [
   "/logos/tmt.png",
   "/logos/uplay2.png",
   "/logos/WizzQuiz.png",
+];
+
+export const TELECOMMUNICATION_PARTNER_LOGOS = [
+  "/logos/globe.png",
+  "/logos/ATOM.webp",
+  "logos/celcomdigi.png",
+  "/logos/indosat.svg",
 ];
