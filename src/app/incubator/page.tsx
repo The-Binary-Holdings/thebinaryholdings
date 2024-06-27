@@ -34,7 +34,7 @@ const monumentExtended = localFont({
 
 const Incubator = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-no-repeat font-light">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-no-repeat font-light overflow-hidden">
       {/* hero section */}
       <section
         id="hero"
