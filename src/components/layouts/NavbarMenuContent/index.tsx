@@ -29,7 +29,7 @@ let tabs = [
     tab: <BusinessTab />,
   },
   // {
-  //   id: "PRODUCTS", 
+  //   id: "PRODUCTS",
   //   label: "PRODUCTS",
   //   tab: <ProductTab />,
   // },
@@ -42,6 +42,11 @@ let tabs = [
     id: "ABOUT US",
     label: "About us",
     tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
+  },
+  {
+    id: "CAREERS",
+    label: "Careers",
+    tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
   },
   // {
   //   id: "BNRYLAB",
