@@ -619,7 +619,7 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </div>`,
       },
       {
-        question: "Who are our competitiors?",
+        question: "Who are our competitors?",
         answer: `<div>
                 <p>None - we lead this space</p>
                 </div>`,
