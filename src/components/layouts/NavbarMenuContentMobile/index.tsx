@@ -44,11 +44,11 @@ let tabs = [
     label: "About us",
     tab: <ItemTab items={LAYOUT_ITEMS[2]} />,
   },
-  {
-    id: "CAREERS",
-    label: "Careers",
-    tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
-  },
+  // {
+  //   id: "CAREERS",
+  //   label: "Careers",
+  //   tab: <ItemTab items={LAYOUT_ITEMS[3]} />,
+  // },
   // {
   //   id: "BNRYLAB",
   //   label: "BNRY LAB",
