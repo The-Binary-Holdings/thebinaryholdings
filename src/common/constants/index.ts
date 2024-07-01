@@ -574,13 +574,13 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </div>`,
       },
       {
-        question: "What Does The Binary Holdings Do?",
+        question: "What does The Binary Holdings do?",
         answer: `<div>
                 <p>The Binary Holdings provides Web3 infrastructure designed to help large ecosystems like telecommunications companies and banks to enhance user engagement, retention, activation, and Average Revenue Per User (ARPU).By integrating its Layer2 platform, The Binary Network, with these legacy industries, it enables them to incorporate decentralised applications for their existing user base.</p>
                 </div>`,
       },
       {
-        question: "How Many Products Are Under The Binary Holdings?",
+        question: "How many products are under The Binary Holdings?",
         answer: `<span>
                   <p>Under The Binary Holdings, there are currently several key products:</p><br/>
                   <ul class="list-disc px-10">
@@ -655,13 +655,14 @@ export const FAQ_ITEMS: IFaqItem[] = [
                 </div>`,
       },
       {
-        question: "What Network Is The Binary Network Built On?",
+        question: "What network is The Binary Network built on?",
         answer: `<div>
                 <p>The Binary Network is built on the Optimism tech stack.</p>
                 </div>`,
       },
       {
-        question: "Why Is The Binary Network Built on The Optimism Tech Stack?",
+        question:
+          "Why is The Binary Network Built on Optimism's OP Tech Stack?",
         answer: `<div>
                 <p>The Binary Network is built on the Optimism (OP) tech stack to effectively serve both users and dApp developers with a scalable blockchain solution. The OP stack, known for its EVM compatibility, allows seamless integration with telecom providers and handles large-scale transactions while remaining developer-friendly. Optimism, being the most mature solution for optimistic rollups, aligns closely with Ethereum's values and ecosystem. This alignment ensures that The Binary Network can leverage Ethereum's larger ecosystem, making it the ideal choice for scalability, ease of dApp integration, and future growth.</p>
                 </div>`,
