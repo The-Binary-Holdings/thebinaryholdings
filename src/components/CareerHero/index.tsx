@@ -3,16 +3,9 @@ import Image from "next/image";
 
 const CareerHero = () => {
   return (
-    <div className="container mx-auto">
-      <h2 className="text-5xl">Career</h2>
-      <div className="mt-4 relative w-full h-56 xl:h-[600px] rounded-sm overflow-hidden">
-        <Image
-          src={"/career_hero.png"}
-          className="object-cover"
-          sizes="auto"
-          alt=""
-          fill
-        />
+    <div className="w-full px-4 md:px-16">
+      <h2 className="text-5xl mb-4">Career</h2>
+      <div className="w-full h-72 xl:h-[600px] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden bg-[url(/career_hero.png)]">
       </div>
     </div>
   );
