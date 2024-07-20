@@ -156,14 +156,14 @@ const Team: NextPage = () => {
     {
       name: "Shishir Bharti",
       role: "Advisor",
-      imageUrl: "/team/Shishir.jpeg",
+      imageUrl: "/team/Shishir.png",
       linkedinUrl: "https://www.linkedin.com/in/shishirbharti/",
     },
     {
       name: "Patricia Auer",
       role: "CIO",
       imageUrl: "/team/patricia_auer.jpeg",
-      linkedinUrl: "https://www.linkedin.com/in/patricia-auer-91b7518",
+      linkedinUrl: "https://www.linkedin.com/in/patricia-auer-91b7518/",
     },
   ];
 
