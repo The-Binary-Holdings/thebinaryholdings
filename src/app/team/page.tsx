@@ -13,9 +13,15 @@ const Team: NextPage = () => {
     },
     {
       name: "Manit Ghogar",
-      role: "CMO",
+      role: "Cofounder and CMO",
       imageUrl: "/team/manit_ghogar.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/manitghogar/",
+    },
+    {
+      name: "Siddharth Sahi",
+      role: "Cofounder and CBO",
+      imageUrl: "/team/siddharth_sahi.jpeg", // Replace with actual path to image
+      linkedinUrl: "https://www.linkedin.com/in/sidsahi/",
     },
     {
       name: "Elton Tay",
@@ -24,16 +30,10 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/eltontay/",
     },
     {
-      name: "Patricia Auer",
-      role: "CIO",
-      imageUrl: "/team/patricia_auer.jpeg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/patricia-auer-91b7518/",
-    },
-    {
-      name: "Eric Liu",
-      role: "MD - Digital RW",
-      imageUrl: "/team/eric_liu.jpeg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/ericliutmt/",
+      name: "George Papas",
+      role: "VP Technology",
+      imageUrl: "/team/George.png", // Replace with actual path to image
+      linkedinUrl: "https://www.linkedin.com/in/georgecpapas/",
     },
     {
       name: "Prashant Gupta",
@@ -42,25 +42,23 @@ const Team: NextPage = () => {
       linkedinUrl: "https://www.linkedin.com/in/pmgupta911/",
     },
     {
-      name: "Siddharth Sahi",
-      role: "CBO",
-      imageUrl: "/team/siddharth_sahi.jpeg", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/sidsahi/",
-    },
-    {
       name: "Manish Jha ",
       role: "MD - Digital Social",
       imageUrl: "/team/manish_jha.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/mjha86/",
     },
-
+    {
+      name: "Rajkumar Tiwari",
+      role: "VP Shared Services",
+      imageUrl: "/team/Rajkumar.jpg",
+      linkedinUrl: "https://www.linkedin.com/in/raj-t-04489b1b/",
+    },
     {
       name: "Sarah Intarapromma",
       role: "Chief Of Staff",
       imageUrl: "/team/sarah.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/sarah-intarapromma-544b3ba/",
     },
-
     {
       name: "Man Pham",
       role: "Business Development Director - SEA",
@@ -68,79 +66,57 @@ const Team: NextPage = () => {
       linkedinUrl:
         "https://www.linkedin.com/in/Business Development Director - SEA",
     },
-
+    {
+      name: "Jean Paul Rosel",
+      role: "Business Development Director - Philippines",
+      imageUrl: "/team/JeanPaul.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/paulrosel/",
+    },
+    {
+      name: "Durjoy Guha Neog",
+      role: "Business Development Consultant",
+      imageUrl: "/team/dujoy.png",
+      linkedinUrl: "https://www.linkedin.com/in/paulrosel/",
+    },
+    {
+      name: "Eric Liu",
+      role: "MD - Digital RW",
+      imageUrl: "/team/eric_liu.jpeg", // Replace with actual path to image
+      linkedinUrl: "https://www.linkedin.com/in/ericliutmt/",
+    },
     {
       name: "Daniel Grove",
       role: "CEO - Move To Earn",
       imageUrl: "/team/daniel_grove.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/daniel-grove-81b3501a3/",
     },
-
-    {
-      name: "Tuty Sakke",
-      role: "Business Development Director - Indonesia",
-      imageUrl: "/team/tuty.jpeg",
-      linkedinUrl: "https://www.linkedin.com/in/tuty-sakke-6a76963b",
-    },
   ];
 
   const partnerMembers = [
-    {
-      name: "Mario Nawfal",
-      role: "Founder & CEO , IBC",
-      imageUrl: "/team/mario_nawfal.jpeg",
-      linkedinUrl: "https://www.linkedin.com/in/mario-nawfal/",
-    },
-
-    // {
-    //   name: "Dave Shin",
-    //   role: "BD @ Immutable",
-    //   imageUrl: "/team/dave_shin.jpg", // Replace with actual path to image
-    //   linkedinUrl: "https://www.linkedin.com/in/shin-novation/",
-    // },
     {
       name: "David Ng",
       role: "Serial Entrepreneur & Investor",
       imageUrl: "/team/david_ng.jpeg", // Replace with actual path to image
       linkedinUrl: "https://www.linkedin.com/in/davidngmw/",
     },
-    // {
-    //   name: "Henry Ondo",
-    //   role: "COO/CFO/BD Coach",
-    //   imageUrl: "/team/male_placeholder.png", // Replace with actual path to image
-    //   linkedinUrl: "https://www.linkedin.com/in/henry-ondo-b18a5765/",
-    // },
-    // {
-    //   name: "Daniel Yang",
-    //   role: "Head of Treasury - Algorand Foundation",
-    //   imageUrl: "/team/daniel_yang.jpeg", // Replace with actual path to image
-    //   linkedinUrl: "https://www.linkedin.com/in/daniel-yang-b7989217/",
-    // },
-    // {
-    //   name: "Kai Kono",
-    //   role: "CEO at Zodia Custody",
-    //   imageUrl: "/team/kai_kono.jpeg", // Replace with actual path to image
-    //   linkedinUrl: "https://www.linkedin.com/in/kai-kono-86542b1b",
-    // },
     {
-      name: "Nathnael Seat",
-      role: "Investor at Ninepine Technologies",
-      imageUrl: "/team/nathanael_seet.png", // Replace with actual path to image
-      linkedinUrl: "https://www.linkedin.com/in/nathanael-seet-9726371aa",
+      name: "Mario Nawfal",
+      role: "Founder & CEO , IBC",
+      imageUrl: "/team/mario_nawfal.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/mario-nawfal/",
     },
-    // {
-    //   name: "Sky Wee",
-    //   role: "Crypto & Gaming Influencer",
-    //   imageUrl: "/team/sky_wee.jpeg", // Replace with actual path to image
-    //   linkedinUrl: "https://www.linkedin.com/in/skywee97",
-    // },
     {
       name: "Nikita Sachdev",
       role: "CEO, Luna Media",
       imageUrl: "/team/nikita_sachdev.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
     },
-
+    {
+      name: "Nathnael Seat",
+      role: "Investor at Ninepine Technologies",
+      imageUrl: "/team/nathanael_seet.png", // Replace with actual path to image
+      linkedinUrl: "https://www.linkedin.com/in/nathanael-seet-9726371aa",
+    },
     {
       name: "Gilly Strauss",
       role: "Chairman, Strauss Capital",
@@ -151,29 +127,43 @@ const Team: NextPage = () => {
       name: "Bhawnish Malhotra",
       role: "Global Head of Solution, Nokia",
       imageUrl: "/team/bhawnish_agarwal.jpeg",
-      linkedinUrl:
-        "http://linkedin.com/in/bhawnish-bobby-malhotra-84a8212",
+      linkedinUrl: "http://linkedin.com/in/bhawnish-bobby-malhotra-84a8212",
     },
     {
       name: "Dr. Joseph Thomas",
       role: "Director, Diebold Nixdorf",
       imageUrl: "/team/joseph_thomas.jpeg",
-      linkedinUrl:
-        "http://linkedin.com/in/drjosephthomas",
+      linkedinUrl: "http://linkedin.com/in/drjosephthomas",
     },
     {
       name: "Subin Bhatia",
       role: "Sr. Advisor & Bain & Co.",
       imageUrl: "/team/subin_bhatia.jpeg",
-      linkedinUrl:
-        "https://www.linkedin.com/in/subinbhatia",
+      linkedinUrl: "https://www.linkedin.com/in/subinbhatia",
     },
     {
       name: "Olivier Letant",
       role: "Partner & Kearney",
       imageUrl: "/team/oliver_letant.jpeg",
-      linkedinUrl:
-        "https://www.linkedin.com/in/olivier-letant-wharton",
+      linkedinUrl: "https://www.linkedin.com/in/olivier-letant-wharton",
+    },
+    {
+      name: "Joanne",
+      role: "Advisor",
+      imageUrl: "/team/joanne_wood.jpg",
+      linkedinUrl: "https://www.linkedin.com/in/joanne-wood-a4a2486/",
+    },
+    {
+      name: "Shishir Bharti",
+      role: "Advisor",
+      imageUrl: "/team/Shishir.png",
+      linkedinUrl: "https://www.linkedin.com/in/shishirbharti/",
+    },
+    {
+      name: "Patricia Auer",
+      role: "CIO",
+      imageUrl: "/team/patricia_auer.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/patricia-auer-91b7518/",
     },
   ];
 
