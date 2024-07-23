@@ -46,7 +46,7 @@ class CareersDAO {
 
   async uploadProfile(file: File) {
     const bannerName = uuidv4();
-    const { data, error } = await supabase.storage.from("Files").upload(`/careers/profiles/${bannerName}`, file);
+    const { data, error } = await supabase.storage.from("Files").upload(`/submitted-profiles/${bannerName}`, file);
     if (error) {
       console.error('Error while uploading file', error);
       return null;
