@@ -28,10 +28,10 @@ const ArticlesHome = () => {
             </div>
             <div className="w-full bg-no-repeat bg-cover bg-center relative">
                 <div className="sm:absolute bottom-0 left-10 md:w-5/6">
-                    <h6 className="text-xs opacity-75 mb-4">The Binary Holdings (TBH)</h6>
-                    <h2 className="mb-8 lg:text-4xl text-xl">The Future of Digital Engagement: Exploring the Depths of the TBH Holding Model</h2>
+                    {/* <h6 className="text-xs opacity-75 mb-4">The Binary Holdings (TBH)</h6> */}
+                    {/* <h2 className="mb-8 lg:text-4xl text-xl">The Future of Digital Engagement: Exploring the Depths of the TBH Holding Model</h2> */}
                 </div>
-              <img src="articles-banner.svg" alt="" />
+              <img src="/blogs/18.png" alt="" />
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:mt-20 mt-8 content-start">
               {articles.map((article, index) => (
