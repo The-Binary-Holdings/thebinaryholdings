@@ -120,13 +120,17 @@ const Footer = () => {
             </span>
           </div>
           <div className="w-full py-16 flex flex-col md:flex-row justify-between items-start md:items-center space-y-10 md:space-y-0">
-            <Image
+            <div><Image
               src="/logos/tbh-logo.svg"
               alt="logo"
               width={100}
               height={20}
               radius="none"
             />
+            <div className='flex place-self-start text-[#666666] mt-10 text-sm'>
+                &copy; {new Date().getFullYear()} The Binary Holdings. All rights reserved.
+              </div>
+            </div>
             <span className="flex space-x-5 flex-wrap text-2xl">
               {SOCIALS.map((social, index) => {
                 return (
