@@ -10,6 +10,7 @@ import { careersDAO, Job } from "@/common/DAO/careers.dao";
 import { toast, Toaster } from "react-hot-toast";
 import { JobServices } from "@/app/services/jobs.service";
 import { PiSpinnerGapBold } from "react-icons/pi";
+import VerifyOTP from "./verify-otp";
 
 const INIT_FORM_VALUE = {
   name: "",
@@ -43,6 +44,8 @@ const ApplyJobModal = ({
 
   const [file, setFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<boolean>(false);
+  const [showVerify, setShowVerify] = useState<boolean>(false);
+  const [formValues, setFormValues] = useState<any>(null);
 
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -91,29 +94,48 @@ const ApplyJobModal = ({
       toast.error("You have already applied for this job", { id: "job-apply" });
       setLoading(false);
     } else {
-      if (file) {
-        const uploadProfile: any = await careersDAO.uploadProfile(file);
-        const application = values;
-        application.attachment = uploadProfile.path;
-        application.job_id = job.id;
-        const res = await JobServices.newApplication(application);
-        if (res) {
-          toast.success("Application submitted successfully", {
-            id: "job-apply",
-          });
-          setTimeout(() => {
-            setLoading(false);
-            toggleOpen(false);
-          }, 3000);
-        } else {
+      setLoading(true);
+      const checkOTP = await JobServices.checkOTP(values.email, job.id);
+      if(checkOTP?.length) {
+        setLoading(false);
+        toast.error("OTP already sent to your email", { id: "job-apply" });
+      } else {
+        setLoading(true);
+        const res = await JobServices.sendOTP(values.email, job.id);
+        if(res) {
+          setFormValues(values);
+          setShowVerify(true);
           setLoading(false);
-          toast.error("Failed to submit application. Please try again", {
-            id: "job-apply",
-          });
+          toast.success("OTP sent to your email", { id: "job-apply" });
         }
       }
     }
   };
+
+  const confirmApply = async (values: any) => {
+    if (file) {
+      const uploadProfile: any = await careersDAO.uploadProfile(file);
+      const application = values;
+      application.attachment = uploadProfile.path;
+      application.job_id = job.id;
+      const res = await JobServices.newApplication(application);
+      if (res) {
+        toast.success("Application submitted successfully", {
+          id: "job-apply",
+        });
+        setTimeout(() => {
+          setLoading(false);
+          toggleOpen(false);
+        }, 3000);
+      } else {
+        setLoading(false);
+        toast.error("Failed to submit application. Please try again", {
+          id: "job-apply",
+        });
+      }
+    }
+
+  }
 
   const toastOptions = { duration: 5000 };
 
@@ -308,6 +330,15 @@ const ApplyJobModal = ({
         </ModalContent>
       </Modal>
       <Toaster position="top-right" toastOptions={toastOptions} />
+      {showVerify && <VerifyOTP email={formValues.email} job_id={job.id} isOpen={true} toggleOpen={(isValid: boolean) => {
+        setShowVerify(false);
+        setLoading(false);
+        if(isValid) {
+          confirmApply(formValues);
+        } else {
+          toast.error("Failed to verify email", { id: "job-apply" });
+        }
+      }} />}
     </>
   );
 };
