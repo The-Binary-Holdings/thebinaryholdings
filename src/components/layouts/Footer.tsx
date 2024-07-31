@@ -127,7 +127,7 @@ const Footer = () => {
               height={20}
               radius="none"
             />
-              <div className='flex place-self-start text-[#666666] mt-10 text-sm'>
+            <div className='flex place-self-start text-[#666666] mt-10 text-sm'>
                 &copy; {new Date().getFullYear()} The Binary Holdings. All rights reserved.
               </div>
             </div>
