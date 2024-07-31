@@ -14,9 +14,7 @@ import {
 import * as React from "react";
 
 interface EmailTemplateProps {
-  firstName: string;
-  lastName: string;
-  message: string;
+  otp: string;
 }
 
 const EmailTemplate = (payload: EmailTemplateProps) => {
@@ -33,7 +31,7 @@ const EmailTemplate = (payload: EmailTemplateProps) => {
         </Section>
 
         <Heading className="mt-6 text-center text-3xl leading-[48px] capitalize">
-          Invitation to judge Phoenix <br /> BINARY Token - 27 May’24
+          Confirm your email
         </Heading>
 
         <Section className="block px-4 border-b-1 border-solid border-white/20 pb-20">

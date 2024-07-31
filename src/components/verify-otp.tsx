@@ -12,7 +12,7 @@ import { JobServices } from "@/app/services/jobs.service";
 import { PiSpinnerGapBold } from "react-icons/pi";
 
 const schema = Yup.object().shape({
-  otp: Yup.number().min(6).max(6).required("OTP is required"),
+  otp: Yup.string().length(6),
 });
 
 const INIT_FORM_VALUE = {
@@ -32,7 +32,7 @@ const VerifyOTP = ({ email, toggleOpen, job_id, isOpen }: VerifyOTPProps) => {
 
   const [loading, setLoading] = useState<boolean>(false);
 
-  const toastOptions = { duration: 5000 };
+  const toastOptions = { duration: 5000, id: "verify-otp" };
 
   const Loader = () => (
     <div className="absolute top-0 left-0 w-full h-full bg-gray-950/[.7] z-50">
@@ -45,8 +45,20 @@ const VerifyOTP = ({ email, toggleOpen, job_id, isOpen }: VerifyOTPProps) => {
     </div>
   );
 
-  const confirm = async () => {
-
+  const confirm = async (values: any) => {
+    if(values?.otp && String(values.otp)?.length === 6) {
+      setLoading(true);
+      const data: any = await JobServices.verifyOTP(email, job_id, values.otp);
+      if(data?.length) {
+        setLoading(false);
+        toast.success("Email verified successfully", toastOptions);
+        await JobServices.clearOTP(email, job_id);
+        toggleOpen(true);
+      } else {
+        setLoading(false);
+        toast.error("Invalid OTP", toastOptions);
+      }
+    }
   }
 
   return (
@@ -64,9 +76,11 @@ const VerifyOTP = ({ email, toggleOpen, job_id, isOpen }: VerifyOTPProps) => {
               <Formik
                 initialValues={INIT_FORM_VALUE}
                 validationSchema={schema}
-                onSubmit={confirm}
+                onSubmit={v => {
+                  confirm(v);
+                }}
               >
-                {({ errors, touched }) => (
+                {({ submitForm, isValid, errors }) => (
                   <Form>
                     <div ref={clickRef}>
                       <div className="text-2xl font-medium flex items-center gap-1 justify-between">
@@ -85,7 +99,7 @@ const VerifyOTP = ({ email, toggleOpen, job_id, isOpen }: VerifyOTPProps) => {
                             OTP
                             <span
                               className={clsx(
-                                errors.otp && touched.otp && "text-red-500"
+                                errors.otp && "text-red-500"
                               )}
                             >
                               *
@@ -93,18 +107,20 @@ const VerifyOTP = ({ email, toggleOpen, job_id, isOpen }: VerifyOTPProps) => {
                           </p>
                           <Field
                             name="otp"
-                            type="text"
+                            type="number"
+                            maxLength={6}
                             autoComplete="off"
                             className={clsx(
                               "w-full mt-2 bg-[#FFFFFF0D] h-10 px-2 outline-none rounded-sm",
                               errors.otp &&
-                                touched.otp &&
                                 "border border-red-500"
                             )}
                           />
                         </div>
                         <button
-                          onClick={confirm}
+                          disabled={!isValid}
+                          onClick={submitForm}
+                          type='submit'
                           className="col-span-2 rounded-md bg-white font-semibold w-full text-black py-4"
                         >
                           Verify

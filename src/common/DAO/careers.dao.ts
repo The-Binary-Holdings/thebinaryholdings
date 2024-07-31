@@ -16,6 +16,7 @@ export interface Job {
   desc: string;
   responsibilities: Array<string>;
   requirements: Array<string>;
+  emails?: Array<string>;
 }
 class CareersDAO {
   async getAll() {  

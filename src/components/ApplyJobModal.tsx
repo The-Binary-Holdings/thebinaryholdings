@@ -88,26 +88,33 @@ const ApplyJobModal = ({
   };
 
   const apply = async (values: any) => {
-    setLoading(true);
-    const check = await JobServices.checkIsApplied(values.email, job.id);
-    if (check?.length) {
-      toast.error("You have already applied for this job", { id: "job-apply" });
-      setLoading(false);
-    } else {
+    if(file) {
       setLoading(true);
-      const checkOTP = await JobServices.checkOTP(values.email, job.id);
-      if(checkOTP?.length) {
-        setLoading(false);
-        toast.error("OTP already sent to your email", { id: "job-apply" });
-      } else {
-        setLoading(true);
-        const res = await JobServices.sendOTP(values.email, job.id);
-        if(res) {
-          setFormValues(values);
-          setShowVerify(true);
+      try {
+        const check = await JobServices.checkIsApplied(values.email, job.id);
+        if (check?.length) {
+          toast.error("You have already applied for this job", { id: "job-apply" });
           setLoading(false);
-          toast.success("OTP sent to your email", { id: "job-apply" });
+        } else {
+          setLoading(true);
+          const checkOTP: any = await JobServices.checkOTP(values.email, job.id);
+          if(checkOTP?.length) {
+            setLoading(false);
+            toast.error("OTP already sent to your email", { id: "job-apply" });
+          } else {
+            setLoading(true);
+            const res = await JobServices.sendOTP(values.name, values.email, job.id);
+            if(res) {
+              setFormValues(values);
+              setShowVerify(true);
+              setLoading(false);
+              toast.success("OTP sent to your email", { id: "job-apply" });
+            }
+          }
         }
+      } catch (error) {
+        setLoading(false);
+        toast.error("Failed to submit application. Please try again", { id: "job-apply" });
       }
     }
   };
@@ -118,7 +125,7 @@ const ApplyJobModal = ({
       const application = values;
       application.attachment = uploadProfile.path;
       application.job_id = job.id;
-      const res = await JobServices.newApplication(application);
+      const res = await JobServices.newApplication(application, job);
       if (res) {
         toast.success("Application submitted successfully", {
           id: "job-apply",
