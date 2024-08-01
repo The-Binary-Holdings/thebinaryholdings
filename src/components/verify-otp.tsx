@@ -119,7 +119,6 @@ const VerifyOTP = ({ email, toggleOpen, job_id, isOpen }: VerifyOTPProps) => {
                         </div>
                         <button
                           disabled={!isValid}
-                          onClick={submitForm}
                           type='submit'
                           className="col-span-2 rounded-md bg-white font-semibold w-full text-black py-4"
                         >

@@ -100,6 +100,8 @@ const ApplyJobModal = ({
           const checkOTP: any = await JobServices.checkOTP(values.email, job.id);
           if(checkOTP?.length) {
             setLoading(false);
+            setFormValues(values);
+            setShowVerify(true);
             toast.error("OTP already sent to your email", { id: "job-apply" });
           } else {
             setLoading(true);
@@ -121,13 +123,14 @@ const ApplyJobModal = ({
 
   const confirmApply = async (values: any) => {
     if (file) {
+      setLoading(true);
       const uploadProfile: any = await careersDAO.uploadProfile(file);
       const application = values;
       application.attachment = uploadProfile.path;
       application.job_id = job.id;
       const res = await JobServices.newApplication(application, job);
       if (res) {
-        toast.success("Application submitted successfully", {
+        toast.success("Application submitted", {
           id: "job-apply",
         });
         setTimeout(() => {

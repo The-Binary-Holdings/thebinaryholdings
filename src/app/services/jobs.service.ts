@@ -50,7 +50,7 @@ class jobServices {
       .select("email, job_id")
       .eq("email", email)
       .eq("job_id", job_id)
-      .eq("otp", otp);
+      .eq("otp", btoa(otp.toString()));
     if (error) {
       throw error;
     }
@@ -72,7 +72,7 @@ class jobServices {
   sendOTP = async (name: string, email: string, job_id: number) => {
     const values = {
       email,
-      otp: Math.floor(100000 + Math.random() * 900000),
+      otp: btoa(String(Math.floor(100000 + Math.random() * 900000))),
       job_id,
     };
     let { data, error } = await supabase
@@ -89,17 +89,20 @@ class jobServices {
         email,
         values.otp
       );
-      return data;
+      if(confirmOTPSent) {
+        return data;
+      }
     }
   };
 
-  sendOTPEmail = async (name: string, email: string, otp: number) => {
+  sendOTPEmail = async (name: string, email: string, otp: string) => {
     const body = EmailBody.sendOTP({
       name,
-      otp,
+      otp: atob(otp),
     });
     if (email) {
-      await sendEmail(email, `OTP for email verification`, body.props.children);
+      const confirm = await sendEmail(email, `OTP for email verification`, body.props.children);
+      return confirm;
     }
   };
 
@@ -111,7 +114,7 @@ class jobServices {
     if (data?.email) {
       await sendEmail(
         data?.email,
-        `Application Submitted`,
+        `Application Submitted for ${job?.title}`,
         body.props.children
       );
     }
@@ -121,6 +124,7 @@ class jobServices {
     const profile: any = await careersDAO.getProfile(data.attachment);
     const body = EmailBody.sendApplicationReceivedEmail({
       ...data,
+      job,
       attachment: profile?.publicUrl,
     });
     if (job?.emails) {
