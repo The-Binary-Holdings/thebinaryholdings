@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Body,
   Container,
@@ -14,7 +14,7 @@ import {
   Tailwind,
   Font,
   render,
-} from '@react-email/components';
+} from "@react-email/components";
 
 interface VercelInviteUserEmailProps {
   name?: string;
@@ -26,116 +26,138 @@ interface VercelInviteUserEmailProps {
   body?: React.ReactElement;
 }
 
-const title = 'thebinaryholdings';
-const email = 'info@thebinaryholdings.com';
+const title = "thebinaryholdings";
+const email = "info@thebinaryholdings.com";
 
-export const CommonTemplate = ({ name, previewText, link, body }: VercelInviteUserEmailProps) => {
+export const CommonTemplate = ({
+  name,
+  previewText,
+  link,
+  body,
+}: VercelInviteUserEmailProps) => {
   return (
     <Html>
       <Head>
         <Font
-          fontFamily='IBM Plex Mono'
-          fallbackFontFamily='monospace'
+          fontFamily="IBM Plex Mono"
+          fallbackFontFamily="monospace"
           webFont={{
-            url: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap',
-            format: 'woff2',
+            url: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap",
+            format: "woff2",
           }}
           fontWeight={400}
-          fontStyle='normal'
+          fontStyle="normal"
         />
       </Head>
       {previewText && <Preview>{previewText}</Preview>}
       <Tailwind>
-        <Body className='mx-auto my-auto bg-white px-2 font-sans'>
-          <Container className='mx-auto my-[40px] max-w-[600px] rounded border border-solid border-[#eaeaea] bg-black'>
-            <Section className='mx-auto w-[90%] border-b border-solid border-[#373737]'>
-              <Row className='w-full py-5 text-[30px] text-white'>
-                <Column align='left'>
-                  <strong>{title}</strong>
-                </Column>
-                <Column align='right'>
-                  <a className='text-sm text-[#E5E5E5]/75 no-underline'>{email}</a>
-                </Column>
-              </Row>
+        <Body className="mx-auto my-auto bg-white px-2 font-sans">
+          <Container className="mx-auto my-[40px] max-w-[600px] rounded border border-solid border-[#eaeaea] bg-black">
+            <Section className="w-[90%] mx-auto flex justify-center items-center px-4 pt-4 pb-6 border-b-1 border-solid border-white/20">
+              <Img
+                src="/logos/tbh-logo.svg"
+                alt=""
+                width={110}
+                className="object-contain"
+              />
             </Section>
-            <Text className='mx-auto w-[90%] text-[16px] text-white'>{name && <strong>Hello {name}</strong>}</Text>
-            {body && <Text className='mx-auto w-[90%] text-[16px] leading-[24px] text-[#E5E5E5]/75'>{body}</Text>}
-            <Text className='mx-auto w-[90%] text-[16px] leading-[24px] text-[#E5E5E5]/75'>
-              If you didn&apos;t apply / register with us, please ignore this email.
+            <Text className="mx-auto w-[90%] text-[16px] text-white">
+              {name && <strong>Hello {name}</strong>}
+            </Text>
+            {body && (
+              <Text className="mx-auto w-[90%] text-[16px] leading-[24px] text-[#E5E5E5]/75">
+                {body}
+              </Text>
+            )}
+            <Text className="mx-auto w-[90%] text-[16px] leading-[24px] text-[#E5E5E5]/75">
+              If you didn&apos;t apply / register with us, please ignore this
+              email.
               <br />
               <br />
-              If you have any questions or need assistance, don&apos;t hesitate to contact our support team{' '}
-              <a className='text-sm text-[#E5E5E5]/75' href={`mailto:${email}`}>
+              If you have any questions or need assistance, don&apos;t hesitate
+              to contact our support team{" "}
+              <a className="text-sm text-[#E5E5E5]/75" href={`mailto:${email}`}>
                 {email}
               </a>
               .
             </Text>
             {link && (
-              <Section className='mx-auto mt-10 w-[90%] text-start'>
+              <Section className="mx-auto mt-10 w-[90%] text-start">
                 <Link
-                  className='cursor-pointer rounded bg-[#00ff85] px-5 py-3 text-center text-[16px] font-semibold text-black no-underline'
+                  className="cursor-pointer rounded bg-[#00ff85] px-5 py-3 text-center text-[16px] font-semibold text-black no-underline"
                   href={link.href}
                 >
                   {link.text}
                 </Link>
               </Section>
             )}
-            <Section className='mx-auto mt-20 w-[90%] border-y border-solid border-[#373737]'>
-              <Text className='mt-10 text-center text-[30px] leading-[24px] text-white'>
-                <strong>{title}</strong>
+
+            <Section className="mx-auto w-[90%] border-b border-solid border-[#373737]">
+              <Row className="w-full py-5 text-[30px] text-white">
+                <Column align="left">
+                  <a className="text-sm text-[#E5E5E5]/75">{email}</a>
+                </Column>
+                <Column align="right">
+                  <p className="text-sm text-[#E5E5E5]/75">
+                    © {new Date().getFullYear()} The Binary Holdings. All rights
+                    reserved.
+                  </p>
+                </Column>
+              </Row>
+            </Section>
+            <Section className="mx-auto w-[90%]">
+              <Text className="uppercase text-white/60 my-0 mt-10">
+                contact us
               </Text>
-              <Row className='mx-auto mb-10 w-1/3'>
-                <Column align='center'>
+              <Text className="text-white text-xl my-0 mb-10">
+                Support@thebinaryholdings.com
+              </Text>
+
+              <Row>
+                <Column align="left">
+                  <Img
+                    src="https://jfbklxbeuejconomxmqb.supabase.co/storage/v1/object/public/tbhs/tbh-logo.png"
+                    alt=""
+                    width={110}
+                    className="object-contain"
+                  />
+                </Column>
+                <Column align="right" className="flex gap-4 justify-end">
                   <Link
-                    className='flex h-10 w-10 items-center justify-center rounded-full border-[0.5px] border-solid border-[#363636] bg-[#0D0D0D] p-0 text-black'
-                    href='https://t.me/tbhofficialchat'
+                    href="https://t.me/tbhofficialchat"
+                    className="w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer hover:opacity-90"
                   >
                     <Img
-                      className='m-auto'
-                      alt='icon'
-                      width={25}
-                      height={25}
-                      src='https://egtpqjrkoujopcgwhkha.supabase.co/storage/v1/object/public/RakDAO/icons/4375108_logo_telegram_icon.png'
+                      src="https://jfbklxbeuejconomxmqb.supabase.co/storage/v1/object/public/tbhs/telegram.png?t=2024-07-26T13%3A22%3A52.956Z"
+                      alt=""
                     />
                   </Link>
-                </Column>
-                <Column align='center'>
                   <Link
-                    className='flex h-10 w-10 items-center justify-center rounded-full border-[0.5px] border-solid border-[#363636] bg-[#0D0D0D] p-0 text-black'
-                    href='https://twitter.com/thebinaryhldgs'
+                    href="https://discord.com/invite/wCXJmTBGr2"
+                    className="w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer hover:opacity-90"
                   >
                     <Img
-                      alt='icon'
-                      width={20}
-                      height={20}
-                      src='https://egtpqjrkoujopcgwhkha.supabase.co/storage/v1/object/public/RakDAO/icons/11244080_x_twitter_elon_musk_twitter_new_logo_icon.png'
-                      className='m-auto'
+                      src="https://jfbklxbeuejconomxmqb.supabase.co/storage/v1/object/public/tbhs/discord.png?t=2024-07-26T13%3A22%3A56.776Z"
+                      alt=""
                     />
                   </Link>
-                </Column>
-                <Column align='center'>
                   <Link
-                    className='flex h-10 w-10 items-center justify-center rounded-full border-[0.5px] border-solid border-[#363636] bg-[#0D0D0D] p-0 text-black'
-                    href='https://discord.gg/wCXJmTBGr2'
+                    href="https://x.com/thebinaryhldgs"
+                    className="w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer hover:opacity-90"
                   >
                     <Img
-                      alt='icon'
-                      width={25}
-                      height={25}
-                      src='https://egtpqjrkoujopcgwhkha.supabase.co/storage/v1/object/public/RakDAO/icons/8666257_discord_icon.png'
-                      className='m-auto'
+                      src="https://jfbklxbeuejconomxmqb.supabase.co/storage/v1/object/public/tbhs/x.png?t=2024-07-26T13%3A23%3A03.516Z"
+                      alt=""
                     />
                   </Link>
                 </Column>
               </Row>
-            </Section>
-            <Section className='mx-auto w-[90%] border-b border-solid border-[#373737]'>
-              <Row className='w-full py-5 text-[30px] text-white'>
-                <Column align='left'>
-                  <a className='text-sm text-[#E5E5E5]/75'>{email}</a>
+              <Row className="text-white/80">
+                <Column className="text-left">
+                  <Text>info@bnrytoken.com</Text>
                 </Column>
-                <Column align='right'>
-                  <p className='text-sm text-[#E5E5E5]/75'>© {new Date().getFullYear()} The Binary Holdings. All rights reserved.</p>
+                <Column className="text-right">
+                  <Text>© BNRY Token LLC. All rights reserved.</Text>
                 </Column>
               </Row>
             </Section>
