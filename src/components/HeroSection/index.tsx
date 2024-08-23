@@ -184,7 +184,7 @@ const HeroSection = () => {
                 <LuUsers />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                43.6 M
+                70.60 M
               </h3>
               <p className="text-sm text-[#DCDCDC]">Total Users</p>
             </div>
@@ -200,7 +200,7 @@ const HeroSection = () => {
                 <TbCalendarUser />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                38.16 M
+                60.20 M
               </h3>
               <p className="text-sm text-[#DCDCDC]">Monthly Active Users</p>
             </div>
@@ -216,7 +216,7 @@ const HeroSection = () => {
                 <TbUserCheck />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                3.34 M
+                4.74 M
               </h3>
               <p className="text-sm text-[#DCDCDC]">Daily Active Users</p>
             </div>
