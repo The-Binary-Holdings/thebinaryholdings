@@ -184,7 +184,7 @@ const HeroSection = () => {
                 <LuUsers />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                70.60 M
+                169.05 M
               </h3>
               <p className="text-sm text-[#DCDCDC]">Total Users</p>
             </div>
@@ -200,7 +200,7 @@ const HeroSection = () => {
                 <TbCalendarUser />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                60.20 M
+                143.87 M
               </h3>
               <p className="text-sm text-[#DCDCDC]">Monthly Active Users</p>
             </div>
@@ -216,7 +216,7 @@ const HeroSection = () => {
                 <TbUserCheck />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                4.74 M
+                11.32 M
               </h3>
               <p className="text-sm text-[#DCDCDC]">Daily Active Users</p>
             </div>
@@ -232,7 +232,7 @@ const HeroSection = () => {
                 <RxClock />
               </motion.div>
               <h3 className="text-3xl font-medium pt-4 whitespace-normal">
-                13.87 Mins
+                13.03 Mins
               </h3>
               <p className="text-sm text-[#DCDCDC]">
                 Avg. time spent across apps

@@ -754,7 +754,7 @@ export const FAQ_ITEMS: IFaqItem[] = [
         answer: `<div>
                 <p>Yes, to validate our thesis, we integrated <b class="font-bold">Fando</b>, an Engage/Watch2Earn platform similar to TikTok, focused on sports and esports content, with telecom apps.</p>
                 <br/>
-                <p>By deploying The Binary Network solution with two major telecom providers in Southeast Asia, we now support 70.60 million users, with 4.74 million daily active users, who spend an average of 13.87 minutes within our ecosystem. This demonstrates significant value and engagement. To know more, visit: <a class="underline" href="https://www.fando.ai/" target="_blank">https://www.fando.ai/</a></p>
+                <p>By deploying The Binary Network solution with two major telecom providers in Southeast Asia, we now support 169.05 million users, with 11.32 million daily active users, who spend an average of 13.03 minutes within our ecosystem. This demonstrates significant value and engagement. To know more, visit: <a class="underline" href="https://www.fando.ai/" target="_blank">https://www.fando.ai/</a></p>
                 </div>`,
       },
       {
