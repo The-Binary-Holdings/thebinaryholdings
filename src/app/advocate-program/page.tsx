@@ -19,26 +19,30 @@ const AdvocateProgram = () => {
       <section className="w-full mt-20 bg-[#0c0c0c]" id="hero">
         <div className="flex flex-col md:items-center justify-center ">
           <div className="w-full bg-ad_hero_bg bg-cover bg-no-repeat relative z-10">
-            <div className="flex flex-col items-center w-1/2 mx-auto pt-8">
-              <Image
-                src="./BNRY.png"
-                alt="banner"
-                radius="none"
-                className="hidden md:block"
-                draggable={false}
-              />
-              <h1 className="text-white uppercase mt-10 font-bold text-xl xl:text-4xl tracking-[0.7rem] xl:tracking-[1.3rem] translate-y-5 z-10 relative">
-                ADVOCATE PROGRAM
-              </h1>
-              <Image
-                src="./advocate-banner.png"
-                alt="banner"
-                radius="none"
-                className="hidden md:block relative z-0"
-              />
-              <h1 className="text-[#EBEABA] uppercase font-bold text-xl xl:text-4xl tracking-[.5rem] xl:tracking-[1rem] -translate-y-3 lg:-translate-y-5 z-10 relative">
-                Join the Binary Club
-              </h1>
+            <div className="flex flex-col items-center w-1/2 mx-auto pt-8 space-y-5 text-center">
+              <div>
+                <Image
+                  src="./BNRY.png"
+                  alt="banner"
+                  radius="none"
+                  className="hidden md:block"
+                  draggable={false}
+                />
+                <h1 className="text-white uppercase mt-10 font-bold text-xl xl:text-4xl tracking-[0.7rem] xl:tracking-[1.3rem] translate-y-0 lg:translate-y-5 z-10 relative">
+                  ADVOCATE PROGRAM
+                </h1>
+              </div>
+              <div>
+                <Image
+                  src="./advocate-banner.png"
+                  alt="banner"
+                  radius="none"
+                  className="hidden md:block relative z-0"
+                />
+                <h1 className="text-[#EBEABA] uppercase font-bold text-xl xl:text-4xl tracking-[.5rem] xl:tracking-[1rem] -translate-y-3 lg:-translate-y-5 z-10 relative">
+                  Join the Binary Club
+                </h1>
+              </div>
             </div>
           </div>
           <div className="w-full flex flex-col items-center space-y-16 relative">
@@ -57,8 +61,8 @@ const AdvocateProgram = () => {
             <VariantsComponent direction="y" startDistance={-100} delay={0.1}>
               <p className="md:text-center text-white text-lg lg:text-2xl font-light p-5">
                 At The Binary Holdings we are changing the telecommunications
-                industry by offering low cost and efficient Web3 infrastructure services essential for
-                adoption and growth.
+                industry by offering low cost and efficient Web3 infrastructure
+                services essential for adoption and growth.
               </p>
             </VariantsComponent>
             <VariantsComponent direction="y" startDistance={-100} delay={0.2}>
