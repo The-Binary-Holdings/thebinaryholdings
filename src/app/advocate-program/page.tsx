@@ -41,7 +41,7 @@ const AdvocateProgram = () => {
               </h1>
             </div>
           </div>
-          <div className="w-full py-10 lg:py-20 flex flex-col items-center space-y-16 relative">
+          <div className="w-full flex flex-col items-center space-y-16 relative">
             <Image
               src="/advocate_hero_bg_2.png"
               alt="bg"
@@ -49,17 +49,15 @@ const AdvocateProgram = () => {
               className="absolute w-full z-0 bottom-0"
             />
             <VariantsComponent direction="y" startDistance={-100} delay={0.1}>
-              <p className="md:text-center text-white font-semibold text-lg lg:text-2xl whitespace-nowrap">
+              <p className="md:text-center text-white font-semibold text-lg lg:text-2xl p-5">
                 Binary advocates are passionate leaders who champion Binary
                 technologies.
               </p>
             </VariantsComponent>
             <VariantsComponent direction="y" startDistance={-100} delay={0.1}>
-              <p className="md:text-center text-white text-lg lg:text-2xl font-light whitespace-nowrap">
+              <p className="md:text-center text-white text-lg lg:text-2xl font-light p-5">
                 At The Binary Holdings we are changing the telecommunications
-                industry by offering low-
-                <br />
-                cost and efficient Web3 infrastructure services essential for
+                industry by offering low cost and efficient Web3 infrastructure services essential for
                 adoption and growth.
               </p>
             </VariantsComponent>
