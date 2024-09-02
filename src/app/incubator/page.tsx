@@ -34,11 +34,11 @@ const monumentExtended = localFont({
 
 const Incubator = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-no-repeat font-light overflow-hidden">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-no-repeat font-light">
       {/* hero section */}
       <section
         id="hero"
-        className="w-full relative h-screen flex flex-col items-center bg-black/50 md:bg-transparent py-16 space-y-4"
+        className="w-full relative h-screen flex flex-col items-center bg-black/50 md:bg-transparent py-16 pt-32 space-y-4"
       >
         <div>
           <Image

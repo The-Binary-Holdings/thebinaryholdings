@@ -13,13 +13,15 @@ const config: Config = {
     extend: {
       backgroundImage: {
         about: "url('/about-img.jpg')",
-        "heros-bg": "url('/heros-bg.png')",
-        "heros-bg-mobile": "url('/heros-bg-mobile.png')",
-        "heros-bg-tablet": "url('/heros-bg-tablet.png')",
+        "heros-bg": "url('/backdrop-hero.gif')",
         "heros-gate": "url('/gate.png')",
-        partners: "url('/partners-bg.png')",
+        partner: "url('/partner-bg.png')",
         "articles-banner": "url('/articles-banner.svg')",
         "advocate-backdrop": "url('/advocate-backdrop.png')",
+        "team-1": "url('/team_bg_1.png')",
+        "team-2": "url('/team_bg_2.png')",
+        ad_hero_bg: "url('/advocate_hero_bg.png')",
+        ad_hero_bg_2: "url('/advocate_hero_bg_2.png')",
       },
       colors: {
         highlight: "#EBEABA",
