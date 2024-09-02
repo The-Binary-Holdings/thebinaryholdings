@@ -35,7 +35,7 @@ const ArticlesHome = () => {
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:mt-20 mt-8 content-start">
               {articles.map((article, index) => (
-                <BlogPost key={index} {...article} />
+                <BlogPost key={index} {...article} isEnableWrap={true}/>
               ))}
             </div>
           </section>

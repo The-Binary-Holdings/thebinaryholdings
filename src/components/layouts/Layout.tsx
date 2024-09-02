@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import { Poppins } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Provider from "../Provider";
 import { Analytics } from "@vercel/analytics/react";
 
-const poppins = Poppins({
+const dm_Sans = DM_Sans({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
@@ -15,13 +14,11 @@ const poppins = Poppins({
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={dm_Sans.className}>
         <NextUIProvider>
-          <Provider>
-            <Header />
-            {children}
-            <Footer />
-          </Provider>
+          <Header />
+          {children}
+          <Footer />
         </NextUIProvider>
         <Analytics />
       </body>

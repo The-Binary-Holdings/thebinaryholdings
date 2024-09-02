@@ -55,7 +55,7 @@ const EmailFormModal = ({
     try {
       setIsLoading(true);
       const response = await axios.post(
-        `${url}/api/send`,
+        `/api/send`,
         JSON.stringify(data),
         {
           headers: {

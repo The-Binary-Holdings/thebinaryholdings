@@ -156,30 +156,6 @@ export const BUSINESSES: IBusiness[] = [
     detail:
       "Binary Holdings' Incubator and Accelerator vertical serves as a catalyst for growth and innovation in the startup ecosystem. By providing early-stage companies with the resources, mentorship, and network they need to succeed, this vertical aims to nurture groundbreaking ideas and turn them into scalable businesses. With a focus on disruptive technologies and market-driven solutions, the Incubator and Accelerator program is designed to propel startups to their full potential, fostering a new generation of entrepreneurs who are ready to change the world.",
   },
-
-  // {
-  //   name: "BNRY Token",
-  //   description:
-  //     "Discover the BNRY Token: The First Telco Token Revolutionizing the Journey from Web2 to Web3!",
-  //   link: "https://bnrytoken.com",
-  //
-  // },
-  // {
-  //   name: "Fando",
-  //   description:
-  //     "The Ultimate Web3 Loyalty and Entertainment App, Crafted for Effortless Web3 Rewards!",
-  //   link: "https://fando.ai",
-  // image_url: "/Fando-img.png",
-  // logo: "/logos/fando-blacklogo.png",
-  // },
-  // {
-  //   name: "The lost club toys",
-  //   description:
-  //     "Discover the Teddy Sticker, Your Key to Move2Earn - A Sticker That Transforms into an Investment!",
-  //   link: "https://lostclubtoys.com/",
-  //   image_url: "/toyClub-img.png",
-  //   logo: "/logos/lostClubToy-blacklogo.png",
-  // },
 ];
 
 export interface IService {
@@ -280,42 +256,17 @@ export interface ILayoutItem {
 }
 
 export const LAYOUT_ITEMS: ILayoutItem[] = [
-  // {
-  //   title: "navigation",
-  //   subItems: [
-  //     {
-  //       name: "Home",
-  //       href: "/",
-  //     },
-  //     {
-  //       name: "Articles",
-  //       href: "#",
-  //     },
-  //     {
-  //       name: "Products",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
   {
     title: "Business",
     subItems: [
       {
         name: "The Binary Network",
-        href: "#",
-      },
-      {
-        name: "Digital Social",
-        href: "/digital-social",
-      },
-
-      {
-        name: "Digital Enterprise",
-        href: "digital-enterprise",
+        href: "https://network.thebinaryholdings.com/",
+        target: "_blank"
       },
       {
         name: "Digital Finance",
-        href: "#",
+        href: "/digital-finance",
       },
       {
         name: "Pre-incubator program",
@@ -323,16 +274,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       },
     ],
   },
-  // {
-  //   title: "Products",
-  //   subItems: [
-  //     {
-  //       name: "$BNRY Portal",
-  //       href: "https://www.bnrytoken.com/",
-  //       target: "_blank",
-  //     },
-  //   ],
-  // },
+
   {
     title: "Learn",
     subItems: [
@@ -375,38 +317,34 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       // },
     ],
   },
-  {
-    title: "careers",
-    subItems: [
-      {
-        name: "Jobs",
-        href: "/career",
-      },
-    ],
-  },
 ];
 
 export interface ISocial {
   type: string;
   link: string;
+  subTitle: string;
 }
 
 export const SOCIALS: ISocial[] = [
   {
-    type: "twitter",
-    link: "https://twitter.com/thebinaryhldgs",
-  },
-  {
-    type: "telegram",
+    type: "Telegram",
     link: "https://t.me/tbhofficialchat",
+    subTitle: "Join Discussion",
   },
   {
-    type: "discord",
+    type: "Twitter",
+    link: "https://twitter.com/thebinaryhldgs",
+    subTitle: "Read the latest",
+  },
+  {
+    type: "Discord",
     link: "https://discord.gg/wCXJmTBGr2",
+    subTitle: "Join Discussion",
   },
   {
-    type: "youtube",
+    type: "Medium",
     link: "https://www.youtube.com/@TheBinaryHoldings",
+    subTitle: "Read update",
   },
 ];
 
@@ -418,10 +356,6 @@ export const BACKERS = [
   {
     name: "Mana Partners",
     image: "/logos/ManaPartners-logo.png",
-  },
-  {
-    name: "SOSV",
-    image: "/logos/SOSV-logo.png",
   },
   {
     name: "Plug and Play",
@@ -460,42 +394,9 @@ export const BACKERS = [
     image: "/logos/HustleFund-logo.png",
   },
   {
-    name: "A3S Group",
-    image: "/logos/a3s_group.png",
+    name: "OP Labs",
+    image: "/logos/OPLab-logo.png",
   },
-  {
-    name: "Binance Labs",
-    image: "/logos/BinanceLabs-logo.png",
-  },
-];
-
-export interface ICertificate {
-  name: string;
-  image: string;
-  description: string;
-}
-
-export const CERTIFICATES: ICertificate[] = [
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
 ];
 
 export interface IAdvocateBenefit {
@@ -533,30 +434,30 @@ export const ROLES: IRole[] = [
   {
     id: 1,
     iconUrl: "/icons/doc.svg",
-    title: "Create engaging social content",
+    title: "Create Engaging Social Content",
     description:
       "Develop a consistent strategy for producing high-quality content across various formats.",
   },
   {
     id: 2,
     iconUrl: "/icons/user-star.svg",
-    title: "Organize online and offline events",
+    title: "Organize Online And Offline Events",
     description:
-      "Foster a vibrant community by hosting regular in-person and online events",
+      "Foster a vibrant community by hosting regular in-person and online events.",
   },
   {
     id: 3,
     iconUrl: "/icons/people.svg",
-    title: "Build and join our ecosystem",
+    title: "Create Engaging Social Content",
     description:
-      "Foster a vibrant community by hosting regular in-person and online events",
+      "Develop a consistent strategy for producing high-quality content across various formats.",
   },
   {
     id: 4,
     iconUrl: "/icons/group-communication.svg",
-    title: "Educate the community about Web3 and TBH",
+    title: "Educate The Community About Web3 And TBH",
     description:
-      "Teach and share your in depth knowledge about The Binary Holdings technology to others",
+      "Teach and share your in depth knowledge about The Binary Holdings technology to others.",
   },
 ];
 
