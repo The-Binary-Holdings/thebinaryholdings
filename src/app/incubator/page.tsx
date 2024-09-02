@@ -214,7 +214,7 @@ const Incubator = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-8 gap-y-6">
               {INCUBATOR_BENEFITS.map((role, index) => {
                 return (
-                    <div className="flex px-10 py-14 h-full rounded-3xl text-white bg-[#402D98] items-center space-x-4">
+                    <div key={index} className="flex px-10 py-14 h-full rounded-3xl text-white bg-[#402D98] items-center space-x-4">
                       <div className="w-2/3 space-y-2">
                         <h1 className="text-2xl text-green font-semibold">
                           {role.title}
