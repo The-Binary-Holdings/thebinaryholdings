@@ -371,7 +371,7 @@ export const BACKERS = [
   },
   {
     name: "Dutch Sport Tech Fund",
-    image: "/logos/DutchSportTechFund-logo.png",
+    image: "/logos/DutchSportTechFund-logo.svg",
   },
   {
     name: "Miti Ventures",
