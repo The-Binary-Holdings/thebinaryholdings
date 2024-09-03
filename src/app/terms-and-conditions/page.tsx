@@ -10,7 +10,7 @@ const TermsAndConditionsPage: React.FC = () => {
         Terms and Conditions
       </div>
       <p className="mb-10 opacity-75 leading-6 text-white">
-        These terms and conditions outline the rules and regulations for the use of The Binary Holdings's Website.
+        These terms and conditions outline the rules and regulations for the use of The Binary Holdings&apos;s Website.
       </p>
       <GradientText className="font-medium lg:text-2xl md:text-xl text-base">1. Introduction</GradientText>
       <p className="mb-5 ms-6 text-base opacity-75 leading-6 text-white">
@@ -18,7 +18,7 @@ const TermsAndConditionsPage: React.FC = () => {
       </p>
       <GradientText className="font-medium lg:text-2xl md:text-xl text-base">2. Cookies</GradientText>
       <p className="mb-5 ms-6 text-base opacity-75 leading-6 text-white">
-        We employ the use of cookies. By accessing The Binary Holdings, you agreed to use cookies in agreement with The Binary Holdings's Privacy Policy.
+        We employ the use of cookies. By accessing The Binary Holdings, you agreed to use cookies in agreement with The Binary Holdings&apos;s Privacy Policy.
       </p>
       <GradientText className="font-medium lg:text-2xl md:text-xl text-base">3. License</GradientText>
       <p className="mb-5 ms-6 text-base opacity-75 leading-6 text-white">
@@ -33,7 +33,7 @@ const TermsAndConditionsPage: React.FC = () => {
         The following organizations may link to our Website without prior written approval: Government agencies; Search engines; News organizations; Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.
       </p>
       <p className="mb-5 ms-6 text-base opacity-75 leading-6 text-white">
-        These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.
+        These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party&apos;s site.
       </p>
     </div>
   );
