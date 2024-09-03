@@ -360,7 +360,7 @@ const HeroSection = () => {
                 <IoEyeOutline />
               </motion.div>
               <h3 className="text-xl xl:text-3xl font-bold pt-4 whitespace-normal">
-                309.81 bil.
+                309.81 B
               </h3>
               <p className="text-sm text-[#DCDCDC]">Impressions</p>
             </div>
@@ -376,7 +376,7 @@ const HeroSection = () => {
                 <RiFilePaperLine />
               </motion.div>
               <h3 className="text-xl xl:text-3xl font-bold pt-4 whitespace-normal">
-                8.51 bil
+                8.51 B
               </h3>
               <p className="text-sm text-[#DCDCDC]">Engagement</p>
             </div>

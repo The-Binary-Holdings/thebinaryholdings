@@ -26,7 +26,7 @@ const PartnerSection = () => {
           </VariantsComponent>
         </div>
       </WrapperContent>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 w-2/3 mx-auto py-10 lg:py-20 gap-7 text-white">
+      <div className="grid min-[320px]:grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 w-2/3 mx-auto py-10 lg:py-20 gap-7 text-white min-[420px]:w-4/5">
         {BACKERS.map((backer, index) => {
           return (
             <div
