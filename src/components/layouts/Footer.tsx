@@ -88,6 +88,23 @@ const Footer = () => {
           </div>
         </div>
       </WrapperContent>
+      <WrapperContent>
+        <div className="w-full p-2 flex border-t border-white/75 justify-between">
+          <div className="flex justify-between">
+            <Link href="/terms-and-conditions" className="text-sm opacity-50 text-white hover:opacity-90">
+              Terms and Conditions
+            </Link>
+            <span className="text-sm text-white opacity-50 mx-2">|</span>
+            <Link href="/privacy-policy" className="text-sm opacity-50 text-white hover:opacity-90">
+              Privacy Policy
+            </Link>
+          </div>
+          <div className="flex text-sm opacity-50 text-white">
+            The Binary Holdings. All rights reserved. &copy;{" "}
+            {new Date().getFullYear()}
+          </div>
+        </div>
+      </WrapperContent>
     </footer>
   );
 };
