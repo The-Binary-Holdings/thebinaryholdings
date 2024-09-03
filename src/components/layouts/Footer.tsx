@@ -89,8 +89,8 @@ const Footer = () => {
         </div>
       </WrapperContent>
       <WrapperContent>
-        <div className="w-full p-2 flex border-t border-white/75 justify-between">
-          <div className="flex justify-between">
+        <div className="w-full p-2 md:flex border-t border-white/75 md:justify-between text-center">
+          <div className="md:flex md:justify-between">
             <Link href="/terms-and-conditions" className="text-sm opacity-50 text-white hover:opacity-90">
               Terms and Conditions
             </Link>
@@ -99,9 +99,9 @@ const Footer = () => {
               Privacy Policy
             </Link>
           </div>
-          <div className="flex text-sm opacity-50 text-white">
-            The Binary Holdings. All rights reserved. &copy;{" "}
-            {new Date().getFullYear()}
+          <div className="md:flex text-sm opacity-50 text-white text-center sm:text-xs">
+            The Binary Holdings.  <div className="md:flex sm:block text-center">All rights reserved. &copy;{" "}
+            {new Date().getFullYear()}</div>
           </div>
         </div>
       </WrapperContent>

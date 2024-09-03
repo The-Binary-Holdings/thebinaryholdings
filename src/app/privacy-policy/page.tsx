@@ -5,7 +5,7 @@ import React from "react";
 
 const PrivacyPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-20 w-4/5">
+    <div className="container mx-auto p-4 w-full lg:w-4/5 lg:p-20">
       <div className="sticky top-0 py-10 border-b border-white/10 bg-black inline-block text-center z-20 col-span-4 w-full text-green text-lg lg:text-3xl font-semibold">
         Privacy policy
       </div>
