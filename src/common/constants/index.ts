@@ -303,6 +303,14 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         name: "Advocate Program",
         href: "/advocate-program",
       },
+      {
+        name: "Privacy Policy",
+        href: "/privacy-policy",
+      },
+      {
+        name: "Terms of use",
+        href: "/Terms-and-conditions",
+      },
       // {
       //   name: "Get in touch",
       //   href: "openModal",
