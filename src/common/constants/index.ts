@@ -311,10 +311,10 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         name: "Terms of use",
         href: "/Terms-and-conditions",
       },
-      // {
-      //   name: "Get in touch",
-      //   href: "openModal",
-      // },
+      {
+        name: "Get in touch",
+        href: "openModal",
+      },
       // {
       //   name: "Terms of use",
       //   href: "#",
