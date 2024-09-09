@@ -1,10 +1,17 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import WrapperContent from "@/components/WrapperContent";
 import { Button, Image } from "@nextui-org/react";
 import VariantsComponent from "@/components/VariantsComponent";
 import Link from "next/link";
 
 const AboutSection = () => {
+  
+  const vidRef: any = useRef();
+
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
   return (
     <section id="about" className="w-full relative text-white py-16">
       <WrapperContent>
@@ -24,24 +31,13 @@ const AboutSection = () => {
                 drive the adoption of tokenized and web3 services.
               </p>
             </div>
-            <Image
-              src="./about-1.gif"
-              alt="gif"
-              className="w-3/5 lg:w-2/5"
-              removeWrapper
-              draggable={false}
-            />
+            <video src="/cube.mp4" ref={vidRef} className="w-3/5 lg:w-2/5" loop autoPlay muted>
+            </video>
           </div>
 
           <div className="w-full flex flex-col sm:flex-row p-16 items-center">
-            <Image
-              src="./about-2.gif"
-              alt="gif"
-              className="w-3/5 lg:w-2/5"
-              radius="none"
-              removeWrapper
-              draggable={false}
-            />
+            <video src="/NFT.mp4" ref={vidRef} className="w-3/5 lg:w-2/5" loop autoPlay muted>
+            </video>
             <div className="flex flex-col space-y-6 w-full sm:w-1/2 px-4 sm:px-6 sm:ps-8 lg:ps-16 mt-4 sm:mt-0">
               <h1 className="text-green text-3xl lg:text-5xl font-semibold leading-snug">
                 <b className="text-highlight font-semibold">What Is</b>
@@ -87,13 +83,8 @@ const AboutSection = () => {
                 Buy $BNRY
               </Button>
             </div>
-            <Image
-              src="./about-3.gif"
-              alt="gif"
-              className="w-3/5 sm:w-2/5 my-4"
-              removeWrapper
-              draggable={false}
-            />
+            <video src="/token.mp4" ref={vidRef} className="w-3/5 sm:w-2/5 my-4" loop autoPlay muted>
+            </video>
           </div>
         </div>
       </WrapperContent>
