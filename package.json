@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.5",
     "@nextui-org/react": "^2.2.10",
     "@smakss/react-scroll-direction": "^4.0.4",
     "@supabase/ssr": "^0.1.0",
