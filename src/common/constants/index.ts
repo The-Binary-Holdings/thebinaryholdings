@@ -875,3 +875,19 @@ export const TELECOMMUNICATION_PARTNER_LOGOS = [
   "logos/celcomdigi.png",
   "/logos/indosat.svg",
 ];
+
+export interface BuyOption {
+  label: string;
+  href: string;
+}
+
+export const BUY_OPTIONS: Array<BuyOption> = [{
+  label: 'Buy on MEXC',
+  href: 'https://www.mexc.com/exchange/BNRY_USDT',
+},{
+  label: 'Buy on BingX',
+  href: 'https://bingx.com/en/spot/BNRYUSDT',
+}, {
+  label: 'Buy on Coinstore',
+  href:"https://www.coinstore.com/spot/BNRYUSDT"
+}]

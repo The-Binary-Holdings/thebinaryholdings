@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import WrapperContent from "@/components/WrapperContent";
-import { Button, Image } from "@nextui-org/react";
-import VariantsComponent from "@/components/VariantsComponent";
+import { Button } from "@nextui-org/react";
 import Link from "next/link";
+import DropDown from "@/components/DropDown";
+import { BUY_OPTIONS } from "@/common/constants";
 
 const AboutSection = () => {
   
@@ -74,14 +75,12 @@ const AboutSection = () => {
                 to trade, stake, and as a loyalty point within telecommunication
                 ecosystems to purchase goods, or pay for utility bills.
               </p>
-              <Button
-                as={Link}
-                href="https://www.mexc.com/exchange/BNRY_USDT"
-              target="_blank"
-                className="bg-green w-fit font-semibold text-black"
+              <div
+                className="bg-green w-fit font-semibold text-black rounded-[12px]"
               >
-                Buy $BNRY
-              </Button>
+                
+              <DropDown label="Buy $BNRY" list={BUY_OPTIONS} />
+              </div>
             </div>
             <video src="/token.mp4" ref={vidRef} className="w-3/5 sm:w-2/5 my-4" loop autoPlay muted>
             </video>
