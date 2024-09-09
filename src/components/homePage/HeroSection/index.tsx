@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import WrapperContent from "../../WrapperContent";
 import { LuUsers } from "react-icons/lu";
 import { TbCalendarUser } from "react-icons/tb";
@@ -229,9 +229,30 @@ const HeroSection = () => {
       setIsHidden(true);
     }
   }, [isHidden, scrollPosition, startAnimation, stopAnimation]);
+
+  const vidRef: any = useRef();
+
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
+  
   return (
     <section id="hero" className="w-full ">
-      <div className="before:opacity-40 before:absolute before:w-full before:h-full before:bg-heros-bg before:bg-no-repeat before:bg-cover before:bg-center relative before:z-10">
+      <div className="before:opacity-40 before:absolute before:w-full before:h-full before:bg-no-repeat before:bg-cover before:bg-center relative before:z-10">
+        <Image
+          className="absolute object-cover sm:object-contain h-full z-0 top-0 bottom-0 sm:right-32 opacity-10 xl:opacity-100"
+          src="./hero-img.png"
+          alt="img"
+          removeWrapper
+        />
+        <video
+          src="/backdrop-hero.mp4"
+          ref={vidRef}
+          className="opacity-40 absolute z-10 lg:w-auto min-w-full min-h-full lg:max-w-none max-[426px]:hidden"
+          loop
+          autoPlay
+          muted
+        ></video>
         <WrapperContent className="flex lg:h-screen py-24 lg:py-0 flex-col justify-evenly relative z-20 text-white">
           <div className="flex flex-col h-full">
             <div className="flex flex-col w-3/4 xl:w-1/4 space-y-6 h-full justify-center pt-10 lg:pt-20">
@@ -267,12 +288,6 @@ const HeroSection = () => {
             </div>
           </div>
         </WrapperContent>
-        <Image
-          className="absolute object-cover sm:object-contain h-full z-0 top-0 bottom-0 sm:right-32 opacity-10 xl:opacity-100"
-          src="./hero-img.png"
-          alt="img"
-          removeWrapper
-        />
       </div>
 
       <WrapperContent className="z-30 relative bg-black/50 md:bg-transparent">

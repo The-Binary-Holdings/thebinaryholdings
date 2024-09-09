@@ -1,9 +1,18 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import WrapperContent from "@/components/WrapperContent";
 import { Button, Image } from "@nextui-org/react";
 import Link from "next/link";
 
 const VisionSection = () => {
+  
+
+  const vidRef: any = useRef();
+
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
+
   return (
     <section className="w-full text-white py-16">
       <WrapperContent>
@@ -12,12 +21,8 @@ const VisionSection = () => {
             Bringing Web3{" "}
             <b className="text-highlight font-semibold">To The Masses</b>
           </h1>
-          <Image
-            src="/diagram.gif"
-            className="w-full border-3 border-white rounded-3xl border-dashed"
-            removeWrapper
-            alt="diagram"
-          />
+        <video src="/binary_flow_diagram.mp4" ref={vidRef} className="w-full border-3 border-white rounded-3xl border-dashed" loop autoPlay muted>
+        </video>
           <div className="w-full py-10 border-b border-[#8E7CFF] relative">
             <Image
               src="./radio.gif"
