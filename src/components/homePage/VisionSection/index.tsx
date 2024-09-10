@@ -10,6 +10,7 @@ const VisionSection = () => {
   const vidRef: any = useRef();
 
   useEffect(() => {
+    vidRef.current.defaultMuted = true;
     vidRef.current.play();
   }, []);
 
