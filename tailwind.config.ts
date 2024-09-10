@@ -13,6 +13,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         about: "url('/about-img.jpg')",
+        "heros-bg": "url('/backdrop-hero.gif')",
         "heros-gate": "url('/gate.png')",
         partner: "url('/partner-bg.png')",
         "articles-banner": "url('/articles-banner.svg')",
