@@ -233,8 +233,10 @@ const HeroSection = () => {
   const vidRef: any = useRef();
 
   useEffect(() => {
+    vidRef.current.muted = true;
     vidRef.current.defaultMuted = true;
     vidRef.current.play();
+    debugger;
   }, []);
   
   return (
@@ -257,7 +259,7 @@ const HeroSection = () => {
             <div className="flex flex-col w-3/4 xl:w-1/4 space-y-6 h-full justify-center pt-10 lg:pt-20">
               <h1 className="text-green text-4xl lg:text-6xl font-semibold">
                 <b className="text-highlight font-semibold">Onboarding</b> The
-                Next Billion To Web3
+                Next Billion To Web3 {vidRef.current?.muted ?'1':'2'}
               </h1>
               <p className="text-sm leading-relaxed">
                 We build web3 infrastructure that integrates into
