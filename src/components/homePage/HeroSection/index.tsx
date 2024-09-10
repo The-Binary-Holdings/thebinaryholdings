@@ -250,9 +250,7 @@ const HeroSection = () => {
           src="/backdrop-hero.mp4"
           ref={vidRef}
           className="opacity-40 absolute z-10 lg:w-auto min-w-full min-h-full lg:max-w-none max-[426px]:hidden"
-          loop
-          autoPlay
-          muted
+          loop={true} muted={true} autoPlay={true}
         ></video>
         <WrapperContent className="flex lg:h-screen py-24 lg:py-0 flex-col justify-evenly relative z-20 text-white">
           <div className="flex flex-col h-full">
