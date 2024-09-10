@@ -11,6 +11,7 @@ const AboutSection = () => {
   const vidRef: any = useRef();
 
   useEffect(() => {
+    vidRef.current.defaultMuted = true;
     vidRef.current.play();
   }, []);
   return (
