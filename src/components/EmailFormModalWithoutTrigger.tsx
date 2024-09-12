@@ -43,7 +43,7 @@ const EmailFormModal = ({
         const response = await fetch("/api/emails", {
           method: "POST",
           body: JSON.stringify({
-            to: "siva@thebinaryholdings.com",
+            to: "darpan@thebinaryholdings.com",
             subject: data.subject,
             body: `A new message received: <br> ${senderDetails}`,
           }),
