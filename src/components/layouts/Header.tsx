@@ -26,7 +26,7 @@ import EmailFormModal from "../EmailFormModalWithoutTrigger";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { scrollPosition } = useDetectScroll();
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
   return (
     <>
@@ -34,6 +34,7 @@ export default function Header() {
         className="cursor-pointer"
         isOpen={isOpen}
         onOpen={onOpen}
+        onClose={onClose}
         onOpenChange={onOpenChange}
       />
       <Navbar

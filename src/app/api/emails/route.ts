@@ -7,6 +7,7 @@ const RESEND_API_KEY = 're_MSoYs1Tg_44Q7dvoiheUh27gWVcXtBcPM';
 const from = 'no-reply <no-reply@thebinaryholdings.com>';
 
 export async function POST(req: NextRequest) {
+  console.log(req);
   const data = await req.json();
   const { to, body, subject } = data;
   const res = await fetch('https://api.resend.com/emails', {
@@ -19,7 +20,7 @@ export async function POST(req: NextRequest) {
       from,
       to,
       subject,
-      html: `<strong style="color: red">${body}</strong>`,
+      html: body,
     }),
   });
 
