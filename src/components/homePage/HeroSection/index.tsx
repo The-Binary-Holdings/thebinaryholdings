@@ -231,7 +231,7 @@ const HeroSection = () => {
   }, [isHidden, scrollPosition, startAnimation, stopAnimation]);
   return (
     <section id="hero" className="w-full ">
-      <div className="before:opacity-40 before:absolute before:w-full before:h-full before:bg-heros-bg before:bg-no-repeat before:bg-cover before:bg-center relative before:z-10">
+      <div className="before:opacity-20 before:absolute before:w-full before:h-full before:bg-heros-bg before:bg-no-repeat before:bg-cover before:bg-center relative before:z-10">
         <WrapperContent className="flex lg:h-screen py-24 lg:py-0 flex-col justify-evenly relative z-20 text-white">
           <div className="flex flex-col h-full">
             <div className="flex flex-col w-3/4 xl:w-1/4 space-y-6 h-full justify-center pt-10 lg:pt-20">

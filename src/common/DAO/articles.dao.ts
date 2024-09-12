@@ -4,7 +4,9 @@ class ArticlesDAO {
   async getAllAtricles() {    
     let { data: articles, error } = await supabase
     .from('articles')
-    .select('id,created_at,img,title,type');
+    .select('id,created_at,img,title,type')
+    .filter('active', 'eq', true)
+    .order('created_at', { ascending: false });
     if (error) {
       throw error;
     }

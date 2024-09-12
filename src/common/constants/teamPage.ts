@@ -129,8 +129,8 @@ export const partnerMembers = [
     linkedinUrl: "https://www.linkedin.com/in/olivier-letant-wharton",
   },
   {
-    name: "Joanne",
-    role: "Advisor",
+    name: "Joanne Wood",
+    role: "Chairman, Capital Eight",
     imageUrl: "/team/joanne_wood.jpg",
     avatar: "/team/joanne_wood_avatar.png",
     linkedinUrl: "https://www.linkedin.com/in/joanne-wood-a4a2486/",
