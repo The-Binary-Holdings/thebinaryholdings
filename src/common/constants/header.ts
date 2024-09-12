@@ -109,11 +109,11 @@ export const headerItem: HeaderItem[] = [
         href: "/team",
         isBlank: false
       },
-      // {
-      //   title: "Get In Touch",
-      //   href: "",
-      //   isBlank: false
-      // },
+      {
+        title: "Get In Touch",
+        href: "",
+        isBlank: false
+      },
     ],
   },
   {

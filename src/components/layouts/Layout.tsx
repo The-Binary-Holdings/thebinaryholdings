@@ -5,6 +5,8 @@ import { NextUIProvider } from "@nextui-org/react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Analytics } from "@vercel/analytics/react";
+import ConsentBanner from "../ConsentBanner";
+import UserConsentModal from "../ConsentModal";
 
 const dm_Sans = DM_Sans({
   subsets: ["latin"],
@@ -19,6 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Header />
           {children}
           <Footer />
+          {/* <UserConsentModal /> */}
         </NextUIProvider>
         <Analytics />
       </body>
