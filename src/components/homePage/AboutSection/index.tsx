@@ -6,12 +6,12 @@ import Link from "next/link";
 import DropDown from "@/components/DropDown";
 import { BUY_OPTIONS } from "@/common/constants";
 
-const AboutSection = () => {
+const AboutSection = (props?: {hide?: boolean}) => {
   return (
     <section id="about" className="w-full relative text-white py-16">
       <WrapperContent>
         <div className="w-full flex flex-col">
-          <div className="w-full py-10 xl:py-0 bg-[#151515] relative flex flex-col-reverse sm:flex-row px-4 sm:px-16 items-center justify-between before:absolute before:size-[6px] before:-top-1 before:-left-1 before:bg-green before:rounded-full after:absolute after:size-[6px] after:-top-1 after:-right-1 after:bg-green after:rounded-full">
+          {!props?.hide && <div className="w-full py-10 xl:py-0 bg-[#151515] relative flex flex-col-reverse sm:flex-row px-4 sm:px-16 items-center justify-between before:absolute before:size-[6px] before:-top-1 before:-left-1 before:bg-green before:rounded-full after:absolute after:size-[6px] after:-top-1 after:-right-1 after:bg-green after:rounded-full">
             <div className="absolute w-full h-full top-0 left-0 before:absolute before:size-[6px] before:-bottom-1 before:-left-1 before:bg-green before:rounded-full after:absolute after:size-[6px] after:-bottom-1 after:-right-1 after:bg-green after:rounded-full"></div>
             <div className="flex flex-col space-y-6 w-full sm:w-1/2 px-6">
               <h1 className="text-green text-3xl lg:text-5xl font-semibold leading-snug">
@@ -33,7 +33,7 @@ const AboutSection = () => {
               removeWrapper
               draggable={false}
             />
-          </div>
+          </div>}
 
           <div className="w-full flex flex-col sm:flex-row p-16 items-center">
             <Image
@@ -65,7 +65,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="w-full bg-[#151515] py-10 xl:py-0 relative flex flex-col-reverse sm:flex-row px-4 sm:px-16 items-center justify-between before:absolute before:size-[6px] before:-top-1 before:-left-1 before:bg-green before:rounded-full after:absolute after:size-[6px] after:-top-1 after:-right-1 after:bg-green after:rounded-full">
+          {!props?.hide && <div className="w-full bg-[#151515] py-10 xl:py-0 relative flex flex-col-reverse sm:flex-row px-4 sm:px-16 items-center justify-between before:absolute before:size-[6px] before:-top-1 before:-left-1 before:bg-green before:rounded-full after:absolute after:size-[6px] after:-top-1 after:-right-1 after:bg-green after:rounded-full">
             <div className="absolute w-full h-full top-0 left-0 before:absolute before:size-[6px] before:-bottom-1 before:-left-1 before:bg-green before:rounded-full after:absolute after:size-[6px] after:-bottom-1 after:-right-1 after:bg-green after:rounded-full"></div>
             <div className="flex flex-col space-y-6 w-full sm:w-1/2 px-6">
               <h1 className="text-green text-3xl lg:text-5xl font-semibold leading-snug">
@@ -93,7 +93,7 @@ const AboutSection = () => {
               removeWrapper
               draggable={false}
             />
-          </div>
+          </div>}
         </div>
       </WrapperContent>
     </section>
