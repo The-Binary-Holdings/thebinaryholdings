@@ -21,7 +21,7 @@ const IntegrateWithW3 = () => {
         </div>
               <Button
                 as={Link}
-                href="#"
+                href="https://ih0fkt3fs9c.typeform.com/to/Avh9E6S7"
                 target="_blank"
                 className="bg-green text-black w-fit font-semibold uppercase mt-5 mb-20"
                 radius="sm"
