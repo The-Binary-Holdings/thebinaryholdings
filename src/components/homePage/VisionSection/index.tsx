@@ -3,7 +3,7 @@ import WrapperContent from "@/components/WrapperContent";
 import { Button, Image } from "@nextui-org/react";
 import Link from "next/link";
 
-const VisionSection = () => {
+const VisionSection = (props?: {hide?: boolean}) => {
   return (
     <section className="w-full text-white py-16">
       <WrapperContent>
@@ -18,7 +18,7 @@ const VisionSection = () => {
             removeWrapper
             alt="diagram"
           />
-          <div className="w-full py-10 border-b border-[#8E7CFF] relative">
+          {!props?.hide && <div className="w-full py-10 border-b border-[#8E7CFF] relative">
             <Image
               src="./radio.gif"
               alt="img"
@@ -44,8 +44,8 @@ const VisionSection = () => {
                 Apply Now
               </Button>
             </div>
-          </div>
-          <div className="w-full py-10 border-b border-[#8E7CFF] relative flex">
+          </div>}
+          {!props?.hide && <div className="w-full py-10 border-b border-[#8E7CFF] relative flex">
             <div className="sm:w-1/2 flex flex-col space-y-6 relative z-10">
               <h1 className="text-green text-3xl lg:text-5xl font-semibold leading-snug">
                 The Binary
@@ -73,7 +73,7 @@ const VisionSection = () => {
                 radius="none"
               />
             </div>
-          </div>
+          </div>}
         </div>
       </WrapperContent>
     </section>
