@@ -1,9 +1,5 @@
 import React from "react";
 
-import CareerHero from "@/components/CareerHero";
-import CareerJobs from "@/components/CareerJobs";
-import Separate from "@/components/Separate";
-import WrapperContent from "@/components/WrapperContent";
 import { Image, Button } from "@nextui-org/react";
 import Link from "next/link";
 
