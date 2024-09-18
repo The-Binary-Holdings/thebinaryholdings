@@ -25,11 +25,6 @@ export const PRODUCTS: IProduct[] = [
     link: "digital-enterprise",
   },
   {
-    name: "Digital Finance",
-    description: "Streamlining finance with secure, digital-first solutions.",
-    link: "#",
-  },
-  {
     name: "Pre-incubator program",
     description: "Accelerating startups with resources and mentorship.",
     link: "/incubators",
@@ -263,10 +258,6 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         name: "The Binary Network",
         href: "https://network.thebinaryholdings.com/",
         target: "_blank"
-      },
-      {
-        name: "Digital Finance",
-        href: "/digital-finance",
       },
       {
         name: "Pre-incubator program",

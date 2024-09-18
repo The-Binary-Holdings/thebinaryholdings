@@ -45,35 +45,6 @@ const VisionSection = (props?: {hide?: boolean}) => {
               </Button>
             </div>
           </div>}
-          {!props?.hide && <div className="w-full py-10 border-b border-[#8E7CFF] relative flex">
-            <div className="sm:w-1/2 flex flex-col space-y-6 relative z-10">
-              <h1 className="text-green text-3xl lg:text-5xl font-semibold leading-snug">
-                The Binary
-                <br /> Ecosystem:{" "}
-                <b className="text-highlight font-semibold">PlutoPe</b>
-              </h1>
-              <h2 className="text-start text-lg lg:text-3xl font-semibold">
-                Learn more about the largest non-custodial wallet in crypto.
-              </h2>
-              <Button
-                className="w-fit bg-green text-black underline font-semibold translate-y-16"
-                radius="sm"
-                as={Link}
-                href="/digital-finance"
-              >
-                Digital Finance
-              </Button>
-            </div>
-            <div className="flex w-1/2 justify-center">
-              <Image
-                src="./ecosystem.png"
-                alt="img"
-                removeWrapper
-                className="w-full object-contain sm:w-2/3 lg:w-1/2"
-                radius="none"
-              />
-            </div>
-          </div>}
         </div>
       </WrapperContent>
     </section>

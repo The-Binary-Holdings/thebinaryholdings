@@ -26,11 +26,6 @@ export const headerItem: HeaderItem[] = [
       //   title: "Digital Social",
       //   href: "/digital-social",
       // },
-      {
-        title: "Digital Finance",
-        href: "/digital-finance",
-        isBlank: false
-      },
       // {
       //   title: "Digital Enterprise",
       //   href: "/digital-enterprise",
