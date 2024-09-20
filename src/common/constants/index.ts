@@ -342,7 +342,7 @@ export const SOCIALS: ISocial[] = [
   },
   {
     type: "Medium",
-    link: "https://www.youtube.com/@TheBinaryHoldings",
+    link: "https://medium.com/tag/the-binary-holdings",
     subTitle: "Read update",
   },
 ];
