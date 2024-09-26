@@ -83,7 +83,7 @@ const Article: NextPage = () => {
                 <Author thumbnail={article.author.thumbnail} name={article.author.name} role={article.author.role} pageTitle={article.title} />
               </div>
               <div className="lg:w-3/4 lg:p-0 pt-2">
-                <div className="text-sm opacity-75 leading-6">{article.desc}</div>
+                <div className="text-sm opacity-75 leading-6" dangerouslySetInnerHTML={{ __html: article.desc }}></div>
                 {article?.addons?.length && <Accordion className="w-full border-y border-white/10 mt-14" selectionMode="multiple">
                   {article.addons.map((data, index) => {
                     return (
