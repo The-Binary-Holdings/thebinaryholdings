@@ -25,11 +25,6 @@ export const PRODUCTS: IProduct[] = [
     link: "digital-enterprise",
   },
   {
-    name: "Digital Finance",
-    description: "Streamlining finance with secure, digital-first solutions.",
-    link: "#",
-  },
-  {
     name: "Pre-incubator program",
     description: "Accelerating startups with resources and mentorship.",
     link: "/incubators",
@@ -156,30 +151,6 @@ export const BUSINESSES: IBusiness[] = [
     detail:
       "Binary Holdings' Incubator and Accelerator vertical serves as a catalyst for growth and innovation in the startup ecosystem. By providing early-stage companies with the resources, mentorship, and network they need to succeed, this vertical aims to nurture groundbreaking ideas and turn them into scalable businesses. With a focus on disruptive technologies and market-driven solutions, the Incubator and Accelerator program is designed to propel startups to their full potential, fostering a new generation of entrepreneurs who are ready to change the world.",
   },
-
-  // {
-  //   name: "BNRY Token",
-  //   description:
-  //     "Discover the BNRY Token: The First Telco Token Revolutionizing the Journey from Web2 to Web3!",
-  //   link: "https://bnrytoken.com",
-  //
-  // },
-  // {
-  //   name: "Fando",
-  //   description:
-  //     "The Ultimate Web3 Loyalty and Entertainment App, Crafted for Effortless Web3 Rewards!",
-  //   link: "https://fando.ai",
-  // image_url: "/Fando-img.png",
-  // logo: "/logos/fando-blacklogo.png",
-  // },
-  // {
-  //   name: "The lost club toys",
-  //   description:
-  //     "Discover the Teddy Sticker, Your Key to Move2Earn - A Sticker That Transforms into an Investment!",
-  //   link: "https://lostclubtoys.com/",
-  //   image_url: "/toyClub-img.png",
-  //   logo: "/logos/lostClubToy-blacklogo.png",
-  // },
 ];
 
 export interface IService {
@@ -280,42 +251,13 @@ export interface ILayoutItem {
 }
 
 export const LAYOUT_ITEMS: ILayoutItem[] = [
-  // {
-  //   title: "navigation",
-  //   subItems: [
-  //     {
-  //       name: "Home",
-  //       href: "/",
-  //     },
-  //     {
-  //       name: "Articles",
-  //       href: "#",
-  //     },
-  //     {
-  //       name: "Products",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
   {
     title: "Business",
     subItems: [
       {
         name: "The Binary Network",
-        href: "#",
-      },
-      {
-        name: "Digital Social",
-        href: "/digital-social",
-      },
-
-      {
-        name: "Digital Enterprise",
-        href: "digital-enterprise",
-      },
-      {
-        name: "Digital Finance",
-        href: "#",
+        href: "https://network.thebinaryholdings.com/",
+        target: "_blank"
       },
       {
         name: "Pre-incubator program",
@@ -323,16 +265,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       },
     ],
   },
-  // {
-  //   title: "Products",
-  //   subItems: [
-  //     {
-  //       name: "$BNRY Portal",
-  //       href: "https://www.bnrytoken.com/",
-  //       target: "_blank",
-  //     },
-  //   ],
-  // },
+
   {
     title: "Learn",
     subItems: [
@@ -362,6 +295,14 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         href: "/advocate-program",
       },
       {
+        name: "Privacy Policy",
+        href: "/privacy-policy",
+      },
+      {
+        name: "Terms of use",
+        href: "/Terms-and-conditions",
+      },
+      {
         name: "Get in touch",
         href: "openModal",
       },
@@ -375,38 +316,34 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       // },
     ],
   },
-  {
-    title: "careers",
-    subItems: [
-      {
-        name: "Jobs",
-        href: "/career",
-      },
-    ],
-  },
 ];
 
 export interface ISocial {
   type: string;
   link: string;
+  subTitle: string;
 }
 
 export const SOCIALS: ISocial[] = [
   {
-    type: "twitter",
-    link: "https://twitter.com/thebinaryhldgs",
-  },
-  {
-    type: "telegram",
+    type: "Telegram",
     link: "https://t.me/tbhofficialchat",
+    subTitle: "Join Discussion",
   },
   {
-    type: "discord",
+    type: "Twitter",
+    link: "https://twitter.com/thebinaryhldgs",
+    subTitle: "Read the latest",
+  },
+  {
+    type: "Discord",
     link: "https://discord.gg/wCXJmTBGr2",
+    subTitle: "Join Discussion",
   },
   {
-    type: "youtube",
-    link: "https://www.youtube.com/@TheBinaryHoldings",
+    type: "Medium",
+    link: "https://medium.com/tag/the-binary-holdings",
+    subTitle: "Read update",
   },
 ];
 
@@ -420,16 +357,12 @@ export const BACKERS = [
     image: "/logos/ManaPartners-logo.png",
   },
   {
-    name: "SOSV",
-    image: "/logos/SOSV-logo.png",
-  },
-  {
     name: "Plug and Play",
     image: "/logos/PlugAndPlay-logo.png",
   },
   {
     name: "Dutch Sport Tech Fund",
-    image: "/logos/DutchSportTechFund-logo.png",
+    image: "/logos/DutchSportTechFund-logo.svg",
   },
   {
     name: "Miti Ventures",
@@ -460,42 +393,9 @@ export const BACKERS = [
     image: "/logos/HustleFund-logo.png",
   },
   {
-    name: "A3S Group",
-    image: "/logos/a3s_group.png",
+    name: "OP Labs",
+    image: "/logos/OPLab-logo.png",
   },
-  {
-    name: "Binance Labs",
-    image: "/logos/BinanceLabs-logo.png",
-  },
-];
-
-export interface ICertificate {
-  name: string;
-  image: string;
-  description: string;
-}
-
-export const CERTIFICATES: ICertificate[] = [
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
-  // {
-  //   name: "Original WEB3",
-  //   image: "/certificate.png",
-  //   description: "Certified",
-  // },
 ];
 
 export interface IAdvocateBenefit {
@@ -533,30 +433,30 @@ export const ROLES: IRole[] = [
   {
     id: 1,
     iconUrl: "/icons/doc.svg",
-    title: "Create engaging social content",
+    title: "Create Engaging Social Content",
     description:
       "Develop a consistent strategy for producing high-quality content across various formats.",
   },
   {
     id: 2,
     iconUrl: "/icons/user-star.svg",
-    title: "Organize online and offline events",
+    title: "Organize Online And Offline Events",
     description:
-      "Foster a vibrant community by hosting regular in-person and online events",
+      "Foster a vibrant community by hosting regular in-person and online events.",
   },
   {
     id: 3,
     iconUrl: "/icons/people.svg",
-    title: "Build and join our ecosystem",
+    title: "Create Engaging Social Content",
     description:
-      "Foster a vibrant community by hosting regular in-person and online events",
+      "Develop a consistent strategy for producing high-quality content across various formats.",
   },
   {
     id: 4,
     iconUrl: "/icons/group-communication.svg",
-    title: "Educate the community about Web3 and TBH",
+    title: "Educate The Community About Web3 And TBH",
     description:
-      "Teach and share your in depth knowledge about The Binary Holdings technology to others",
+      "Teach and share your in depth knowledge about The Binary Holdings technology to others.",
   },
 ];
 
@@ -754,7 +654,7 @@ export const FAQ_ITEMS: IFaqItem[] = [
         answer: `<div>
                 <p>Yes, to validate our thesis, we integrated <b class="font-bold">Fando</b>, an Engage/Watch2Earn platform similar to TikTok, focused on sports and esports content, with telecom apps.</p>
                 <br/>
-                <p>By deploying The Binary Network solution with two major telecom providers in Southeast Asia, we now support 169.05 million users, with 11.32 million daily active users, who spend an average of 13.03 minutes within our ecosystem. This demonstrates significant value and engagement. To know more, visit: <a class="underline" href="https://www.fando.ai/" target="_blank">https://www.fando.ai/</a></p>
+                <p>By deploying The Binary Network solution with two major telecom providers in Southeast Asia, we now support 43.6 million users, with 3.34 million daily active users, who spend an average of 13.87 minutes within our ecosystem. This demonstrates significant value and engagement. To know more, visit: <a class="underline" href="https://www.fando.ai/" target="_blank">https://www.fando.ai/</a></p>
                 </div>`,
       },
       {
@@ -966,3 +866,19 @@ export const TELECOMMUNICATION_PARTNER_LOGOS = [
   "logos/celcomdigi.png",
   "/logos/indosat.svg",
 ];
+
+export interface BuyOption {
+  label: string;
+  href: string;
+}
+
+export const BUY_OPTIONS: Array<BuyOption> = [{
+  label: 'Buy on MEXC',
+  href: 'https://www.mexc.com/exchange/BNRY_USDT',
+},{
+  label: 'Buy on BingX',
+  href: 'https://bingx.com/en/spot/BNRYUSDT',
+}, {
+  label: 'Buy on Coinstore',
+  href:"https://www.coinstore.com/spot/BNRYUSDT"
+}]

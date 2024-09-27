@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
 import { FaLinkedinIn, FaTwitter, FaDiscord } from "react-icons/fa";
+import { Image, Link } from "@nextui-org/react";
 
 interface TeamMemberProps {
   name: string;
   role: string;
   imageUrl: string;
+  avatar: string;
   twitterUrl?: string;
   linkedinUrl?: string;
   discordUrl?: string;
@@ -15,47 +15,43 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   name,
   role,
   imageUrl,
+  avatar,
   twitterUrl,
   linkedinUrl,
 }) => {
   return (
-    <div className="rounded-lg">
-      <div className="relative w-full h-96 mx-auto overflow-hidden rounded-lg">
-        <Image
-          unoptimized
-          src={imageUrl}
-          alt={name}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
-        />
-        <div className="absolute bottom-0 right-0 p-4 space-x-2">
-          {linkedinUrl && (
-            <a
-              key="linkedIn"
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block p-4 rounded-full text-white bg-black hover:bg-blue-600 transition-colors"
-            >
-              <FaLinkedinIn />
-            </a>
-          )}
-          {twitterUrl && (
-            <a
-              key="twitter"
-              href={twitterUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block p-4 rounded-full text-white bg-black hover:bg-blue-500 transition-colors"
-            >
-              <FaTwitter />
-            </a>
-          )}
-        </div>
+    <div className="bg-gradient-to-t from-[#6A6A6A]/10 to-white/10 p-1">
+      <div className="w-full bg-gradient-to-t from-[#00FB64]/20 to-[#D9D9D9]/10 py-5 px-3 flex flex-col backdrop-blur-md">
+        <Link
+          className="w-full h-64 cursor-pointer bg-black group"
+          href={linkedinUrl}
+          target="_blank"
+        >
+          <Image
+            src="/decor_avatar.png"
+            alt="image"
+            className="w-full h-full absolute top-0 object-cover object-center "
+            removeWrapper
+            radius="none"
+          />
+          <Image
+            src={avatar}
+            alt="image"
+            className="w-full h-full absolute top-0 object-cover object-top opacity-100 group-hover:opacity-0 transition-opacity"
+            removeWrapper
+            radius="none"
+          />
+          <Image
+            src={imageUrl}
+            alt="image"
+            className="w-full h-full absolute top-0 object-cover object-top !opacity-0 group-hover:!opacity-100 transition-opacity"
+            removeWrapper
+            radius="none"
+          />
+        </Link>
+        <h1 className="mt-5 font-medium text-xl">{name}</h1>
+        <p className="mt-1 font-light text-xs">{role}</p>
       </div>
-      <h3 className="text-2xl md:text-3xl font-bold text-white pt-4">{name}</h3>
-      <p className="text-lg md:text-xl pt-2">{role}</p>
     </div>
   );
 };

@@ -5,7 +5,8 @@ class ArticlesDAO {
     let { data: articles, error } = await supabase
     .from('articles')
     .select('id,created_at,img,title,type')
-    .order('id', { ascending: false })
+    .filter('active', 'eq', true)
+    .order('created_at', { ascending: false });
     if (error) {
       throw error;
     }

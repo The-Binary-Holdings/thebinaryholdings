@@ -17,7 +17,7 @@ const FAQ = () => {
         </WrapperContent>
       </section>
       <section className="w-full" id="hero">
-        <WrapperContent className=" max-w-screen-xl py-16 mx-auto">
+        <WrapperContent className=" max-w-screen-xl pb-16 mx-auto">
           {FAQ_ITEMS.map((faq, index) => {
             return (
               <div

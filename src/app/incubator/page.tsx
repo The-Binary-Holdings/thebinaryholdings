@@ -34,11 +34,11 @@ const monumentExtended = localFont({
 
 const Incubator = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-no-repeat font-light overflow-hidden">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-no-repeat font-light">
       {/* hero section */}
       <section
         id="hero"
-        className="w-full relative h-screen flex flex-col items-center bg-black/50 md:bg-transparent py-16 space-y-4"
+        className="w-full relative h-screen flex flex-col items-center bg-black/50 md:bg-transparent py-16 pt-32 space-y-4"
       >
         <div>
           <Image
@@ -214,13 +214,7 @@ const Incubator = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-8 gap-y-6">
               {INCUBATOR_BENEFITS.map((role, index) => {
                 return (
-                  <VariantsComponent
-                    key={role.id}
-                    direction="x"
-                    startDistance={index % 2 == 0 ? -100 : 100}
-                    delay={0.1}
-                  >
-                    <div className="flex px-10 py-14 h-full rounded-3xl text-white bg-[#402D98] items-center space-x-4">
+                    <div key={index} className="flex px-10 py-14 h-full rounded-3xl text-white bg-[#402D98] items-center space-x-4">
                       <div className="w-2/3 space-y-2">
                         <h1 className="text-2xl text-green font-semibold">
                           {role.title}
@@ -234,7 +228,6 @@ const Incubator = () => {
                         removeWrapper
                       />
                     </div>
-                  </VariantsComponent>
                 );
               })}
             </div>
