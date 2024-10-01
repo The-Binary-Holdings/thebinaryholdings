@@ -79,13 +79,13 @@ export const partnerMembers = [
     avatar: "/team/mario_nawfal_avatar.png",
     linkedinUrl: "https://www.linkedin.com/in/mario-nawfal/",
   },
-  {
-    name: "Nikita Sachdev",
-    role: "CEO, Luna Media",
-    imageUrl: "/team/nikita_sachdev.jpeg",
-    avatar: "/team/nikita_sachdev_avatar.png",
-    linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
-  },
+  // {
+  //   name: "Nikita Sachdev",
+  //   role: "CEO, Luna Media",
+  //   imageUrl: "/team/nikita_sachdev.jpeg",
+  //   avatar: "/team/nikita_sachdev_avatar.png",
+  //   linkedinUrl: "https://www.linkedin.com/in/nikitasachdev/",
+  // },
   {
     name: "Nathnael Seat",
     role: "Investor at Ninepine Technologies",

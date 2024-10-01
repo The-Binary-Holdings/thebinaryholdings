@@ -376,10 +376,10 @@ export const BACKERS = [
     name: "Point Carbon Zero",
     image: "/logos/PointCarbonZero-logo.png",
   },
-  {
-    name: "Luna Capital",
-    image: "/logos/LunaCapital-logo.png",
-  },
+  // {
+  //   name: "Luna Capital",
+  //   image: "/logos/LunaCapital-logo.png",
+  // },
   {
     name: "Orbit Startups",
     image: "/logos/OrbitStartups-logo.png",
