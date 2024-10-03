@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Header />
           {children}
           <Footer />
-          {/* <UserConsentModal /> */}
+          <UserConsentModal />
         </NextUIProvider>
         <Analytics />
       </body>

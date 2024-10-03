@@ -19,10 +19,10 @@ const UserConsentModal = () => {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("consentProvided")) {
+    if (!localStorage.getItem("consentProvided") && !location.pathname.includes("privacy-policy")) {
       setShowModal(true);
     }
-  }, [localStorage.getItem("consentProvided")]);
+  }, [localStorage.getItem("consentProvided"), location?.pathname]);
 
   return (
     <div className="max-w-4xl mx-auto p-6">
