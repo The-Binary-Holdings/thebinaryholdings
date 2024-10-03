@@ -1,28 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 
 const UserConsentModal = () => {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [ls, setLs] = useState<Storage | null>(null);
+  const [lc, setLc] = useState<Location | null>(null);
+
+  useEffect(() => {
+    setLs(localStorage);
+    setLc(location);
+  }, []);
+  
 
   const handleAcceptCookies = () => {
-    localStorage.setItem("cookiesAccepted", "true");
-    localStorage.setItem("consentProvided", "true");
-    setCookiesAccepted(true);
-    setShowModal(false);
+    if(ls) {
+      ls.setItem("cookiesAccepted", "true");
+      ls.setItem("consentProvided", "true");
+      setCookiesAccepted(true);
+      setShowModal(false);
+    }
   };
 
   const handleDeclineCookies = () => {
-    localStorage.setItem("cookiesAccepted", "false");
-    localStorage.setItem("consentProvided", "true");
-    setCookiesAccepted(false);
-    setShowModal(false);
+    if(ls) {
+      ls.setItem("cookiesAccepted", "false");
+      ls.setItem("consentProvided", "true");
+      setCookiesAccepted(false);
+      setShowModal(false);
+    }
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("consentProvided") && !location.pathname.includes("privacy-policy")) {
+    setShowModal(false);
+    if (!ls?.getItem("consentProvided") && !lc?.pathname.includes("privacy-policy")) {
       setShowModal(true);
     }
-  }, [localStorage.getItem("consentProvided"), location?.pathname]);
+  }, [ls?.getItem("consentProvided"), lc?.pathname]);
 
   return (
     <div className="max-w-4xl mx-auto p-6">
