@@ -10,10 +10,9 @@ const UserConsentModal = () => {
     setLs(localStorage);
     setLc(location);
   }, []);
-  
 
   const handleAcceptCookies = () => {
-    if(ls) {
+    if (ls) {
       ls.setItem("cookiesAccepted", "true");
       ls.setItem("consentProvided", "true");
       setCookiesAccepted(true);
@@ -22,7 +21,7 @@ const UserConsentModal = () => {
   };
 
   const handleDeclineCookies = () => {
-    if(ls) {
+    if (ls) {
       ls.setItem("cookiesAccepted", "false");
       ls.setItem("consentProvided", "true");
       setCookiesAccepted(false);
@@ -32,13 +31,16 @@ const UserConsentModal = () => {
 
   useEffect(() => {
     setShowModal(false);
-    if (!ls?.getItem("consentProvided") && !lc?.pathname.includes("privacy-policy")) {
+    if (
+      !ls?.getItem("consentProvided") &&
+      !lc?.pathname.includes("privacy-policy")
+    ) {
       setShowModal(true);
     }
   }, [ls?.getItem("consentProvided"), lc?.pathname]);
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 text-white">
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 top-0 left-0">
@@ -64,7 +66,7 @@ const UserConsentModal = () => {
                 Accept
               </button>
               <button
-                className="bg-red-500 text-black px-4 py-2 rounded hover:bg-red-600"
+                className="bg-red-500 px-4 py-2 rounded hover:bg-red-600 text-white"
                 onClick={handleDeclineCookies}
               >
                 Decline
