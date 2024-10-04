@@ -186,7 +186,7 @@ const ApplyJobModal = ({
                           onClick={() => toggleOpen(false)}
                         />
                       </div>
-                      <div className="text-white/75 mt-6 gap-x-3 gap-y-5 grid grid-cols-2">
+                      <div className="text-zinc-400 text-sm mt-6 gap-x-3 gap-y-5 grid grid-cols-2">
                         <div className="col-span-2">
                           <p>
                             Name
@@ -294,7 +294,7 @@ const ApplyJobModal = ({
                           <div className="text-center">
                             <p
                               className={
-                                fileError ? "text-red-500" : "text-white"
+                                fileError ? "text-red-500" : "text-zinc-400"
                               }
                             >
                               {file ? (
@@ -308,7 +308,7 @@ const ApplyJobModal = ({
                             {!file && (
                               <p
                                 className={
-                                  fileError ? "text-red-500" : "text-white"
+                                  fileError ? "text-red-500" : "text-zinc-400"
                                 }
                               >
                                 (File types: pdf, doc, odt)
