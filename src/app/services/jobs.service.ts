@@ -101,7 +101,8 @@ class jobServices {
       otp: atob(otp),
     });
     if (email) {
-      const confirm = await sendEmail(email, `OTP for email verification`, body.props.children);
+      const newBody = await body.props.children;
+      const confirm = await sendEmail(email, `OTP for email verification`, newBody);
       return confirm;
     }
   };
@@ -112,10 +113,11 @@ class jobServices {
       job
     });
     if (data?.email) {
+      const newBody = await body.props.children;
       await sendEmail(
         data?.email,
         `Application Submitted for ${job?.title}`,
-        body.props.children
+        newBody
       );
     }
   };
@@ -128,10 +130,11 @@ class jobServices {
       attachment: profile?.publicUrl,
     });
     if (job?.emails) {
+      const newBody = await body.props.children;
       await sendEmail(
         job?.emails,
         `Application Received for ${job?.title}`,
-        body.props.children
+        newBody
       );
     }
   };

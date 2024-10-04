@@ -64,7 +64,6 @@ const ApplyJobModal = ({
       if (
         fileExt === "pdf" ||
         fileExt === "doc" ||
-        fileExt === "docx" ||
         fileExt === "odt"
       ) {
         setFile(file[0]);
@@ -312,13 +311,13 @@ const ApplyJobModal = ({
                                   fileError ? "text-red-500" : "text-white"
                                 }
                               >
-                                (File types: pdf, doc, docx, odt)
+                                (File types: pdf, doc, odt)
                               </p>
                             )}
                           </div>
                           <input
                             type="file"
-                            accept=".pdf,.doc,.docx,.odt"
+                            accept=".pdf,.doc,.odt"
                             onClick={clear}
                             onChange={fileSet}
                             className="opacity-0 absolute w-full h-full z-1 cursor-pointer"

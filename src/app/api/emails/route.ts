@@ -9,22 +9,29 @@ const from = 'no-reply <no-reply@thebinaryholdings.com>';
 export async function POST(req: NextRequest) {
   const data = await req.json();
   const { to, body, subject } = data;
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${RESEND_API_KEY}`,
-    },
-    body: JSON.stringify({
-      from,
-      to,
-      subject,
-      html: body,
-    }),
-  });
-
-  if (res.ok) {
-    const data = await res.json();
-    return NextResponse.json(data);
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        from,
+        to,
+        subject,
+        html: body,
+      }),
+    });
+    if (res.ok) {
+      const data = await res.json();
+      console.log(data);
+      return NextResponse.json(data);
+    } else {
+      return NextResponse.error();
+    }
+  } catch (error) {
+    console.error(error);
+    return NextResponse.error();
   }
 }

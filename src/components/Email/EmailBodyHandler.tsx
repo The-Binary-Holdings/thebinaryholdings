@@ -1,7 +1,5 @@
 import { render } from "@react-email/render";
 import CommonTemplate from "./CommonTemplate";
-import { Section } from "@react-email/components";
-import { Button } from "@nextui-org/react";
 
 const sendOTP = (data: any) => {
   const previewText = `Verify your email address`;
