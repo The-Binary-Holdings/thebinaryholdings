@@ -11,17 +11,15 @@ import { careersDAO, Job } from "@/common/DAO/careers.dao";
 import { Application, applicationDAO } from "@/common/DAO/applications.dao";
 
 const INIT_FORM_VALUE = {
-  firstName: "",
-  lastName: "",
+  name: "",
   email: "",
-  phoneNumber: "",
-  linkedinProfile: "",
+  mobile: "",
+  linkedIn: "",
   website: "",
 };
 
 const schema = Yup.object().shape({
-  firstName: Yup.string().required("First Name is required"),
-  lastName: Yup.string().required("Last Name is required"),
+  name: Yup.string().required("Name is required"),
   email: Yup.string().email().required("Email is required"),
   phoneNumber: Yup.string().required("Phone Number is required"),
   linkedinProfile: Yup.string(),

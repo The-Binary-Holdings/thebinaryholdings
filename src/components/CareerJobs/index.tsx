@@ -4,45 +4,51 @@ import Link from "next/link";
 
 import ApplyJobModal from "../ApplyJobModal";
 import WrapperContent from "../WrapperContent";
+import { careersDAO, Job } from "@/common/DAO/careers.dao";
+import { forIn, isEmpty } from "lodash";
 
 import { careersDAO, Job } from "@/common/DAO/careers.dao";
 
 const CareerJobs = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [jobs, setJobs] = useState<{ [key: string]: Job[] }>({});
-  const [listDept, setListDept] = useState<string[]>([]);
-  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [careers, setCareers] = useState<any>({});
+  const [depts, setDepts] = useState<Array<string>>([]);
+  const [showJobs, setShowJobs] = useState<boolean>(false);
+  const [job, setJob] = useState<Job>();
+  const getAllJobs = () => {
+    careersDAO.getAll().then((data) => {
+      setShowJobs(false);
+      setCareers(data);
+      setDepts(Object.keys(data));
+    });
+  };
 
   useEffect(() => {
-    const fetchJobs = async () => {
-      const data = await careersDAO.getAll();
-      setJobs(data);
-      setListDept(Object.keys(data));
-    };
-
-    fetchJobs();
+    getAllJobs();
   }, []);
+
+  useEffect(() => {
+    if (!isEmpty(careers) && depts?.length) {
+      setShowJobs(true);
+    }
+  }, [careers, depts]);
 
   return (
     <WrapperContent>
-      {isOpen && (
-        <ApplyJobModal
-          isOpen={isOpen}
-          toggleOpen={setIsOpen}
-          job={selectedJob}
-        />
-      )}
-      {listDept.map((item: string) => (
-        <div key={item}>
-          <p className="text-white/75 mt-10">{item}</p>
-          <div>
-            {jobs[item].map((job) => (
+      {(isOpen && job) && <ApplyJobModal isOpen={isOpen} toggleOpen={setIsOpen} job={job} />}
+      {showJobs
+        ? depts.map((dept) => (
+            <>
+              <div key={dept}>
+                <p className="text-white/75 mt-10">{dept}</p>
+              </div>
+              {careers[dept].map((job: any) => (
               <div
-                key={job.id}
+                key={job?.id}
                 className="grid gap-4 grid-cols-6 bg-[#131313] py-4 px-6 my-4"
               >
-                <p className="flex items-center col-span-6 md:col-span-3 lg:col-span-2 text-xl text-white/75">
-                  {job.title}
+                <p className="flex items-center col-span-6 md:col-span-3 lg:col-span-2 text-xl">
+                  {job?.title}
                 </p>
                 <p className="col-span-3 md:col-span-1 text-white/75 flex items-center">
                   {job.type}
@@ -58,18 +64,18 @@ const CareerJobs = () => {
                 </Link>
                 <button
                   onClick={() => {
-                    setSelectedJob(job);
+                    setJob(job);
                     setIsOpen(true);
                   }}
-                  className="col-span-3 lg:col-span-1 flex items-center justify-center p-2 lg:p-4 bg-white text-[#080729] hover:opacity-90 rounded-md font-semibold"
+                  className="col-span-3 lg:col-span-1 flex items-center justify-center p-4 bg-white text-[#080729] hover:opacity-90 rounded-md font-semibold"
                 >
                   APPLY NOW
                 </button>
               </div>
-            ))}
-          </div>
-        </div>
-      ))}
+              ))}
+            </>
+          ))
+        : ""}
     </WrapperContent>
   );
 };
