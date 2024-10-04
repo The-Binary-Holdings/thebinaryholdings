@@ -51,7 +51,7 @@ const CareerJobs = () => {
                   {job.location}
                 </p>
                 <Link
-                  href={`/career/job/${job.id}`}
+                  href={`/careers/job/${job.id}`}
                   className="col-span-3 lg:col-span-1 text-right flex items-center underline text-white"
                 >
                   View Details

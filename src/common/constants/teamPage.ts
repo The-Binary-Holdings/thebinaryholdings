@@ -61,7 +61,7 @@ export const teamMembers = [
     imageUrl: "/team/sarah.jpeg",
     avatar: "/team/sarah_avatar.png",
     linkedinUrl: "https://www.linkedin.com/in/sarah-intarapromma-544b3ba/",
-  }
+  },
 ];
 
 export const partnerMembers = [
@@ -141,5 +141,12 @@ export const partnerMembers = [
     imageUrl: "/team/Shishir.png",
     avatar: "/team/Shishir_avatar.png",
     linkedinUrl: "https://www.linkedin.com/in/shishirbharti/",
+  },
+  {
+    name: "Aditya Chand",
+    role: "CEO, Through The Lens Entertainment™",
+    imageUrl: "/team/aditya_chand.jpeg",
+    avatar: "/team/aditya_chand_avatar.png",
+    linkedinUrl: "https://www.linkedin.com/in/aditya-chand-44139529",
   },
 ];

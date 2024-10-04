@@ -257,7 +257,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       {
         name: "The Binary Network",
         href: "https://network.thebinaryholdings.com/",
-        target: "_blank"
+        target: "_blank",
       },
       {
         name: "Pre-incubator program",
@@ -305,6 +305,10 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       {
         name: "Get in touch",
         href: "openModal",
+      },
+      {
+        name: "Careers",
+        href: "/careers",
       },
       // {
       //   name: "Terms of use",
@@ -395,6 +399,10 @@ export const BACKERS = [
   {
     name: "OP Labs",
     image: "/logos/OPLab-logo.png",
+  },
+  {
+    name: "Advisory",
+    image: "/logos/advisory.png",
   },
 ];
 
@@ -872,13 +880,17 @@ export interface BuyOption {
   href: string;
 }
 
-export const BUY_OPTIONS: Array<BuyOption> = [{
-  label: 'Buy on MEXC',
-  href: 'https://www.mexc.com/exchange/BNRY_USDT',
-},{
-  label: 'Buy on BingX',
-  href: 'https://bingx.com/en/spot/BNRYUSDT',
-}, {
-  label: 'Buy on Coinstore',
-  href:"https://www.coinstore.com/spot/BNRYUSDT"
-}]
+export const BUY_OPTIONS: Array<BuyOption> = [
+  {
+    label: "Buy on MEXC",
+    href: "https://www.mexc.com/exchange/BNRY_USDT",
+  },
+  {
+    label: "Buy on BingX",
+    href: "https://bingx.com/en/spot/BNRYUSDT",
+  },
+  {
+    label: "Buy on Coinstore",
+    href: "https://www.coinstore.com/spot/BNRYUSDT",
+  },
+];
