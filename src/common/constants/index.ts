@@ -306,6 +306,10 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
         name: "Get in touch",
         href: "openModal",
       },
+      {
+        name: "Careers",
+        href: "/careers",
+      },
       // {
       //   name: "Terms of use",
       //   href: "#",
