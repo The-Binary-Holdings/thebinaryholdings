@@ -7,8 +7,6 @@ import WrapperContent from "../WrapperContent";
 import { careersDAO, Job } from "@/common/DAO/careers.dao";
 import { forIn, isEmpty } from "lodash";
 
-import { careersDAO, Job } from "@/common/DAO/careers.dao";
-
 const CareerJobs = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [careers, setCareers] = useState<any>({});
