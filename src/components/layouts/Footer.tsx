@@ -93,7 +93,7 @@ const Footer = () => {
           <div className="md:flex text-left">
           All images are copyright to their respective owners. All product names, logos and brands used in our websites are properties of their respective owners.
           </div>
-          <div className="md:mt-0 mt-2 min-w-80">
+          <div className="md:mt-0 mt-2">
             <div className="text-right">              
               The Binary Holdings.  All rights reserved. &copy;{" "}
               {new Date().getFullYear()}
