@@ -10,10 +10,9 @@ const UserConsentModal = () => {
     setLs(localStorage);
     setLc(location);
   }, []);
-  
 
   const handleAcceptCookies = () => {
-    if(ls) {
+    if (ls) {
       ls.setItem("cookiesAccepted", "true");
       ls.setItem("consentProvided", "true");
       setCookiesAccepted(true);
@@ -22,7 +21,7 @@ const UserConsentModal = () => {
   };
 
   const handleDeclineCookies = () => {
-    if(ls) {
+    if (ls) {
       ls.setItem("cookiesAccepted", "false");
       ls.setItem("consentProvided", "true");
       setCookiesAccepted(false);
@@ -32,13 +31,16 @@ const UserConsentModal = () => {
 
   useEffect(() => {
     setShowModal(false);
-    if (!ls?.getItem("consentProvided") && !lc?.pathname.includes("privacy-policy")) {
+    if (
+      !ls?.getItem("consentProvided") &&
+      !lc?.pathname.includes("privacy-policy")
+    ) {
       setShowModal(true);
     }
   }, [ls?.getItem("consentProvided"), lc?.pathname]);
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 text-white">
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
@@ -64,7 +66,7 @@ const UserConsentModal = () => {
                 Accept
               </button>
               <button
-                className="bg-red-500 text-black px-4 py-2 rounded hover:bg-red-600"
+                className="bg-red-500 px-4 py-2 rounded hover:bg-red-600 text-white"
                 onClick={handleDeclineCookies}
               >
                 Decline
@@ -109,12 +111,19 @@ const UserConsentModal = () => {
           </li>
         </ul>
 
-        <h2 className="text-xl font-semibold mb-2">2. How We Use Your Information</h2>
+        <h2 className="text-xl font-semibold mb-2">
+          2. How We Use Your Information
+        </h2>
         <ul className="list-disc list-inside mb-4">
           <li>To provide and improve our website and services.</li>
-          <li>To personalize your experience by remembering your preferences.</li>
+          <li>
+            To personalize your experience by remembering your preferences.
+          </li>
           <li>To analyze how our site is used and measure its performance.</li>
-          <li>To communicate with you, such as sending newsletters or responding to inquiries.</li>
+          <li>
+            To communicate with you, such as sending newsletters or responding
+            to inquiries.
+          </li>
           <li>To comply with legal obligations.</li>
         </ul>
 
@@ -137,11 +146,26 @@ const UserConsentModal = () => {
         <p className="mb-4">
           You have the following rights regarding your personal data:
           <ul className="list-disc list-inside">
-            <li><strong>Right to Access</strong>: You can request a copy of the data we hold about you.</li>
-            <li><strong>Right to Rectification</strong>: You can request corrections to inaccurate or incomplete data.</li>
-            <li><strong>Right to Erasure</strong>: You can request the deletion of your personal data under certain conditions.</li>
-            <li><strong>Right to Object</strong>: You can object to the processing of your personal data for certain purposes.</li>
-            <li><strong>Right to Withdraw Consent</strong>: You can withdraw your consent to data processing at any time.</li>
+            <li>
+              <strong>Right to Access</strong>: You can request a copy of the
+              data we hold about you.
+            </li>
+            <li>
+              <strong>Right to Rectification</strong>: You can request
+              corrections to inaccurate or incomplete data.
+            </li>
+            <li>
+              <strong>Right to Erasure</strong>: You can request the deletion of
+              your personal data under certain conditions.
+            </li>
+            <li>
+              <strong>Right to Object</strong>: You can object to the processing
+              of your personal data for certain purposes.
+            </li>
+            <li>
+              <strong>Right to Withdraw Consent</strong>: You can withdraw your
+              consent to data processing at any time.
+            </li>
           </ul>
         </p>
 
@@ -153,7 +177,9 @@ const UserConsentModal = () => {
           functionalities of the website.
         </p>
 
-        <h2 className="text-xl font-semibold mb-2">6. Changes to this Consent Policy</h2>
+        <h2 className="text-xl font-semibold mb-2">
+          6. Changes to this Consent Policy
+        </h2>
         <p className="mb-4">
           We reserve the right to update or modify this User Consent Policy at
           any time. We will notify you of any significant changes by updating
