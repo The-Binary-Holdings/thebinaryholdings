@@ -35,6 +35,13 @@ export const teamMembers = [
     linkedinUrl: "https://www.linkedin.com/in/pmgupta911/",
   },
   {
+    name: "Shahab Ahmed",
+    role: "General Counsel",
+    imageUrl: "/team/shahab.jpeg", // Replace with actual path to image
+    avatar: "/team/shahab_avatar.png",
+    linkedinUrl: "https://www.linkedin.com/in/shahab-ahmed-9976132/",
+  },
+  {
     name: "Darpan Keswani",
     role: "VP Of Marketing",
     imageUrl: "/team/darpan.png", // Replace with actual path to image
