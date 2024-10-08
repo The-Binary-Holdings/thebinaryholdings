@@ -1,43 +1,38 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import clsx from "clsx";
 import { Field, Form, Formik } from "formik";
 import { IoClose } from "react-icons/io5";
 import * as Yup from "yup";
-import { Button, Modal, ModalBody, ModalContent } from "@nextui-org/react";
-import { FaRegTimesCircle } from "react-icons/fa";
+import { Modal, ModalBody, ModalContent } from "@nextui-org/react";
 
 import useClickOutside from "@/common/hooks/useClickOutSide";
 import { careersDAO, Job } from "@/common/DAO/careers.dao";
-import { Application, applicationDAO } from "@/common/DAO/applications.dao";
+import { toast, Toaster } from "react-hot-toast";
+import { JobServices } from "@/app/services/jobs.service";
+import { PiSpinnerGapBold } from "react-icons/pi";
+import VerifyOTP from "./verify-otp";
 
 const INIT_FORM_VALUE = {
-  firstName: "",
-  lastName: "",
+  name: "",
   email: "",
-  phoneNumber: "",
-  linkedinProfile: "",
+  mobile: "",
+  linkedIn: "",
   website: "",
 };
 
 const schema = Yup.object().shape({
-  firstName: Yup.string().required("First Name is required"),
-  lastName: Yup.string().required("Last Name is required"),
+  name: Yup.string().required("Name is required"),
   email: Yup.string().email().required("Email is required"),
-  phoneNumber: Yup.string().required("Phone Number is required"),
-  linkedinProfile: Yup.string(),
-  website: Yup.string(),
+  mobile: Yup.string().required("Phone Number is required"),
+  linkedIn: Yup.string().url(),
+  website: Yup.string().url(),
 });
 
 interface ApplyJobModalProps {
   isOpen: boolean;
+  job: Job;
   toggleOpen: (val: boolean) => void;
-  job: Job | null;
 }
-
-const allowedTypes = [
-  "application/pdf",
-  // Add more supported types as needed
-];
 
 const ApplyJobModal = ({
   isOpen = false,
@@ -45,118 +40,172 @@ const ApplyJobModal = ({
   job,
 }: ApplyJobModalProps) => {
   const clickRef = useRef<HTMLDivElement>(null);
+  // useClickOutside(clickRef, () => toggleOpen(false));
+
   const [file, setFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [uploadSuccess, setUploadSuccess] = useState<boolean | null>(true);
-  useClickOutside(clickRef, () => toggleOpen(false));
+  const [fileError, setFileError] = useState<boolean>(false);
+  const [showVerify, setShowVerify] = useState<boolean>(false);
+  const [formValues, setFormValues] = useState<any>(null);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = event.target.files?.[0];
-    if (selectedFile && allowedTypes.includes(selectedFile.type)) {
-      setFile(selectedFile);
-    } else {
-      alert("Invalid file type. Only pdf are allowed.");
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const clear = (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
+    const element = event.target as HTMLInputElement;
+    element.value = "";
+    setFile(null);
+  };
+
+  const fileSet = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const element = event.target as HTMLInputElement;
+    const file = event.target.files;
+    setFileError(false);
+    if (file) {
+      const fileExt = file[0].name.split(".").pop();
+      if (
+        fileExt === "pdf" ||
+        fileExt === "doc" ||
+        fileExt === "odt"
+      ) {
+        setFile(file[0]);
+      } else {
+        toast.error(
+          "Invalid file type. Please upload pdf, doc, docx, odt files",
+          { id: "file-error" }
+        );
+        element.value = "";
+        setFile(null);
+        setFileError(true);
+      }
     }
   };
 
-  useEffect(() => {
-    if (isOpen) setUploadSuccess(null);
-  }, [isOpen]);
-
-  const handleSubmit = async (val: typeof INIT_FORM_VALUE) => {
-    if (!file) return;
-    setIsLoading(true);
-
-    const res = await careersDAO.uploadProfile(file);
-    const attachmentLink = res?.path || "";
-
-    const app: Application = {
-      email: val.email,
-      job_id: job?.id || 0,
-      attachment: attachmentLink,
-      name: val.firstName + " " + val.lastName,
-      mobile: val.phoneNumber,
-      linkedIn: val.linkedinProfile,
-      website: val.website,
-    };
-
-    const result = await applicationDAO.addApplication(app);
-    if (result) {
-      setUploadSuccess(true);
-    } else {
-      setUploadSuccess(false);
+  const validate = async (values: any) => {
+    if (!file) {
+      setFileError(true);
+      return;
     }
-    setIsLoading(false);
   };
+
+  const apply = async (values: any) => {
+    if(file) {
+      setLoading(true);
+      try {
+        const check = await JobServices.checkIsApplied(values.email, job.id);
+        if (check?.length) {
+          toast.error("You have already applied for this job", { id: "job-apply" });
+          setLoading(false);
+        } else {
+          setLoading(true);
+          const checkOTP: any = await JobServices.checkOTP(values.email, job.id);
+          if(checkOTP?.length) {
+            setLoading(false);
+            setFormValues(values);
+            setShowVerify(true);
+            toast.error("OTP already sent to your email", { id: "job-apply" });
+          } else {
+            setLoading(true);
+            const res = await JobServices.sendOTP(values.name, values.email, job.id);
+            if(res) {
+              setFormValues(values);
+              setShowVerify(true);
+              setLoading(false);
+              toast.success("OTP sent to your email", { id: "job-apply" });
+            }
+          }
+        }
+      } catch (error) {
+        setLoading(false);
+        toast.error("Failed to submit application. Please try again", { id: "job-apply" });
+      }
+    }
+  };
+
+  const confirmApply = async (values: any) => {
+    if (file) {
+      setLoading(true);
+      const uploadProfile: any = await careersDAO.uploadProfile(file);
+      const application = values;
+      application.attachment = uploadProfile.path;
+      application.job_id = job.id;
+      const res = await JobServices.newApplication(application, job);
+      if (res) {
+        toast.success("Application submitted", {
+          id: "job-apply",
+        });
+        setTimeout(() => {
+          setLoading(false);
+          toggleOpen(false);
+        }, 3000);
+      } else {
+        setLoading(false);
+        toast.error("Failed to submit application. Please try again", {
+          id: "job-apply",
+        });
+      }
+    }
+
+  }
+
+  const toastOptions = { duration: 5000 };
+
+  const Loader = () => (
+    <div className="absolute top-0 left-0 w-full h-full bg-gray-950/[.7] z-50">
+      <div className="flex h-screen">
+        <div className="m-auto">
+          <PiSpinnerGapBold className="animate-spin m-auto text-3xl text-zinc-400" />
+          <div className="text-sm mt-2 text-zinc-400">Processing</div>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
-    <Modal hideCloseButton isOpen={isOpen}>
-      <ModalContent className="bg-[#131313] text-white">
-        {() => (
-          <ModalBody className="py-4 lg:p-4">
-            {uploadSuccess === null && (
+    <>
+      <Modal
+        hideCloseButton={true}
+        isOpen={isOpen}
+        isDismissable={false}
+        isKeyboardDismissDisabled={false}
+      >
+        <ModalContent className="bg-[#131313] text-white relative">
+          {() => (
+            <ModalBody className="py-4 lg:p-4">
+              {loading && <Loader />}
               <Formik
                 initialValues={INIT_FORM_VALUE}
                 validationSchema={schema}
-                onSubmit={handleSubmit}
+                onSubmit={apply}
               >
                 {({ errors, touched }) => (
                   <Form>
                     <div ref={clickRef}>
                       <div className="text-2xl font-medium flex items-center gap-1 justify-between">
-                        <p>Apply For {job?.title}</p>
+                        <p>Apply For {job.title}</p>
                         <IoClose
                           className="text-3xl cursor-pointer"
                           onClick={() => toggleOpen(false)}
                         />
                       </div>
-                      <div className="text-white/75 mt-6 gap-x-3 gap-y-5 grid grid-cols-2">
-                        <div>
+                      <div className="text-zinc-400 text-sm mt-6 gap-x-3 gap-y-5 grid grid-cols-2">
+                        <div className="col-span-2">
                           <p>
-                            First Name
+                            Name
                             <span
                               className={clsx(
-                                errors.firstName &&
-                                  touched.firstName &&
-                                  "text-red-500"
+                                errors.name && touched.name && "text-red-500"
                               )}
                             >
                               *
                             </span>
                           </p>
                           <Field
-                            name="firstName"
+                            name="name"
                             type="text"
                             autoComplete="off"
                             className={clsx(
                               "w-full mt-2 bg-[#FFFFFF0D] h-10 px-2 outline-none rounded-sm",
-                              errors.firstName &&
-                                touched.firstName &&
-                                "border border-red-500"
-                            )}
-                          />
-                        </div>
-                        <div>
-                          <p>
-                            Last Name
-                            <span
-                              className={clsx(
-                                errors.lastName &&
-                                  touched.lastName &&
-                                  "text-red-500"
-                              )}
-                            >
-                              *
-                            </span>
-                          </p>
-                          <Field
-                            name="lastName"
-                            type="text"
-                            autoComplete="off"
-                            className={clsx(
-                              "w-full mt-2 bg-[#FFFFFF0D] h-10 px-2 outline-none rounded-sm",
-                              errors.lastName &&
-                                touched.lastName &&
+                              errors.name &&
+                                touched.name &&
                                 "border border-red-500"
                             )}
                           />
@@ -189,8 +238,8 @@ const ApplyJobModal = ({
                             Phone Number
                             <span
                               className={clsx(
-                                errors.phoneNumber &&
-                                  touched.phoneNumber &&
+                                errors.mobile &&
+                                  touched.mobile &&
                                   "text-red-500"
                               )}
                             >
@@ -198,55 +247,33 @@ const ApplyJobModal = ({
                             </span>
                           </p>
                           <Field
-                            name="phoneNumber"
+                            name="mobile"
                             type="text"
                             autoComplete="off"
                             className={clsx(
                               "w-full mt-2 bg-[#FFFFFF0D] h-10 px-2 outline-none rounded-sm",
-                              errors.phoneNumber &&
-                                touched.phoneNumber &&
+                              errors.mobile &&
+                                touched.mobile &&
                                 "border border-red-500"
                             )}
                           />
                         </div>
                         <div className="col-span-2">
-                          <p>
-                            Please enter your Linkedin Profile URL
-                            <span
-                              className={clsx(
-                                errors.linkedinProfile &&
-                                  touched.linkedinProfile &&
-                                  "text-red-500"
-                              )}
-                            >
-                              *
-                            </span>
-                          </p>
+                          <p>Linkedin Profile URL</p>
                           <Field
-                            name="linkedinProfile"
+                            name="linkedIn"
                             type="text"
                             autoComplete="off"
                             className={clsx(
                               "w-full mt-2 bg-[#FFFFFF0D] h-10 px-2 outline-none rounded-sm",
-                              errors.linkedinProfile &&
-                                touched.linkedinProfile &&
+                              errors.linkedIn &&
+                                touched.linkedIn &&
                                 "border border-red-500"
                             )}
                           />
                         </div>
                         <div className="col-span-2">
-                          <p>
-                            Website, Blog, or Portfolio
-                            <span
-                              className={clsx(
-                                errors.website &&
-                                  touched.website &&
-                                  "text-red-500"
-                              )}
-                            >
-                              *
-                            </span>
-                          </p>
+                          <p>Website, Blog, or Portfolio</p>
                           <Field
                             name="website"
                             type="text"
@@ -259,83 +286,69 @@ const ApplyJobModal = ({
                             )}
                           />
                         </div>
-
-                        {file ? (
-                          <div className="col-span-2 flex">
-                            <p className=" items-center">
-                              File Selected: {file.name}
-                              <button
-                                className="ms-2"
-                                onClick={() => {
-                                  setFile(null);
-                                }}
-                              >
-                                <FaRegTimesCircle />
-                              </button>
+                        <div
+                          className={`col-span-2 flex items-center justify-center border border-dashed border-white/50 py-8 relative ${
+                            fileError && "!border-solid !border-red-500"
+                          }`}
+                        >
+                          <div className="text-center">
+                            <p
+                              className={
+                                fileError ? "text-red-500" : "text-zinc-400"
+                              }
+                            >
+                              {file ? (
+                                file.name
+                              ) : (
+                                <>
+                                  Upload Your Resume <span>*</span>
+                                </>
+                              )}
                             </p>
-                          </div>
-                        ) : (
-                          <label className="col-span-2 flex items-center justify-center border border-dashed border-white/50 py-8 cursor-pointer">
-                            <div className="text-center">
-                              <p className="text-white">
-                                Upload Your Resume/CV <span>*</span>
+                            {!file && (
+                              <p
+                                className={
+                                  fileError ? "text-red-500" : "text-zinc-400"
+                                }
+                              >
+                                (File types: pdf, doc, odt)
                               </p>
-                              <p>(File types: pdf, doc, docx, txt, rtf)</p>
-                            </div>
-                            <input
-                              id="dropzone-file"
-                              type="file"
-                              className="hidden"
-                              required
-                              onChange={handleFileChange}
-                            />
-                          </label>
-                        )}
-
-                        <Button
-                          type="submit"
-                          isLoading={isLoading}
-                          className={clsx(
-                            "col-span-2 rounded-md bg-white font-semibold w-full text-black py-4"
-                          )}
+                            )}
+                          </div>
+                          <input
+                            type="file"
+                            accept=".pdf,.doc,.odt"
+                            onClick={clear}
+                            onChange={fileSet}
+                            className="opacity-0 absolute w-full h-full z-1 cursor-pointer"
+                          />
+                        </div>
+                        <button
+                          onClick={validate}
+                          className="col-span-2 rounded-md bg-white font-semibold w-full text-black py-4"
                         >
                           Submit Application
-                        </Button>
+                        </button>
                       </div>
                     </div>
                   </Form>
                 )}
               </Formik>
-            )}
-
-            {uploadSuccess !== null &&
-              (uploadSuccess ? (
-                <div className="w-full flex flex-col items-center justify-between">
-                  <div className="text-2xl font-medium flex gap-1 justify-end w-full px-4">
-                    <IoClose
-                      className="text-3xl cursor-pointer"
-                      onClick={() => toggleOpen(false)}
-                    />
-                  </div>
-                  <p className="py-10">Upload your profile successfully!</p>
-                </div>
-              ) : (
-                <div className="w-full flex flex-col items-center justify-between">
-                  <div className="text-2xl font-medium flex gap-1 justify-end w-full px-4">
-                    <IoClose
-                      className="text-3xl cursor-pointer"
-                      onClick={() => toggleOpen(false)}
-                    />
-                  </div>
-                  <p className="py-10">
-                    Failed to upload your profile. Please try again.
-                  </p>
-                </div>
-              ))}
-          </ModalBody>
-        )}
-      </ModalContent>
-    </Modal>
+            </ModalBody>
+          )}
+        </ModalContent>
+      </Modal>
+      <Toaster position="top-right" toastOptions={toastOptions} />
+      {showVerify && <VerifyOTP email={formValues.email} job_id={job.id} isOpen={true} toggleOpen={(isValid: boolean) => {
+        setShowVerify(false);
+        setLoading(false);
+        if(isValid) {
+          confirmApply(formValues);
+        } else {
+          toast.error("Failed to verify email", { id: "job-apply" });
+        }
+      }} />}
+    </>
   );
 };
 
