@@ -5,7 +5,7 @@ import React from 'react'
 
 const bnryMartFaq: React.FC = () => {
   return (
-    <div className="container px-2 py-20 md:px-6">
+    <div className="container px-2 py-20 md:px-6 text-justify">
       <div className="mx-auto lg:w-4/5">
         {/* What is BNRYMart? */}
         <div>
