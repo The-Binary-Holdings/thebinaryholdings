@@ -35,7 +35,7 @@ const UserConsentModal = () => {
       !ls?.getItem("consentProvided") &&
       !lc?.pathname.includes("privacy-policy")
     ) {
-      setShowModal(true);
+      setTimeout(() => setShowModal(true), 2000);
     }
   }, [ls?.getItem("consentProvided"), lc?.pathname]);
 
