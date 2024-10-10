@@ -6,17 +6,30 @@ import { useParams } from "next/navigation";
 import ApplyJobModal from "@/components/ApplyJobModal";
 import WrapperContent from "@/components/WrapperContent";
 import { careersDAO, Job } from "@/common/DAO/careers.dao";
+import { Button, Tooltip } from "@nextui-org/react";
 
 const JobDeTail = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [job, setJob] = useState<Job>();
   const params = useParams<{ id: string }>();
+  const [isOpenToolTip, setIsOpenToolTip] = useState(false);
 
   useEffect(() => {
     careersDAO.getById(params.id).then((data: Job) => {
       setJob(data);
     });
   }, [params.id]);
+
+  const handleShareLink = () => {
+    setIsOpenToolTip(true);
+    const linkJob = window.location.href;
+
+    navigator.clipboard.writeText(linkJob);
+
+    setTimeout(() => {
+      setIsOpenToolTip(false);
+    }, 1000);
+  };
 
   return (
     <WrapperContent>
@@ -99,9 +112,16 @@ const JobDeTail = () => {
                 >
                   APPLY NOW
                 </button>
-                <div className="flex justify-center items-center h-12 w-12 rounded-lg border-2 border-solid border-white">
-                  <IoShareSocial className="text-xl" />
-                </div>
+                <Button
+                  onClick={handleShareLink}
+                  className="flex justify-center items-center h-12 w-12 rounded-lg border-2 border-solid border-white relative"
+                >
+                  {!isOpenToolTip ? (
+                    <IoShareSocial className="text-xl" />
+                  ) : (
+                    "copied!"
+                  )}
+                </Button>{" "}
               </div>
             </div>
           </div>

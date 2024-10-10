@@ -6,6 +6,7 @@ import ApplyJobModal from "../ApplyJobModal";
 import WrapperContent from "../WrapperContent";
 import { careersDAO, Job } from "@/common/DAO/careers.dao";
 import { forIn, isEmpty } from "lodash";
+import { CircularProgress } from "@nextui-org/react";
 
 const CareerJobs = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,19 +34,21 @@ const CareerJobs = () => {
 
   return (
     <WrapperContent>
-      {(isOpen && job) && <ApplyJobModal isOpen={isOpen} toggleOpen={setIsOpen} job={job} />}
-      {showJobs
-        ? depts.map((dept) => (
-            <>
-              <div key={dept}>
-                <p className="text-white/75 mt-10">{dept}</p>
-              </div>
-              {careers[dept].map((job: any) => (
+      {isOpen && job && (
+        <ApplyJobModal isOpen={isOpen} toggleOpen={setIsOpen} job={job} />
+      )}
+      {showJobs ? (
+        depts.map((dept) => (
+          <>
+            <div key={dept}>
+              <p className="text-white/75 mt-10">{dept}</p>
+            </div>
+            {careers[dept].map((job: any) => (
               <div
                 key={job?.id}
                 className="grid gap-4 grid-cols-6 bg-[#131313] py-4 px-6 my-4"
               >
-                <p className="flex items-center col-span-6 md:col-span-3 lg:col-span-2 text-xl">
+                <p className="flex items-center col-span-6 md:col-span-3 lg:col-span-2 text-xl text-white ">
                   {job?.title}
                 </p>
                 <p className="col-span-3 md:col-span-1 text-white/75 flex items-center">
@@ -70,10 +73,12 @@ const CareerJobs = () => {
                   APPLY NOW
                 </button>
               </div>
-              ))}
-            </>
-          ))
-        : ""}
+            ))}
+          </>
+        ))
+      ) : (
+        <CircularProgress className="mx-auto" color="default"/>
+      )}
     </WrapperContent>
   );
 };
