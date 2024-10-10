@@ -1,0 +1,30 @@
+{
+    "title": "Head of Sales",
+    "type": "Full Time",
+    "positions": 1,
+    "location": "Bangkok",
+    "salary": "USD 100,000",
+    "dept": "Sales",
+    "description": "We are looking for a creative individual to join our team as a 3D artist. The responsibilities of the 3D artist include creating still and moving images using computers, creating 3D models of products, and managing multiple projects while adhering to deadlines. To be a successful 3D artist, you should be detail-oriented, flexible, and a good team player. Ultimately, a top-notch 3D artist is creative and artistic with a strong working knowledge of color, texture, and light as well as industry-standard software.",
+    "responsibilities": [
+        "Using 3D modeling, texture, mapping, and other techniques to create graphics, visual effects, and animations.",
+        "Understanding the project requirements and conceptualizing creative ideas.",
+        "CStrong working knowledge of industry-standard software, including 3ds Max, Blender, SketchUp, and Maya.",
+        "Excellent creativity and artistic skills.",
+        "An eye for composition, realism, texture, color, and lighting.",
+        "Good communication and teamwork skills.",
+        "Excellent time management skills.",
+        "Willingness to remain up-to-date on the latest creative software and hardware."
+
+    ],
+    "requirements": [
+        "3D artists in medical illustration must have a working knowledge of biology.",
+        "A strong portfolio of previous work and completed projects.",
+        "Creating storyboards to visualize scenes and create a realistic environment for our Products.",
+        "Receiving feedback from directors, animators, designers, and editing your creations based on the comments received.",
+        "Reviewing 3D arts and recommending improvements.",
+        "Creating 3D sculpts and assets to meet artistic standards.",
+        "Troubleshooting any problems that arise during work on a project.",
+        "Meeting with clients, Designers, and Directors to discuss and review projects and deadlines"
+    ]
+}
