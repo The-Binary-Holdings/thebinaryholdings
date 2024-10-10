@@ -21,9 +21,12 @@ const CareerPage = () => {
             considered <br className="hidden md:inline-block" /> for
             <br className="md:hidden" /> upcoming opportunities.
           </p>
-          <button className="mx-auto mt-6 col-span-3 lg:col-span-1 flex items-center justify-center py-4 px-10 bg-white text-[#080729] hover:opacity-90 rounded-md font-semibold">
+          <a
+            href="mailto:sarah@thebinaryholdings.com "
+            className="w-fit mx-auto mt-6 col-span-3 lg:col-span-1 flex items-center justify-center py-4 px-10 bg-white text-[#080729] hover:opacity-90 rounded-md font-semibold"
+          >
             CONTACT US
-          </button>
+          </a>
         </div>
       </WrapperContent>
     </div>
