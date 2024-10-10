@@ -31,7 +31,7 @@ const UserConsentModal = () => {
 
   useEffect(() => {
     setShowModal(false);
-    if (
+    if (ls && 
       !ls?.getItem("consentProvided") &&
       !lc?.pathname.includes("privacy-policy")
     ) {
