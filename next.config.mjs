@@ -6,6 +6,10 @@ const nextConfig = {
                 source: '/thebinaryhub/privacypolicy',
                 destination: '/thebinaryhub', // Maps /new-url to /custom-folder
             },
+            {
+                source: '/thebinaryhub/BNRYMart/FAQ',
+                destination: '/bnry-mart', // Maps /new-url to /custom-folder
+            }
         ];
     },
 };
