@@ -300,7 +300,7 @@ export const LAYOUT_ITEMS: ILayoutItem[] = [
       },
       {
         name: "Terms of use",
-        href: "/Terms-and-conditions",
+        href: "/terms-and-conditions",
       },
       {
         name: "Get in touch",
