@@ -21,6 +21,14 @@ export const teamMembers = [
     linkedinUrl: "https://www.linkedin.com/in/sidsahi/",
   },
   {
+    name: "Yannis Karipsiadis",
+    role: "Co-Found & CIO",
+    imageUrl: "/team/yannis_aripsiadis.jpg", // Replace with actual path to image
+    avatar: "/team/yannis_aripsiadis_avatar.png",
+    linkedinUrl:
+      "https://www.linkedin.com/in/ykaripsiadis/",
+  },
+  {
     name: "George Papas",
     role: "VP Technology",
     imageUrl: "/team/George.png", // Replace with actual path to image
